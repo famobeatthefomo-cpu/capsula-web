@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios · Cápsula</title>
+<meta name="description" content="Tres caminos para tu bienestar habitacional: Cápsula Rosa, Coral y Petróleo. Encuentra el que encaja con tu momento y presupuesto.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="pill"></span> cá<b>psula</b></a>
+    <nav class="nav-links">
+      <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
+      <a href="servicios.html" data-i18n="nav.services">Servicios</a>
+      <a href="prueba-gratis.html" data-i18n="nav.test">Test</a>
+      <a href="contacto.html" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="en">EN</button><button data-lang="it">IT</button></div>
+      <a class="btn btn--primary desktop-only" href="prueba-gratis.html" data-i18n="cta.test">Test gratis</a>
+      <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero ph--coral">
+  <div class="wrap">
+    <p class="eyebrow" data-i18n="nav.services">Servicios</p>
+    <h1 data-i18n="sv.h1">Tres caminos para tu bienestar habitacional</h1>
+    <p class="tag" data-i18n="sv.lead">Cada nivel responde a una necesidad y a un presupuesto distintos. Empieza por donde estás hoy.</p>
+  </div>
+</section>
+
+<!-- SELECTOR -->
+<section class="section section--tight" data-tabset>
+  <div class="wrap center">
+    <h2 data-i18n="sv.selTitle">¿Qué buscas?</h2>
+    <div class="selector">
+      <button data-tab="rosa" class="active" data-i18n="sv.opt1">Explorar mis necesidades</button>
+      <button data-tab="coral" data-i18n="sv.opt2">Soluciones a medida para mi hogar</button>
+      <button data-tab="petroleo" data-i18n="sv.opt3">Diseñar y comprar con criterio</button>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="selector-panel active" data-panel="rosa">
+      <div class="card" style="border-top:6px solid var(--pink-d)">
+        <span class="pill-tag" style="background:#fde7ee" data-i18n="tag.rosa">Aprende a leer tu casa</span>
+        <h3 style="margin-top:.8rem">Cápsula Rosa</h3>
+        <p class="muted" data-i18n="sv.rosaText">Talleres experienciales y creativos que unen teoría y actividades prácticas para ayudarte a comprender tu manera de habitar y construir una caja de herramientas personal, hecha de instrumentos, paletas cromáticas y estrategias de diseño para aplicar en tu casa.</p>
+        <p style="margin-top:.8rem"><strong data-i18n="sv.priceLbl">Precio:</strong> <span data-i18n="price.rosa">20–35 € + IVA</span></p>
+        <a class="btn btn--primary" href="rosa.html" style="margin-top:1rem" data-i18n="cta.more">Conocer más</a>
+      </div>
+    </div>
+    <div class="selector-panel" data-panel="coral">
+      <div class="card" style="border-top:6px solid var(--coral)">
+        <span class="pill-tag" style="background:#ffe5db" data-i18n="tag.coral">Diseña con nosotras tu casa</span>
+        <h3 style="margin-top:.8rem">Cápsula Coral</h3>
+        <p class="muted" data-i18n="sv.coralText">Desbloquea el test completo, profundiza en tu perfil y elige el nivel de asesoría profesional más adecuado para ti, desde la autoproyección guiada hasta el acompañamiento personalizado.</p>
+        <p style="margin-top:.8rem"><strong data-i18n="sv.priceLbl">Precio:</strong> <span data-i18n="sv.coralPrice">Desde 20 € (test) hasta proyecto completo</span></p>
+        <a class="btn btn--primary" href="coral.html" style="margin-top:1rem" data-i18n="cta.more">Conocer más</a>
+      </div>
+    </div>
+    <div class="selector-panel" data-panel="petroleo">
+      <div class="card" style="border-top:6px solid var(--teal)">
+        <span class="pill-tag" style="background:#d9eeec" data-i18n="tag.petroleo">Elige y compra con criterio</span>
+        <h3 style="margin-top:.8rem">Cápsula Petróleo</h3>
+        <p class="muted" data-i18n="sv.petroleoText">Recibe tu catálogo personalizado de mobiliario y acabados según tu perfil, con productos seleccionados de tiendas físicas y comercios locales.</p>
+        <p style="margin-top:.8rem"><strong data-i18n="sv.priceLbl">Precio:</strong> <span data-i18n="sv.petroleoPrice">Desde 35 € según pack</span></p>
+        <a class="btn btn--primary" href="petroleo.html" style="margin-top:1rem" data-i18n="cta.more">Conocer más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section">
+  <div class="wrap center"><h2 data-i18n="sv.compTitle">Compara los tres niveles</h2></div>
+  <div class="wrap" style="overflow-x:auto">
+    <table class="price-table" style="margin-top:1.6rem;min-width:640px">
+      <thead><tr>
+        <th></th><th>Rosa</th><th>Coral</th><th>Petróleo</th>
+      </tr></thead>
+      <tbody>
+        <tr><td data-i18n="sv.cFormat">Formato</td><td data-i18n="sv.cFmtRosa">Taller presencial</td><td data-i18n="sv.cFmtCoral">Test + asesoría online</td><td data-i18n="sv.cFmtPet">Test + catálogo online</td></tr>
+        <tr><td data-i18n="sv.cDur">Duración</td><td data-i18n="sv.cDurRosa">~3 horas</td><td data-i18n="sv.cDurCoral">Acceso al perfil</td><td data-i18n="sv.cDurPet">Acceso al perfil</td></tr>
+        <tr><td data-i18n="sv.cFor">Ideal para</td><td data-i18n="sv.cForRosa">Explorar y sentir, en grupo</td><td data-i18n="sv.cForCoral">Comprar/reformar con criterio</td><td data-i18n="sv.cForPet">Comprar con conciencia</td></tr>
+        <tr><td data-i18n="sv.cPrice">Precio</td><td data-i18n="price.rosa">20–35 € + IVA</td><td data-i18n="sv.cPriceCoral">Desde 20 €</td><td data-i18n="sv.cPricePet">Desde 35 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="wrap"><div class="cta-band">
+    <h2 data-i18n="sv.ctaTitle">¿No sabes por dónde empezar?</h2>
+    <p data-i18n="sv.ctaSub">Haz el test gratis y descubre tu perfil sensorial. A partir de ahí, te mostramos el camino.</p>
+    <a class="btn btn--light" href="prueba-gratis.html" style="margin-top:1.4rem" data-i18n="cta.testLong">Inicia tu test gratis</a>
+  </div></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div><a class="brand" href="index.html" style="color:#efe9d6"><span class="pill"></span> cá<b>psula</b></a>
+      <p class="footer-tag" data-i18n="footer.tag">habitar · habitar·te · habit·arte</p>
+      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos hogares que cuidan tu mente y tu cuerpo.</p></div>
+    <div><h4 data-i18n="footer.explore">Explora</h4><ul>
+      <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
+      <li><a href="rosa.html">Cápsula Rosa</a></li><li><a href="coral.html">Cápsula Coral</a></li>
+      <li><a href="petroleo.html">Cápsula Petróleo</a></li><li><a href="prueba-gratis.html" data-i18n="nav.test">Test</a></li></ul></div>
+    <div><h4 data-i18n="footer.contactH">Contacto</h4><ul>
+      <li><a href="contacto.html">hola@capsula.studio</a></li><li><a href="contacto.html">Instagram</a></li>
+      <li><a href="contacto.html">LinkedIn</a></li><li><a href="contacto.html" data-i18n="footer.b2b">Colaboraciones B2B</a></li></ul></div>
+  </div>
+  <div class="wrap footer-bottom"><span>© 2026 Cápsula · Barcelona</span><span><a href="#" data-i18n="footer.privacy">Privacidad</a> · <a href="#" data-i18n="footer.terms">Términos</a></span></div>
+</footer>
+
+<div class="mobile-cta"><a class="btn btn--primary" href="prueba-gratis.html" data-i18n="cta.testLong">Inicia tu test gratis</a></div>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/globals-i18n.js"></script>
+<script>
+CAPSULA_I18N.add({
+  en: {
+    "tag.rosa":"Learn to read your home","tag.coral":"Design your home with us","tag.petroleo":"Choose and buy with criteria",
+    "price.rosa":"€20–35 + VAT",
+    "sv.h1":"Three paths to your living wellbeing","sv.lead":"Each level answers a different need and budget. Start where you are today.",
+    "sv.selTitle":"What are you looking for?",
+    "sv.opt1":"To explore my needs","sv.opt2":"Tailored solutions for my home","sv.opt3":"To design and shop with criteria",
+    "sv.priceLbl":"Price:",
+    "sv.rosaText":"Experiential, creative workshops combining theory and hands-on activities to help you understand the way you inhabit and build a personal toolbox of instruments, colour palettes and design strategies to apply in your home.",
+    "sv.coralText":"Unlock the full test, go deeper into your profile and choose the level of professional advisory that suits you best, from guided self-design to personalized support.",
+    "sv.coralPrice":"From €20 (test) up to a full project",
+    "sv.petroleoText":"Receive your personalized catalogue of furniture and finishes based on your profile, with products selected from physical stores and local businesses.",
+    "sv.petroleoPrice":"From €35 depending on the pack",
+    "sv.compTitle":"Compare the three levels",
+    "sv.cFormat":"Format","sv.cFmtRosa":"In-person workshop","sv.cFmtCoral":"Online test + advisory","sv.cFmtPet":"Online test + catalogue",
+    "sv.cDur":"Duration","sv.cDurRosa":"~3 hours","sv.cDurCoral":"Profile access","sv.cDurPet":"Profile access",
+    "sv.cFor":"Ideal for","sv.cForRosa":"Explore and feel, as a group","sv.cForCoral":"Buy/renovate with criteria","sv.cForPet":"Conscious shopping",
+    "sv.cPrice":"Price","sv.cPriceCoral":"From €20","sv.cPricePet":"From €35",
+    "sv.ctaTitle":"Not sure where to start?","sv.ctaSub":"Take the free test and discover your sensory profile. From there, we’ll show you the way."
+  },
+  it: {
+    "tag.rosa":"Impara a leggere la tua casa","tag.coral":"Progetta con noi la tua casa","tag.petroleo":"Scegli e compra con criterio",
+    "price.rosa":"20–35 € + IVA",
+    "sv.h1":"Tre percorsi per il tuo benessere abitativo","sv.lead":"Ogni livello risponde a un’esigenza e a un budget diversi. Parti da dove sei oggi.",
+    "sv.selTitle":"Cosa cerchi?",
+    "sv.opt1":"Esplorare le mie esigenze","sv.opt2":"Soluzioni su misura per casa mia","sv.opt3":"Progettare e comprare con criterio",
+    "sv.priceLbl":"Prezzo:",
+    "sv.rosaText":"Workshop esperienziali e creativi che uniscono teoria e attività pratiche per aiutarti a comprendere il tuo modo di abitare e costruire una cassetta degli attrezzi personale, fatta di strumenti, palette cromatiche e strategie progettuali da applicare nella tua casa.",
+    "sv.coralText":"Sblocca il test completo, approfondisci il tuo profilo e scegli il livello di consulenza professionale più adatto a te, dall’autoprogettazione al supporto personalizzato.",
+    "sv.coralPrice":"Da 20 € (test) fino al progetto completo",
+    "sv.petroleoText":"Ricevi il tuo catalogo personalizzato di arredi e finiture in base al tuo profilo, con prodotti selezionati da negozi fisici e realtà locali.",
+    "sv.petroleoPrice":"Da 35 € secondo il pack",
+    "sv.compTitle":"Confronta i tre livelli",
+    "sv.cFormat":"Formato","sv.cFmtRosa":"Workshop dal vivo","sv.cFmtCoral":"Test + consulenza online","sv.cFmtPet":"Test + catalogo online",
+    "sv.cDur":"Durata","sv.cDurRosa":"~3 ore","sv.cDurCoral":"Accesso al profilo","sv.cDurPet":"Accesso al profilo",
+    "sv.cFor":"Ideale per","sv.cForRosa":"Esplorare e sentire, in gruppo","sv.cForCoral":"Comprare/ristrutturare con criterio","sv.cForPet":"Acquisto consapevole",
+    "sv.cPrice":"Prezzo","sv.cPriceCoral":"Da 20 €","sv.cPricePet":"Da 35 €",
+    "sv.ctaTitle":"Non sai da dove iniziare?","sv.ctaSub":"Fai il test gratis e scopri il tuo profilo sensoriale. Da lì, ti mostriamo la strada."
+  }
+});
+</script>
+<script src="assets/main.js"></script>
+</body>
+</html>
