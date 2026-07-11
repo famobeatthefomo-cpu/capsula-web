@@ -3,108 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cápsula Rosa · Taller presencial</title>
-<meta name="description" content="Cápsula Rosa: un taller presencial de meditación, test y moodboard para explorar la relación entre tu persona y tus espacios.">
+<title>Cápsula Rosa · Talleres</title>
+<meta name="description" content="Cápsula Rosa: talleres experienciales para aprender a leer tu casa. Grupos privados, talleres abiertos y talleres en programa.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
+<body class="page-rosa">
 
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="pill"></span> cá<b>psula</b></a>
+    <span class="brand brand--static"><img class="brand-logo" src="assets/img/logo.png" alt="Cápsula"></span>
     <nav class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
-      <a href="servicios.html" data-i18n="nav.services">Servicios</a>
-      <a href="prueba-gratis.html" data-i18n="nav.test">Test</a>
-      <a href="contacto.html" data-i18n="nav.contact">Contacto</a>
+      <a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
+      <a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
+      <a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
+      <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
+      <a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a>
     </nav>
     <div class="nav-actions">
-      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="en">EN</button><button data-lang="it">IT</button></div>
-      <a class="btn btn--primary desktop-only" href="prueba-gratis.html" data-i18n="cta.test">Test gratis</a>
+      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <a class="btn btn--capsule btn--coralc desktop-only js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
       <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<section class="page-hero ph--rosa">
+<section class="page-hero">
   <div class="wrap">
     <p class="prov" data-i18n="rosa.prov">¿Te has preguntado alguna vez por qué en ciertos ambientes te sientes bien y en otros enseguida más cansado, nervioso o fuera de lugar?</p>
-    <h1>Cápsula Rosa</h1>
+    <h1><span class="pill-ico pill-ico--rosa"></span>Cápsula Rosa</h1>
     <p class="tag" data-i18n="rosa.tag">La casa no es un fondo neutro: la luz, los colores, los materiales, los objetos, los ruidos y la disposición de los espacios pueden influir en cómo te sientes cada día.</p>
-    <div class="hero-cta"><a class="btn btn--primary" href="#reservar" data-i18n="rosa.cta1">Reserva tu taller</a><a class="btn btn--ghost" href="#agenda" data-i18n="rosa.cta2">Ver cómo funciona</a></div>
+    <div class="hero-cta"><a class="btn btn--capsule btn--rosa" href="#participar" data-i18n="rosa.cta1">Participa en un taller</a></div>
   </div>
 </section>
 
-<!-- 3 BLOCKS -->
-<section class="section" id="agenda">
+<!-- EL TALLER -->
+<section class="section" id="taller">
   <div class="wrap center"><p class="eyebrow" data-i18n="rosa.structEyebrow">El taller</p><h2 data-i18n="rosa.structTitle">Aprende a leer tu casa</h2></div>
   <div class="wrap">
     <p class="muted" style="max-width:70ch;margin-inline:auto" data-i18n="rosa.intro1">Con una dosis de Cápsula Rosa aprendes a observarte a ti mismo en relación con tu casa, reconociendo lo que te hace sentir bien, lo que te fatiga y qué pequeños cambios pueden mejorar tu bienestar cotidiano.</p>
     <p class="muted" style="max-width:70ch;margin-inline:auto;margin-top:1rem" data-i18n="rosa.intro2">A través de teoría, actividades prácticas y herramientas creativas, construyes una base visual y de diseño personal desde la que partir:</p>
   </div>
   <div class="wrap grid-3" style="margin-top:1.6rem">
-    <div class="card"><div class="ico">🎨</div><h3 data-i18n="rosa.b1t">Moodboard</h3><p class="muted" data-i18n="rosa.b1">Tu moodboard personal: imágenes, materiales y referencias que traducen tu manera de habitar.</p></div>
-    <div class="card"><div class="ico">🌈</div><h3 data-i18n="rosa.b2t">Paleta cromática personalizada</h3><p class="muted" data-i18n="rosa.b2">Los colores que te hacen sentir bien, adaptados a tu percepción.</p></div>
-    <div class="card"><div class="ico">🧰</div><h3 data-i18n="rosa.b3t">Caja de herramientas</h3><p class="muted" data-i18n="rosa.b3">Instrumentos y estrategias de diseño para usar en la vida de todos los días.</p></div>
+    <div class="card"><img class="card-img" src="assets/img/lab-cassetta.jpg" alt="Caja de herramientas"><h3 data-i18n="rosa.b1t">Caja de herramientas</h3><p class="muted" data-i18n="rosa.b1">Instrumentos y estrategias de diseño para usar en la vida de todos los días.</p></div>
+    <div class="card"><img class="card-img" src="assets/img/lab-palette.jpg" alt="Paleta cromática"><h3 data-i18n="rosa.b2t">Paleta cromática personalizada</h3><p class="muted" data-i18n="rosa.b2">Los colores que te hacen sentir bien, adaptados a tu percepción.</p></div>
+    <div class="card"><img class="card-img" src="assets/img/lab-moodboard.jpg" alt="Moodboard"><h3 data-i18n="rosa.b3t">Moodboard</h3><p class="muted" data-i18n="rosa.b3">Tu moodboard personal: imágenes, materiales y referencias que traducen tu manera de habitar.</p></div>
   </div>
 </section>
 
-<!-- AUDIENCE -->
+<!-- A QUIÉN VA DIRIGIDO -->
 <section class="section pains">
-  <div class="wrap"><p class="eyebrow" style="color:#fbd8cd" data-i18n="rosa.forEyebrow">A quién va dirigido</p><h2 data-i18n="rosa.forTitle">Para quienes quieren empezar por entenderse</h2>
-    <div class="grid-2" style="margin-top:1.8rem">
-      <div class="pain"><p data-i18n="rosa.for1">Personas de 25 a 45 años que quieren reformar su casa y empezar por sí mismas.</p></div>
-      <div class="pain"><p data-i18n="rosa.for2">Empresas y coworkings que buscan espacios de trabajo más saludables.</p></div>
+  <div class="wrap center"><h2 data-i18n="rosa.forTitle">¿A quién va dirigido?</h2></div>
+  <div class="wrap grid-2" style="margin-top:1.8rem">
+    <div class="pain"><p data-i18n="rosa.for1">Personas que quieren renovar su casa partiendo de su propio bienestar.</p></div>
+    <div class="pain"><p data-i18n="rosa.for2">Empresas y coworkings que quieren ofrecer espacios de trabajo en los que estar y sentirse bien.</p></div>
+  </div>
+</section>
+
+<!-- CÓMO PARTICIPAR -->
+<section class="section" id="participar">
+  <div class="wrap center"><p class="eyebrow" data-i18n="rosa.bookEyebrow">Cómo participar</p><h2 data-i18n="rosa.bookTitle">Tres maneras de unirte</h2></div>
+  <div class="wrap grid-3">
+    <div class="card" style="border-top:6px solid var(--pink-d);display:flex;flex-direction:column">
+      <h3 data-i18n="rosa.bk1t">Talleres grupos privados</h3>
+      <p class="muted" style="flex:1" data-i18n="rosa.bk1">Reserva un taller privado con tu grupo (mínimo 3 personas), a domicilio u online.</p>
+      <span class="venue" data-i18n="rosa.v1">Lugar: tu casa u online</span>
+      <p class="price" style="font-weight:700;color:var(--pink-dd);margin:.6rem 0 0" data-i18n="rosa.p1">30–35 € + IVA por persona</p>
+      <a class="btn btn--capsule btn--rosa" style="margin-top:1rem;align-self:flex-start" href="#form-reserva" data-i18n="rosa.bk1cta">Reserva</a>
+    </div>
+    <div class="card" style="border-top:6px solid var(--pink-d);display:flex;flex-direction:column">
+      <h3 data-i18n="rosa.bk2t">Talleres abiertos</h3>
+      <p class="muted" style="flex:1" data-i18n="rosa.bk2">Elige entre las fechas disponibles y únete a un grupo en formación, visible para todos. El taller se realiza al alcanzar 10 participantes.</p>
+      <span class="venue" data-i18n="rosa.v2">Lugar: Asociación cultural en Poble Sec, Barcelona</span>
+      <p class="price" style="font-weight:700;color:var(--pink-dd);margin:.6rem 0 0" data-i18n="rosa.p2">20–25 € + IVA por persona</p>
+      <a class="btn btn--capsule btn--rosa" style="margin-top:1rem;align-self:flex-start" href="#calendario" data-i18n="rosa.bk2cta">Encuentra grupo</a>
+    </div>
+    <div class="card" style="border-top:6px solid var(--pink-d);display:flex;flex-direction:column">
+      <h3 data-i18n="rosa.bk3t">Talleres en programa</h3>
+      <p class="muted" style="flex:1" data-i18n="rosa.bk3">Reserva tu plaza en un taller ya programado en uno de los centros colaboradores.</p>
+      <span class="venue" data-i18n="rosa.v3">Lugar: centros organizados en Barcelona</span>
+      <p class="price" style="font-weight:700;color:var(--pink-dd);margin:.6rem 0 0" data-i18n="rosa.p3">20–25 € + IVA por persona</p>
+      <a class="btn btn--capsule btn--rosa" style="margin-top:1rem;align-self:flex-start" href="#eventos" data-i18n="rosa.bk3cta">Encuentra evento</a>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="section">
-  <div class="wrap center"><p class="eyebrow" data-i18n="rosa.priceEyebrow">Precios</p><h2 data-i18n="rosa.priceTitle">Tres formatos de taller</h2></div>
-  <div class="wrap" style="overflow-x:auto">
-    <table class="price-table" style="min-width:560px">
-      <thead><tr><th data-i18n="rosa.thOpt">Opción</th><th data-i18n="rosa.thCond">Condiciones</th><th data-i18n="rosa.thPrice">Precio</th></tr></thead>
-      <tbody>
-        <tr><td data-i18n="rosa.o1">Taller a domicilio</td><td data-i18n="rosa.o1c">Grupo mínimo de 3 personas</td><td>30–35 € <span data-i18n="rosa.vat">+ IVA</span></td></tr>
-        <tr><td data-i18n="rosa.o2">Taller en Arca</td><td data-i18n="rosa.o2c">Grupo en formación; se confirma al llegar a 10</td><td>20–25 € <span data-i18n="rosa.vat">+ IVA</span></td></tr>
-        <tr><td data-i18n="rosa.o3">Taller en centro organizado</td><td data-i18n="rosa.o3c">Eventos ya programados en centros colaboradores</td><td>20–25 € <span data-i18n="rosa.vat">+ IVA</span></td></tr>
-      </tbody>
-    </table>
-    <p class="note" data-i18n="rosa.priceNote">Precios por persona.</p>
+<!-- FORM RESERVA (grupos privados) -->
+<section class="section section--tight" id="form-reserva">
+  <div class="wrap center"><h2 data-i18n="rosa.f1Title">Reserva tu taller privado</h2></div>
+  <div class="wrap" style="display:grid;place-items:center;margin-top:1.6rem">
+    <form class="form card" data-demo style="width:min(640px,100%)">
+      <div><label data-i18n="form.name">Nombre y apellidos</label><input type="text" required></div>
+      <div><label data-i18n="form.email">Email</label><input type="email" required></div>
+      <div><label data-i18n="rosa.fMode">Modalidad</label>
+        <select><option data-i18n="rosa.fModeA">Online</option><option data-i18n="rosa.fModeB">Presencial a domicilio</option></select></div>
+      <div><label data-i18n="rosa.fNum">Número de participantes</label><input type="number" min="3" value="3" required></div>
+      <button class="btn btn--capsule btn--rosa" type="submit" data-i18n="form.send">Enviar</button>
+      <p class="form-msg note" hidden data-i18n="rosa.fThanks">¡Gracias! Te recontactamos.</p>
+    </form>
   </div>
 </section>
 
-<!-- BOOKING -->
-<section class="section section--tight" id="reservar">
-  <div class="wrap center"><p class="eyebrow" data-i18n="rosa.bookEyebrow">Cómo reservar</p><h2 data-i18n="rosa.bookTitle">Tres maneras de unirte</h2></div>
-  <div class="wrap grid-3">
-    <div class="card" style="border-top:6px solid var(--pink-d)"><h3 data-i18n="rosa.bk1t">Reserva</h3><p class="muted" data-i18n="rosa.bk1">Reserva automáticamente un taller a domicilio con tu grupo de amigos (mínimo 3 personas), entre las alternativas de disponibilidad que te proponemos.</p><span class="venue" data-i18n="rosa.v1">Lugar: tu casa</span></div>
-    <div class="card" style="border-top:6px solid var(--coral)"><h3 data-i18n="rosa.bk2t">Encuentra grupo</h3><p class="muted" data-i18n="rosa.bk2">Elige entre las fechas y horarios disponibles y únete a un grupo en formación, visible para todos. Al alcanzar 10 participantes recibes una notificación para pagar y confirmar tu plaza.</p><span class="venue" data-i18n="rosa.v2">Lugar: espacio Arca</span></div>
-    <div class="card" style="border-top:6px solid var(--teal)"><h3 data-i18n="rosa.bk3t">Encuentra evento</h3><p class="muted" data-i18n="rosa.bk3">Reserva tu plaza en un taller ya programado en uno de nuestros centros colaboradores.</p><span class="venue" data-i18n="rosa.v3">Lugar: centros organizados</span></div>
+<!-- CALENDARIO (talleres abiertos) -->
+<section class="section section--tight" id="calendario">
+  <div class="wrap center"><h2 data-i18n="rosa.calTitle">Encuentra grupo · Talleres abiertos</h2>
+    <p class="muted" style="max-width:64ch;margin:0.8rem auto 0" data-i18n="rosa.calNote">El taller se realizará solo si se alcanza el número de 10 personas en el día seleccionado: al enviar tu selección, te pones en lista de espera.</p></div>
+  <div class="cal" id="rosa-cal">
+    <div class="cal-head">
+      <button type="button" id="cal-prev" aria-label="Mes anterior">‹</button>
+      <span class="cal-title" id="cal-title"></span>
+      <button type="button" id="cal-next" aria-label="Mes siguiente">›</button>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+    <div class="cal-legend">
+      <span class="lg-dis" data-i18n="rosa.lgDis">No disponible</span>
+      <span class="lg-open" data-i18n="rosa.lgOpen">Fecha abierta (nº de inscritos)</span>
+      <span class="lg-full" data-i18n="rosa.lgFull">Completo (10 personas, taller confirmado)</span>
+    </div>
+    <div class="center" style="margin-top:1.2rem">
+      <button class="btn btn--capsule btn--rosa" id="cal-send" disabled data-i18n="form.send">Enviar</button>
+      <p class="note" id="cal-msg" hidden data-i18n="rosa.calThanks">¡Recibido! Estás en lista de espera para la fecha seleccionada. Te avisaremos al llegar a 10 participantes.</p>
+    </div>
   </div>
-  <div class="wrap center" style="margin-top:2rem"><a class="btn btn--primary" href="contacto.html" data-i18n="rosa.cta1">Reserva tu taller</a> <a class="btn btn--ghost" href="contacto.html" data-i18n="rosa.cta3">Ver calendario de eventos</a></div>
+</section>
+
+<!-- EVENTOS (talleres en programa) -->
+<section class="section section--tight" id="eventos">
+  <div class="wrap center"><h2 data-i18n="rosa.evTitle">Encuentra evento · Talleres en programa</h2></div>
+  <div class="wrap" style="max-width:760px;margin-top:1.6rem">
+    <div class="event-row"><div class="event-logo">A</div><div class="event-info"><h4>Ateneu del Raval</h4><p>C/ de la Cera 12, Barcelona · <span data-i18n="rosa.ev1d">Sábado 26 de septiembre, 11:00</span></p></div><a class="btn btn--capsule btn--rosa" href="#" data-i18n="rosa.evCta">Reserva</a></div>
+    <div class="event-row"><div class="event-logo" style="background:var(--coral)">C</div><div class="event-info"><h4>Casa Orlandai</h4><p>C/ Jaume Piquet 23, Barcelona · <span data-i18n="rosa.ev2d">Domingo 11 de octubre, 10:30</span></p></div><a class="btn btn--capsule btn--rosa" href="#" data-i18n="rosa.evCta">Reserva</a></div>
+    <div class="event-row"><div class="event-logo" style="background:var(--pink-dd)">L</div><div class="event-info"><h4>La Lleialtat Santsenca</h4><p>C/ d’Olzinelles 31, Barcelona · <span data-i18n="rosa.ev3d">Viernes 23 de octubre, 18:00</span></p></div><a class="btn btn--capsule btn--rosa" href="#" data-i18n="rosa.evCta">Reserva</a></div>
+    <p class="note center" data-i18n="rosa.evNote">La reserva y el pago se realizan en la web de cada centro.</p>
+  </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div><a class="brand" href="index.html" style="color:#efe9d6"><span class="pill"></span> cá<b>psula</b></a>
+    <div>
+      <img class="brand-logo" src="assets/img/logo.png" alt="Cápsula">
       <p class="footer-tag" data-i18n="footer.tag">habitar · habitar·te · habit·arte</p>
-      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos hogares que cuidan tu mente y tu cuerpo.</p></div>
+      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos hogares que cuidan tu mente y tu cuerpo.</p>
+    </div>
     <div><h4 data-i18n="footer.explore">Explora</h4><ul>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
-      <li><a href="rosa.html">Cápsula Rosa</a></li><li><a href="coral.html">Cápsula Coral</a></li>
-      <li><a href="petroleo.html">Cápsula Petróleo</a></li><li><a href="prueba-gratis.html" data-i18n="nav.test">Test</a></li></ul></div>
+      <li><a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
+      <li><a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a></li>
+      <li><a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a></li>
+      <li><a href="galeria.html" data-i18n="nav.gallery">Galería</a></li>
+      <li><a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a></li>
+    </ul></div>
     <div><h4 data-i18n="footer.contactH">Contacto</h4><ul>
-      <li><a href="contacto.html">hola@capsula.studio</a></li><li><a href="contacto.html">Instagram</a></li>
-      <li><a href="contacto.html">LinkedIn</a></li><li><a href="contacto.html" data-i18n="footer.b2b">Colaboraciones B2B</a></li></ul></div>
+      <li><a href="mailto:hola@capsula.studio">hola@capsula.studio</a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul></div>
   </div>
   <div class="wrap footer-bottom"><span>© 2026 Cápsula · Barcelona</span><span><a href="#" data-i18n="footer.privacy">Privacidad</a> · <a href="#" data-i18n="footer.terms">Términos</a></span></div>
 </footer>
 
-<div class="mobile-cta"><a class="btn btn--primary" href="#reservar" data-i18n="rosa.cta1">Reserva tu taller</a></div>
+<div class="mobile-cta"><a class="btn btn--capsule btn--rosa" href="#participar" data-i18n="rosa.cta1">Participa en un taller</a></div>
 
 <script src="assets/i18n.js"></script>
 <script src="assets/globals-i18n.js"></script>
@@ -113,53 +175,129 @@ CAPSULA_I18N.add({
   en: {
     "rosa.prov":"Have you ever wondered why in some environments you feel good, and in others you immediately feel more tired, nervous or out of place?",
     "rosa.tag":"Your home is not a neutral backdrop: light, colours, materials, objects, sounds and the layout of spaces can influence how you feel every day.",
-    "rosa.cta1":"Book your workshop","rosa.cta2":"See how it works","rosa.cta3":"See the events calendar",
+    "rosa.cta1":"Join a workshop",
     "rosa.structEyebrow":"The workshop","rosa.structTitle":"Learn to read your home",
     "rosa.intro1":"With a dose of Cápsula Rosa you learn to observe yourself in relation to your home, recognising what makes you feel good, what wears you down and which small changes can improve your everyday wellbeing.",
     "rosa.intro2":"Through theory, hands-on activities and creative tools, you build a personal visual and design base to start from:",
-    "rosa.b1t":"Moodboard","rosa.b1":"Your personal moodboard: images, materials and references that translate the way you inhabit.",
+    "rosa.b1t":"Toolbox","rosa.b1":"Design instruments and strategies to use in everyday life.",
     "rosa.b2t":"Personalized colour palette","rosa.b2":"The colours that make you feel good, adapted to your perception.",
-    "rosa.b3t":"Toolbox","rosa.b3":"Design instruments and strategies to use in everyday life.",
-    "rosa.forEyebrow":"Who it’s for","rosa.forTitle":"For those who want to start by understanding themselves",
-    "rosa.for1":"People aged 25–45 who want to renovate their home and start with themselves.",
-    "rosa.for2":"Companies and coworkings seeking healthier workspaces.",
-    "rosa.priceEyebrow":"Pricing","rosa.priceTitle":"Three workshop formats",
-    "rosa.thOpt":"Option","rosa.thCond":"Conditions","rosa.thPrice":"Price","rosa.vat":"+ VAT",
-    "rosa.o1":"At-home workshop","rosa.o1c":"Minimum group of 3 people",
-    "rosa.o2":"Workshop at Arca","rosa.o2c":"Group in the making; confirmed when it reaches 10",
-    "rosa.o3":"Workshop at a partner venue","rosa.o3c":"Events already scheduled at partner centres",
-    "rosa.priceNote":"Prices per person.",
-    "rosa.bookEyebrow":"How to book","rosa.bookTitle":"Three ways to join",
-    "rosa.bk1t":"Book","rosa.bk1":"Automatically book an at-home workshop with your group of friends (minimum 3 people), from the availability options we offer.","rosa.v1":"Venue: your home",
-    "rosa.bk2t":"Find a group","rosa.bk2":"Choose from the available dates and times and join a group in the making, visible to everyone. When it reaches 10 participants you get a notification to pay and confirm your spot.","rosa.v2":"Venue: Arca space",
-    "rosa.bk3t":"Find an event","rosa.bk3":"Book your spot in a workshop already scheduled at one of our partner centres.","rosa.v3":"Venue: partner centres"
+    "rosa.b3t":"Moodboard","rosa.b3":"Your personal moodboard: images, materials and references that translate the way you inhabit.",
+    "rosa.forTitle":"Who is it for?",
+    "rosa.for1":"People who want to renovate their home starting from their own wellbeing.",
+    "rosa.for2":"Companies and coworkings that want to offer workspaces where people can be — and feel — well.",
+    "rosa.bookEyebrow":"How to join","rosa.bookTitle":"Three ways to join",
+    "rosa.bk1t":"Private group workshops","rosa.bk1":"Book a private workshop with your group (minimum 3 people), at home or online.","rosa.v1":"Venue: your home or online","rosa.p1":"€30–35 + VAT per person","rosa.bk1cta":"Book",
+    "rosa.bk2t":"Open workshops","rosa.bk2":"Choose from the available dates and join a group in the making, visible to everyone. The workshop takes place once it reaches 10 participants.","rosa.v2":"Venue: cultural association in Poble Sec, Barcelona","rosa.p2":"€20–25 + VAT per person","rosa.bk2cta":"Find a group",
+    "rosa.bk3t":"Scheduled workshops","rosa.bk3":"Book your spot in a workshop already scheduled at one of our partner centres.","rosa.v3":"Venue: partner centres in Barcelona","rosa.p3":"€20–25 + VAT per person","rosa.bk3cta":"Find an event",
+    "rosa.f1Title":"Book your private workshop",
+    "form.name":"Full name","form.email":"Email",
+    "rosa.fMode":"Mode","rosa.fModeA":"Online","rosa.fModeB":"In person, at home",
+    "rosa.fNum":"Number of participants","rosa.fThanks":"Thanks! We’ll get back to you.",
+    "rosa.calTitle":"Find a group · Open workshops",
+    "rosa.calNote":"The workshop will only take place if 10 people are reached on the selected day: by sending your selection, you join the waiting list.",
+    "rosa.lgDis":"Not available","rosa.lgOpen":"Open date (nº signed up)","rosa.lgFull":"Full (10 people, workshop confirmed)",
+    "rosa.calThanks":"Received! You’re on the waiting list for the selected date. We’ll notify you when it reaches 10 participants.",
+    "rosa.evTitle":"Find an event · Scheduled workshops",
+    "rosa.ev1d":"Saturday 26 September, 11:00","rosa.ev2d":"Sunday 11 October, 10:30","rosa.ev3d":"Friday 23 October, 18:00",
+    "rosa.evCta":"Book","rosa.evNote":"Booking and payment take place on each centre’s website."
   },
   it: {
     "rosa.prov":"Ti sei mai chiesto perché in certi ambienti ti senti bene e in altri ti senti subito più stanco, nervoso o fuori posto?",
     "rosa.tag":"La casa non è uno sfondo neutro: luce, colori, materiali, oggetti, rumori e disposizione degli spazi possono influenzare il modo in cui ti senti ogni giorno.",
-    "rosa.cta1":"Prenota il tuo taller","rosa.cta2":"Scopri come funziona","rosa.cta3":"Guarda il calendario eventi",
-    "rosa.structEyebrow":"Il taller","rosa.structTitle":"Impara a leggere la tua casa",
+    "rosa.cta1":"Partecipa a un laboratorio",
+    "rosa.structEyebrow":"Il laboratorio","rosa.structTitle":"Impara a leggere la tua casa",
     "rosa.intro1":"Con una dose di Cápsula Rosa impari a osservare te stesso in relazione alla tua casa, riconoscendo ciò che ti fa stare bene, ciò che ti affatica e quali piccole modifiche possono migliorare il tuo benessere quotidiano.",
     "rosa.intro2":"Attraverso teoria, attività pratiche e strumenti creativi, costruisci una base visiva e progettuale personale da cui partire:",
-    "rosa.b1t":"Moodboard","rosa.b1":"La tua moodboard personale: immagini, materiali e riferimenti che traducono il tuo modo di abitare.",
+    "rosa.b1t":"Cassetta degli attrezzi","rosa.b1":"Strumenti e strategie progettuali da usare nella vita di tutti i giorni.",
     "rosa.b2t":"Palette cromatica personalizzata","rosa.b2":"I colori che ti fanno stare bene, adattati alla tua percezione.",
-    "rosa.b3t":"Cassetta degli attrezzi","rosa.b3":"Strumenti e strategie progettuali da usare nella vita di tutti i giorni.",
-    "rosa.forEyebrow":"A chi si rivolge","rosa.forTitle":"Per chi vuole partire dal capirsi",
-    "rosa.for1":"Persone tra i 25 e i 45 anni che vogliono rinnovare casa partendo da sé.",
-    "rosa.for2":"Aziende e coworking che cercano spazi di lavoro più sani.",
-    "rosa.priceEyebrow":"Prezzi","rosa.priceTitle":"Tre formati di taller",
-    "rosa.thOpt":"Opzione","rosa.thCond":"Condizioni","rosa.thPrice":"Prezzo","rosa.vat":"+ IVA",
-    "rosa.o1":"Taller a domicilio","rosa.o1c":"Gruppo minimo di 3 persone",
-    "rosa.o2":"Taller presso Arca","rosa.o2c":"Gruppo in formazione; confermato al raggiungimento di 10",
-    "rosa.o3":"Taller presso centri organizzati","rosa.o3c":"Eventi già in programma nei centri partner",
-    "rosa.priceNote":"Prezzi a persona.",
-    "rosa.bookEyebrow":"Come prenotare","rosa.bookTitle":"Tre modi per unirti",
-    "rosa.bk1t":"Prenota","rosa.bk1":"Prenota automaticamente un taller a domicilio con il tuo gruppo di amici (minimo 3 persone), sulla base delle alternative di disponibilità che ti indichiamo.","rosa.v1":"Luogo: a domicilio",
-    "rosa.bk2t":"Trova gruppo","rosa.bk2":"Scegli tra le date e gli orari disponibili, unisciti a un gruppo in formazione visibile a tutti e, al raggiungimento di 10 partecipanti, ricevi una notifica per effettuare il pagamento e confermare la prenotazione.","rosa.v2":"Luogo: presso Arca",
-    "rosa.bk3t":"Trova evento","rosa.bk3":"Prenotati a un taller già in programma in uno dei centri organizzati.","rosa.v3":"Luogo: centri organizzati"
+    "rosa.b3t":"Moodboard","rosa.b3":"La tua moodboard personale: immagini, materiali e riferimenti che traducono il tuo modo di abitare.",
+    "rosa.forTitle":"A chi si rivolge?",
+    "rosa.for1":"Persone che vogliono rinnovare casa partendo dal proprio benessere.",
+    "rosa.for2":"Aziende e coworking che vogliono offrire spazi di lavoro in cui stare e sentirsi bene.",
+    "rosa.bookEyebrow":"Come partecipare","rosa.bookTitle":"Tre modi per unirti",
+    "rosa.bk1t":"Laboratori gruppi privati","rosa.bk1":"Prenota un laboratorio privato con il tuo gruppo (minimo 3 persone), a domicilio o online.","rosa.v1":"Luogo: casa tua oppure online","rosa.p1":"30–35 € + IVA a persona","rosa.bk1cta":"Prenota",
+    "rosa.bk2t":"Laboratori aperti","rosa.bk2":"Scegli tra le date disponibili e unisciti a un gruppo in formazione, visibile a tutti. Il laboratorio si svolge al raggiungimento di 10 partecipanti.","rosa.v2":"Luogo: Associazione culturale in Poble Sec, Barcellona","rosa.p2":"20–25 € + IVA a persona","rosa.bk2cta":"Trova gruppo",
+    "rosa.bk3t":"Laboratori in programma","rosa.bk3":"Prenota il tuo posto in un laboratorio già in programma in uno dei centri collaboratori.","rosa.v3":"Luogo: centri organizzati a Barcellona","rosa.p3":"20–25 € + IVA a persona","rosa.bk3cta":"Trova evento",
+    "rosa.f1Title":"Prenota il tuo laboratorio privato",
+    "form.name":"Nome e cognome","form.email":"Email",
+    "rosa.fMode":"Modalità","rosa.fModeA":"Online","rosa.fModeB":"Presenziale a domicilio",
+    "rosa.fNum":"Numero partecipanti","rosa.fThanks":"Grazie! Ti ricontattiamo.",
+    "rosa.calTitle":"Trova gruppo · Laboratori aperti",
+    "rosa.calNote":"Il laboratorio verrà svolto solo se si raggiunge il numero di 10 persone nel giorno selezionato: inviando la tua selezione ti stai mettendo in lista d’attesa.",
+    "rosa.lgDis":"Non disponibile","rosa.lgOpen":"Data aperta (n° di iscritti)","rosa.lgFull":"Completo (10 persone, laboratorio confermato)",
+    "rosa.calThanks":"Ricevuto! Sei in lista d’attesa per la data selezionata. Ti avviseremo al raggiungimento di 10 partecipanti.",
+    "rosa.evTitle":"Trova evento · Laboratori in programma",
+    "rosa.ev1d":"Sabato 26 settembre, 11:00","rosa.ev2d":"Domenica 11 ottobre, 10:30","rosa.ev3d":"Venerdì 23 ottobre, 18:00",
+    "rosa.evCta":"Prenota","rosa.evNote":"Prenotazione e pagamento avvengono sul sito di ogni centro."
   }
 });
 </script>
 <script src="assets/main.js"></script>
+<script>
+/* Calendario demo — Laboratori aperti */
+(function () {
+  var view = new Date(); view.setDate(1);
+  var today = new Date(); today.setHours(0,0,0,0);
+  var selected = null;
+  var grid = document.getElementById("cal-grid");
+  var title = document.getElementById("cal-title");
+  var send = document.getElementById("cal-send");
+  var msg = document.getElementById("cal-msg");
+  if (!grid) return;
+
+  // Estado determinista de cada día (demo): gris / abierto (con inscritos) / completo
+  function dayState(y, m, d) {
+    var dt = new Date(y, m, d);
+    if (dt <= today) return { s: "disabled" };
+    var dow = dt.getDay();
+    if (dow === 1 || dow === 3) return { s: "disabled" }; // lunes y miércoles no disponibles
+    var h = (d * 7 + m * 11 + y) % 10;
+    if (h === 3) return { s: "full", n: 10 };
+    if (h < 6) return { s: "open", n: (d * 3 + m) % 9 };  // 0–8 inscritos
+    return { s: "disabled" };
+  }
+
+  function langLocale() {
+    var l = document.documentElement.lang || "es";
+    return l === "it" ? "it-IT" : l === "en" ? "en-GB" : "es-ES";
+  }
+
+  function render() {
+    var y = view.getFullYear(), m = view.getMonth();
+    title.textContent = view.toLocaleDateString(langLocale(), { month: "long", year: "numeric" });
+    grid.innerHTML = "";
+    var dows = { "es-ES":["L","M","X","J","V","S","D"], "it-IT":["L","M","M","G","V","S","D"], "en-GB":["M","T","W","T","F","S","S"] }[langLocale()];
+    dows.forEach(function (d) { var el = document.createElement("div"); el.className = "dow"; el.textContent = d; grid.appendChild(el); });
+    var first = (new Date(y, m, 1).getDay() + 6) % 7; // lunes = 0
+    for (var i = 0; i < first; i++) { var pad = document.createElement("div"); pad.className = "cal-day out"; grid.appendChild(pad); }
+    var days = new Date(y, m + 1, 0).getDate();
+    for (var d = 1; d <= days; d++) {
+      (function (d) {
+        var st = dayState(y, m, d);
+        var el = document.createElement("div");
+        el.className = "cal-day " + st.s;
+        el.textContent = d;
+        if (st.s === "open" && st.n > 0) { var c = document.createElement("span"); c.className = "cnt"; c.textContent = st.n; el.appendChild(c); }
+        if (st.s === "full") { var c2 = document.createElement("span"); c2.className = "cnt"; c2.textContent = "10"; el.appendChild(c2); }
+        if (st.s === "open") {
+          el.addEventListener("click", function () {
+            grid.querySelectorAll(".cal-day.selected").forEach(function (x) { x.classList.remove("selected"); });
+            el.classList.add("selected");
+            selected = new Date(y, m, d);
+            send.disabled = false; msg.hidden = true;
+          });
+        }
+        grid.appendChild(el);
+      })(d);
+    }
+  }
+
+  document.getElementById("cal-prev").addEventListener("click", function () { view.setMonth(view.getMonth() - 1); selected = null; send.disabled = true; render(); });
+  document.getElementById("cal-next").addEventListener("click", function () { view.setMonth(view.getMonth() + 1); selected = null; send.disabled = true; render(); });
+  send.addEventListener("click", function () { if (selected) { msg.hidden = false; } });
+  document.querySelectorAll(".lang-switch button").forEach(function (b) { b.addEventListener("click", function () { setTimeout(render, 0); }); });
+  render();
+})();
+</script>
 </body>
 </html>

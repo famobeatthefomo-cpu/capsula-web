@@ -52,5 +52,35 @@
         form.reset();
       });
     });
+
+    // ---- Auth mockup (localStorage) ----
+    // If logged in, the header capsule shows "Carta Habitacional" instead of "Accede".
+    var user = null;
+    try { user = JSON.parse(localStorage.getItem("capsula_user")); } catch (e) {}
+    if (user && user.name) {
+      document.querySelectorAll(".js-auth-cta").forEach(function (a) {
+        a.setAttribute("data-i18n", "cta.profile");
+        a.dataset.es = "Carta Habitacional";
+        a.innerHTML = "Carta Habitacional";
+      });
+      var lang = "es";
+      try { lang = localStorage.getItem("capsula_lang") || "es"; } catch (e) {}
+      if (window.CAPSULA_I18N) CAPSULA_I18N.apply(lang);
+    }
+
+    // Simple modals
+    document.querySelectorAll("[data-modal-open]").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var m = document.getElementById(btn.getAttribute("data-modal-open"));
+        if (m) m.classList.add("open");
+      });
+    });
+    document.querySelectorAll(".modal-bg").forEach(function (bg) {
+      bg.addEventListener("click", function (e) { if (e.target === bg) bg.classList.remove("open"); });
+      bg.querySelectorAll(".close").forEach(function (c) {
+        c.addEventListener("click", function () { bg.classList.remove("open"); });
+      });
+    });
   });
 })();

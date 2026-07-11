@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accede · Carta Habitacional · Cápsula</title>
+<meta name="description" content="Regístrate o accede a tu perfil personal: tu Carta Habitacional con el Test “Mi casa a mi medida” y sus tres microtests.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <span class="brand brand--static"><img class="brand-logo" src="assets/img/logo.png" alt="Cápsula"></span>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
+      <a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
+      <a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
+      <a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
+      <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
+      <a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <a class="btn btn--capsule btn--coralc desktop-only js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
+      <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- REGISTRO / ACCESO -->
+<section class="section" id="auth-view">
+  <div class="wrap center">
+    <p class="eyebrow" data-i18n="acc.eyebrow">Tu perfil personal</p>
+    <h1 data-i18n="acc.h1">Accede a tu Carta Habitacional</h1>
+    <p class="lead" style="max-width:56ch;margin:1rem auto 0" data-i18n="acc.lead">Regístrate o accede para consultar tu Carta Habitacional: el resultado del Test “Mi casa a mi medida” y sus tres microtests.</p>
+  </div>
+  <div class="wrap" style="display:grid;place-items:center;margin-top:2rem">
+    <form class="form card" id="auth-form" style="width:min(480px,100%)">
+      <div><label data-i18n="form.name">Nombre y apellidos</label><input type="text" id="auth-name" required></div>
+      <div><label data-i18n="form.email">Email</label><input type="email" id="auth-email" required></div>
+      <div><label data-i18n="acc.pass">Contraseña</label><input type="password" id="auth-pass" required minlength="4"></div>
+      <button class="btn btn--capsule btn--coralc" type="submit" data-i18n="acc.enter">Regístrate / Accede</button>
+      <p class="note" data-i18n="acc.demo">Demo: los datos se guardan solo en tu navegador.</p>
+    </form>
+  </div>
+</section>
+
+<!-- PERFIL / CARTA HABITACIONAL -->
+<section class="section" id="profile-view" hidden>
+  <div class="wrap center">
+    <p class="eyebrow" data-i18n="acc.pEyebrow">Tu perfil personal</p>
+    <h1 id="profile-title">Carta Habitacional de …</h1>
+    <h2 style="margin-top:1.6rem;font-size:1.5rem" data-i18n="acc.testTitle">Test “Mi casa a mi medida”</h2>
+  </div>
+  <div class="wrap microtests" id="microtests"></div>
+  <div class="wrap center" style="margin-top:2rem">
+    <button class="btn btn--ghost" id="logout" data-i18n="acc.logout">Cerrar sesión</button>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal"><div class="modal"><button class="close" aria-label="Cerrar">✕</button><div id="modal-body"></div></div></div>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <img class="brand-logo" src="assets/img/logo.png" alt="Cápsula">
+      <p class="footer-tag" data-i18n="footer.tag">habitar · habitar·te · habit·arte</p>
+      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos hogares que cuidan tu mente y tu cuerpo.</p>
+    </div>
+    <div><h4 data-i18n="footer.explore">Explora</h4><ul>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
+      <li><a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
+      <li><a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a></li>
+      <li><a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a></li>
+      <li><a href="galeria.html" data-i18n="nav.gallery">Galería</a></li>
+      <li><a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a></li>
+    </ul></div>
+    <div><h4 data-i18n="footer.contactH">Contacto</h4><ul>
+      <li><a href="mailto:hola@capsula.studio">hola@capsula.studio</a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul></div>
+  </div>
+  <div class="wrap footer-bottom"><span>© 2026 Cápsula · Barcelona</span><span><a href="#" data-i18n="footer.privacy">Privacidad</a> · <a href="#" data-i18n="footer.terms">Términos</a></span></div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/globals-i18n.js"></script>
+<script>
+CAPSULA_I18N.add({
+  en: {
+    "acc.eyebrow":"Your personal profile","acc.h1":"Access your Living Chart",
+    "acc.lead":"Sign up or log in to consult your Living Chart: the result of the “Mi casa a mi medida” test and its three microtests.",
+    "form.name":"Full name","form.email":"Email","acc.pass":"Password",
+    "acc.enter":"Sign up / Log in","acc.demo":"Demo: data is stored only in your browser.",
+    "acc.pEyebrow":"Your personal profile","acc.testTitle":"“Mi casa a mi medida” Test",
+    "acc.logout":"Log out"
+  },
+  it: {
+    "acc.eyebrow":"Il tuo profilo personale","acc.h1":"Accedi alla tua Carta Abitativa",
+    "acc.lead":"Registrati o accedi per consultare la tua Carta Abitativa: il risultato del Test “Mi casa a mi medida” e i suoi tre microtest.",
+    "form.name":"Nome e cognome","form.email":"Email","acc.pass":"Password",
+    "acc.enter":"Registrati / Accedi","acc.demo":"Demo: i dati vengono salvati solo nel tuo browser.",
+    "acc.pEyebrow":"Il tuo profilo personale","acc.testTitle":"Test “Mi casa a mi medida”",
+    "acc.logout":"Esci"
+  }
+});
+</script>
+<script src="assets/main.js"></script>
+<script>
+/* Perfil personal — mockup (sin backend) */
+(function () {
+  var LS_USER = "capsula_user", LS_STATE = "capsula_tests";
+  var STR = {
+    es: {
+      chartOf: "Carta Habitacional de ", free: "Gratis", locked: "Bloqueado", done: "Completado",
+      t1: "Perfil funcional", t1d: "Descubre cómo percibes los estímulos del entorno: tu perfil entre Libélula, Oso, Cangrejo y Colibrí, con tips de diseño específicos.",
+      t2: "Paleta cromática personalizada", t2d: "Los colores más adecuados para ti, del encuentro entre perfil funcional y estación armocromática, para las tres zonas funcionales de la casa.",
+      t3: "Estilo de interiorismo", t3d: "El estilo más coherente con tu manera de vivir los espacios, con materialboard y concept en palabras clave para las tres zonas funcionales.",
+      doTest: "Realiza el test", seeResult: "Consulta tu resultado", unlock: "Desbloquea con el test completo",
+      payTitle: "Desbloquea el test completo", payDesc: "Elige tu opción (pago simulado en esta demo):",
+      pay1: "Para una persona — 20 €", pay2: "Convivientes de 2 personas — 30 €", pay3: "Núcleo de 3–5 personas — 50 € (+10 €/extra)",
+      buy: "Compra", paid: "¡Pago simulado completado! Microtests desbloqueados.",
+      simTitle: "Demo del microtest", simDesc: "En la versión final aquí se abre la experiencia inmersiva del microtest. En esta demo, pulsa para generar un resultado de ejemplo.",
+      simBtn: "Completar test (demo)",
+      resT1: "Tu perfil funcional: ", resT2: "Tu paleta: ", resT3: "Tu estilo: ",
+      profiles: { lib: ["La Libélula","Perceptiva y matizada: aprecia la luz, el detalle y los equilibrios sutiles. Tips: ilumina por capas, cuida los detalles materiales y evita saturar el ambiente."],
+                  oso: ["El Oso","Estable y de fondo: necesita estímulos claros para activarse. Tips: contrastes definidos, zonas de actividad bien marcadas y colores francos."],
+                  can: ["El Cangrejo","Sensible y protector: necesita refugio y control del estímulo. Tips: rincones envolventes, materiales suaves y control de ruido y luz."],
+                  col: ["El Colibrí","Ágil y estimulado: busca color, movimiento y variedad. Tips: paletas vivas, elementos cambiantes y espacios flexibles."] },
+      res2: "Otoño profundo — tonos cálidos y envolventes para la zona de comer/cocinar, neutros suaves para dormir/relajarse y acentos activadores para trabajar/concentrarse.",
+      res3: "Japandi cálido — madera clara, textiles naturales y orden visual. Concept: calma (dormir), convivialidad (comer), claridad (trabajar)."
+    },
+    it: {
+      chartOf: "Carta Abitativa di ", free: "Gratis", locked: "Bloccato", done: "Completato",
+      t1: "Profilo funzionale", t1d: "Scopri come percepisci gli stimoli dell’ambiente: il tuo profilo tra Libellula, Orso, Granchio e Colibrì, con tips progettuali specifici.",
+      t2: "Palette cromatica personalizzata", t2d: "I colori più adatti a te, dall’incontro tra profilo funzionale e stagione armocromatica, per le tre zone funzionali della casa.",
+      t3: "Stile di arredamento", t3d: "Lo stile più coerente con il tuo modo di vivere gli spazi, con materialboard e concept in parole chiave per le tre zone funzionali.",
+      doTest: "Svolgi il test", seeResult: "Consulta il tuo risultato", unlock: "Sblocca con il test completo",
+      payTitle: "Sblocca il test completo", payDesc: "Scegli la tua opzione (pagamento simulato in questa demo):",
+      pay1: "Per una persona — 20 €", pay2: "Coabitanti di 2 persone — 30 €", pay3: "Nucleo di 3–5 persone — 50 € (+10 €/extra)",
+      buy: "Acquista", paid: "Pagamento simulato completato! Microtest sbloccati.",
+      simTitle: "Demo del microtest", simDesc: "Nella versione finale qui si apre l’esperienza immersiva del microtest. In questa demo, premi per generare un risultato di esempio.",
+      simBtn: "Completa il test (demo)",
+      resT1: "Il tuo profilo funzionale: ", resT2: "La tua palette: ", resT3: "Il tuo stile: ",
+      profiles: { lib: ["La Libellula","Percettiva e sfumata: apprezza la luce, il dettaglio e gli equilibri sottili. Tips: luce a strati, cura dei dettagli materici, ambienti non saturi."],
+                  oso: ["L’Orso","Stabile e di fondo: ha bisogno di stimoli chiari per attivarsi. Tips: contrasti definiti, zone di attività ben marcate e colori decisi."],
+                  can: ["Il Granchio","Sensibile e protettivo: ha bisogno di rifugio e controllo dello stimolo. Tips: angoli avvolgenti, materiali morbidi e controllo di rumore e luce."],
+                  col: ["Il Colibrì","Agile e stimolato: cerca colore, movimento e varietà. Tips: palette vivaci, elementi mutevoli e spazi flessibili."] },
+      res2: "Autunno profondo — toni caldi e avvolgenti per la zona in cui mangi/cucini, neutri morbidi per dormire/rilassarti e accenti attivanti per lavorare/concentrarti.",
+      res3: "Japandi caldo — legno chiaro, tessili naturali e ordine visivo. Concept: calma (dormire), convivialità (mangiare), chiarezza (lavorare)."
+    },
+    en: {
+      chartOf: "Living Chart of ", free: "Free", locked: "Locked", done: "Completed",
+      t1: "Functional profile", t1d: "Discover how you perceive environmental stimuli: your profile among Dragonfly, Bear, Crab and Hummingbird, with targeted design tips.",
+      t2: "Personalized colour palette", t2d: "The most suitable colours for you, from the meeting of functional profile and colour season, for the home’s three functional areas.",
+      t3: "Interior style", t3d: "The style most coherent with the way you live your spaces, with a material board and concept keywords for the three functional areas.",
+      doTest: "Take the test", seeResult: "See your result", unlock: "Unlock with the full test",
+      payTitle: "Unlock the full test", payDesc: "Choose your option (simulated payment in this demo):",
+      pay1: "For one person — €20", pay2: "2 cohabitants — €30", pay3: "Household of 3–5 — €50 (+€10/extra)",
+      buy: "Buy", paid: "Simulated payment completed! Microtests unlocked.",
+      simTitle: "Microtest demo", simDesc: "In the final version the immersive microtest experience opens here. In this demo, press to generate a sample result.",
+      simBtn: "Complete test (demo)",
+      resT1: "Your functional profile: ", resT2: "Your palette: ", resT3: "Your style: ",
+      profiles: { lib: ["The Dragonfly","Perceptive and nuanced: appreciates light, detail and subtle balance. Tips: layered lighting, material detail, unsaturated environments."],
+                  oso: ["The Bear","Steady and low-arousal: needs clear stimuli to engage. Tips: defined contrasts, clearly marked activity zones and frank colours."],
+                  can: ["The Crab","Sensitive and protective: needs shelter and stimulus control. Tips: enveloping corners, soft materials, noise and light control."],
+                  col: ["The Hummingbird","Agile and stimulated: seeks colour, movement and variety. Tips: lively palettes, changing elements and flexible spaces."] },
+      res2: "Deep Autumn — warm enveloping tones for the eating/cooking area, soft neutrals for sleeping/relaxing and activating accents for working/concentrating.",
+      res3: "Warm Japandi — light wood, natural textiles and visual order. Concept: calm (sleep), conviviality (eat), clarity (work)."
+    }
+  };
+
+  function lang() { try { return localStorage.getItem("capsula_lang") || "es"; } catch (e) { return "es"; } }
+  function t() { return STR[lang()] || STR.es; }
+  function getUser() { try { return JSON.parse(localStorage.getItem(LS_USER)); } catch (e) { return null; } }
+  function getState() { try { return JSON.parse(localStorage.getItem(LS_STATE)) || {}; } catch (e) { return {}; } }
+  function setState(s) { try { localStorage.setItem(LS_STATE, JSON.stringify(s)); } catch (e) {} }
+
+  var authView = document.getElementById("auth-view");
+  var profView = document.getElementById("profile-view");
+  var wrap = document.getElementById("microtests");
+  var modal = document.getElementById("modal");
+  var modalBody = document.getElementById("modal-body");
+
+  function openModal(html) { modalBody.innerHTML = html; modal.classList.add("open"); }
+  function closeModal() { modal.classList.remove("open"); }
+  modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+  modal.querySelector(".close").addEventListener("click", closeModal);
+
+  function card(id, title, desc, stateLbl, stateCls, btnHtml) {
+    return '<div class="microtest"><span class="state ' + stateCls + '">' + stateLbl + '</span><h3>' + title + '</h3><p>' + desc + '</p>' + btnHtml + '</div>';
+  }
+
+  function render() {
+    var user = getUser();
+    if (!user) { authView.hidden = false; profView.hidden = true; return; }
+    authView.hidden = true; profView.hidden = false;
+    var s = getState(), d = t();
+    document.getElementById("profile-title").textContent = d.chartOf + user.name;
+    var html = "";
+    // Microtest 1 (gratis)
+    html += card("t1", d.t1, d.t1d,
+      s.t1 ? d.done : d.free, s.t1 ? "done" : "free",
+      s.t1
+        ? '<button class="btn btn--capsule btn--coralc" data-act="res1">' + d.seeResult + '</button>'
+        : '<button class="btn btn--capsule btn--coralc" data-act="do1">' + d.doTest + '</button>');
+    // Microtests 2 y 3 (de pago)
+    ["2", "3"].forEach(function (n) {
+      var done = s["t" + n];
+      var lbl = done ? d.done : (s.paid ? d.free : d.locked);
+      var cls = done ? "done" : (s.paid ? "free" : "locked");
+      var btn;
+      if (done) btn = '<button class="btn btn--capsule btn--coralc" data-act="res' + n + '">' + d.seeResult + '</button>';
+      else if (s.paid) btn = '<button class="btn btn--capsule btn--coralc" data-act="do' + n + '">' + d.doTest + '</button>';
+      else btn = '<button class="btn btn--capsule btn--coralc" data-act="pay">' + d.unlock + ' 🔒</button>';
+      html += card("t" + n, d["t" + n], d["t" + n + "d"], lbl, cls, btn);
+    });
+    wrap.innerHTML = html;
+
+    wrap.querySelectorAll("[data-act]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var act = b.getAttribute("data-act"), d = t(), s = getState();
+        if (act === "pay") {
+          openModal("<h3>" + d.payTitle + "</h3><p class='muted'>" + d.payDesc + "</p>" +
+            ["pay1","pay2","pay3"].map(function (k) {
+              return "<p style='display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.9rem'><span>" + d[k] + "</span><button class='btn btn--capsule btn--coralc' data-buy>" + d.buy + "</button></p>";
+            }).join(""));
+          modalBody.querySelectorAll("[data-buy]").forEach(function (bb) {
+            bb.addEventListener("click", function () {
+              var st = getState(); st.paid = true; setState(st);
+              modalBody.innerHTML = "<h3>✓</h3><p>" + d.paid + "</p>";
+              setTimeout(function () { closeModal(); render(); }, 1200);
+            });
+          });
+        } else if (act.slice(0, 2) === "do") {
+          var n = act.slice(2);
+          openModal("<h3>" + d.simTitle + "</h3><p class='muted'>" + d.simDesc + "</p><p style='margin-top:1rem'><button class='btn btn--capsule btn--coralc' data-sim>" + d.simBtn + "</button></p>");
+          modalBody.querySelector("[data-sim]").addEventListener("click", function () {
+            var st = getState();
+            if (n === "1") { var keys = ["lib","oso","can","col"]; st.t1 = keys[Math.floor(Math.random() * 4)]; }
+            else st["t" + n] = true;
+            setState(st); closeModal(); render();
+          });
+        } else if (act === "res1") {
+          var p = d.profiles[s.t1] || d.profiles.lib;
+          var imgs = { lib: "profilo-libellula.png", oso: "profilo-orso.png", can: "profilo-granchio.png", col: "profilo-colibri.png" };
+          openModal("<h3>" + d.resT1 + p[0] + "</h3><img src='assets/img/" + imgs[s.t1 || "lib"] + "' style='width:120px;border-radius:50%;margin:.6rem 0'><p class='muted'>" + p[1] + "</p>");
+        } else if (act === "res2") {
+          openModal("<h3>" + d.resT2 + "</h3><p class='muted'>" + d.res2 + "</p>");
+        } else if (act === "res3") {
+          openModal("<h3>" + d.resT3 + "</h3><p class='muted'>" + d.res3 + "</p>");
+        }
+      });
+    });
+  }
+
+  var form = document.getElementById("auth-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("auth-name").value.trim();
+    var email = document.getElementById("auth-email").value.trim();
+    try { localStorage.setItem(LS_USER, JSON.stringify({ name: name, email: email })); } catch (err) {}
+    document.querySelectorAll(".js-auth-cta").forEach(function (a) { a.dataset.es = "Carta Habitacional"; a.innerHTML = "Carta Habitacional"; a.setAttribute("data-i18n", "cta.profile"); });
+    if (window.CAPSULA_I18N) CAPSULA_I18N.apply(lang());
+    render();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  document.getElementById("logout").addEventListener("click", function () {
+    try { localStorage.removeItem(LS_USER); localStorage.removeItem(LS_STATE); } catch (e) {}
+    location.reload();
+  });
+
+  document.querySelectorAll(".lang-switch button").forEach(function (b) { b.addEventListener("click", function () { setTimeout(render, 0); }); });
+  render();
+})();
+</script>
+</body>
+</html>

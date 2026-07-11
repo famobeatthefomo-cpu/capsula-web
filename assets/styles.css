@@ -4,19 +4,25 @@
    =========================================================== */
 
 :root {
-  --coral:   #FF5733;
-  --coral-d: #E8431F;
-  --teal:    #2B7A78;
-  --teal-d:  #1F5C5A;
-  --cream:   #FFFBE6;
-  --cream-2: #FFF4D6;
-  --pink:    #F0C8D1;
-  --pink-d:  #C77D92;
-  --sage:    #9CB59B;
-  --ink:     #2A2A2A;
-  --muted:   #5b5b5b;
+  /* Palette = solo colores del logo + variaciones (más claras/oscuras) + blanco/negro/grises */
+  --yellow:  #FFF69B; /* logo */
+  --yellow-l:#FFFBD6;
+  --pink:    #FAD4DF; /* logo */
+  --pink-l:  #FDF0F4;
+  --pink-d:  #EFA9BF;
+  --pink-dd: #E184A3;
+  --coral:   #FF4C2B; /* logo */
+  --coral-l: #FFEFEA;
+  --coral-d: #DE3413;
+  --teal:    #29807A; /* logo */
+  --teal-l:  #E7F2F1;
+  --teal-d:  #1D5F5A;
+  --cream:   #FFFDEE; /* amarillo logo muy aclarado */
+  --cream-2: #FFF9D8; /* amarillo logo aclarado */
+  --ink:     #262626; /* negro */
+  --muted:   #5b5b5b; /* gris neutro */
   --white:   #ffffff;
-  --line:    #ece6cf;
+  --line:    #e6e2da; /* gris neutro claro */
 
   --maxw: 1140px;
   --radius: 18px;
@@ -90,8 +96,8 @@ img { max-width: 100%; display: block; }
   display: inline-block; box-shadow: var(--shadow-sm);
 }
 .brand b { color: var(--coral); font-weight: 700; }
-.nav-links { display: flex; align-items: center; gap: 1.4rem; }
-.nav-links a { font-weight: 500; font-size: .98rem; position: relative; }
+.nav-links { display: flex; align-items: center; gap: .95rem; }
+.nav-links a { font-weight: 500; font-size: .88rem; position: relative; white-space: nowrap; }
 .nav-links a:hover { color: var(--coral); }
 .nav-actions { display: flex; align-items: center; gap: .8rem; }
 
@@ -264,6 +270,11 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(140deg, var(--pink), var(--teal)); display: grid; place-items: center;
   color: #fff; font-family: var(--serif); font-size: 2.4rem; box-shadow: var(--shadow-sm);
 }
+/* Team photos: half-capsule crop */
+.team-photo {
+  width: 100%; aspect-ratio: 3 / 3.9; object-fit: cover; object-position: top;
+  border-radius: 999px 999px 0 0; box-shadow: var(--shadow-sm); margin-bottom: 1rem;
+}
 .founder h3 { font-size: 1.3rem; }
 .founder .role { color: var(--coral); font-weight: 600; font-size: .9rem; margin-bottom: .5rem; }
 
@@ -283,12 +294,14 @@ img { max-width: 100%; display: block; }
 .mobile-cta { display: none; }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1150px) {
+  .nav-links, .nav-actions .desktop-only { display: none; }
+  .nav-toggle { display: flex; }
+}
 @media (max-width: 900px) {
   .tiers, .grid-3, .metrics, .func { grid-template-columns: 1fr; }
   .ess { grid-template-columns: repeat(2,1fr); }
   .grid-2, .footer-grid { grid-template-columns: 1fr; }
-  .nav-links, .nav-actions .desktop-only { display: none; }
-  .nav-toggle { display: flex; }
   .site-header.open .nav-links {
     display: flex; flex-direction: column; align-items: flex-start; gap: 1rem;
     position: absolute; top: 100%; left: 0; right: 0; background: var(--cream);
@@ -302,4 +315,123 @@ img { max-width: 100%; display: block; }
   .mobile-cta .btn { width: 100%; justify-content: center; }
   body { padding-bottom: 70px; }
   .hero-blob { width: 320px; height: 320px; right: -100px; bottom: -120px; }
+}
+
+/* ===========================================================
+   Rediseño 2026 — logo, botones cápsula, tintes por página,
+   perfiles funcionales, calendario, eventos, perfil personal
+   =========================================================== */
+
+/* Logo real (no clicable) */
+.brand-logo { height: 46px; width: auto; display: block; }
+.brand--static { cursor: default; }
+.site-footer .brand-logo { height: 54px; }
+
+/* Botón cápsula alargada */
+.btn--capsule {
+  border-radius: 999px; padding: .8em 1.9em; color: #fff; font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+.btn--rosa    { background: var(--pink-d);  color: #fff; }
+.btn--rosa:hover    { background: var(--pink-dd); }
+.btn--coralc  { background: var(--coral);   color: #fff; }
+.btn--coralc:hover  { background: var(--coral-d); }
+.btn--petrolc { background: var(--teal);    color: #fff; }
+.btn--petrolc:hover { background: var(--teal-d); }
+
+/* Tinte de página por cápsula */
+body.page-rosa   { background: var(--pink-l); }
+body.page-coral  { background: var(--coral-l); }
+body.page-petrol { background: var(--teal-l); }
+body.page-rosa .site-header   { background: rgba(253,240,244,.9); }
+body.page-coral .site-header  { background: rgba(255,239,234,.9); }
+body.page-petrol .site-header { background: rgba(231,242,241,.9); }
+body.page-rosa .eyebrow   { color: var(--pink-dd); }
+body.page-coral .eyebrow  { color: var(--coral); }
+body.page-petrol .eyebrow { color: var(--teal); }
+
+/* Símbolo capsulina junto al título */
+.pill-ico {
+  display: inline-block; width: .95em; height: .5em; border-radius: 999px;
+  vertical-align: baseline; margin-right: .25em;
+}
+.pill-ico--rosa   { background: var(--pink-d); }
+.pill-ico--coral  { background: var(--coral); }
+.pill-ico--petrol { background: var(--teal); }
+
+/* Perfiles funcionales (4 símbolos en fila) */
+.profiles-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.4rem; margin-top: 2rem; text-align: center; }
+.profiles-row img { width: min(150px,70%); margin: 0 auto .8rem; border-radius: 50%; }
+.profiles-row h3 { font-size: 1.1rem; }
+.profiles-row p { font-size: .92rem; color: var(--muted); margin-top: .3rem; }
+
+/* Tarjetas laboratorio con imagen */
+.card-img { width: 100%; height: 170px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem; }
+
+/* Calendario (Laboratori aperti) */
+.cal { max-width: 560px; margin: 1.6rem auto 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem; box-shadow: var(--shadow-sm); }
+.cal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: .8rem; }
+.cal-head button { border: 0; background: var(--pink-l); border-radius: 999px; width: 34px; height: 34px; cursor: pointer; font-size: 1rem; }
+.cal-head .cal-title { font-family: var(--serif); font-weight: 600; text-transform: capitalize; }
+.cal-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 4px; }
+.cal-grid .dow { text-align: center; font-size: .7rem; font-weight: 700; color: var(--muted); text-transform: uppercase; padding: .3em 0; }
+.cal-day { position: relative; aspect-ratio: 1; display: grid; place-items: center; border-radius: 10px; font-size: .9rem; background: #fff; border: 1px solid var(--line); }
+.cal-day.out { visibility: hidden; }
+.cal-day.disabled { background: #eeeceb; color: #b5b0ab; border-color: transparent; }
+.cal-day.open { background: var(--pink-l); border-color: var(--pink-d); cursor: pointer; font-weight: 600; }
+.cal-day.open:hover { background: var(--pink); }
+.cal-day.full { background: var(--pink-dd); color: #fff; border-color: transparent; }
+.cal-day.selected { outline: 3px solid var(--coral); }
+.cal-day .cnt { position: absolute; bottom: 2px; right: 5px; font-size: .58rem; font-weight: 700; color: var(--pink-dd); }
+.cal-day.full .cnt { color: #fff; }
+.cal-legend { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; font-size: .78rem; color: var(--muted); }
+.cal-legend span::before { content: ""; display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: .35em; vertical-align: -1px; }
+.cal-legend .lg-dis::before { background: #eeeceb; }
+.cal-legend .lg-open::before { background: var(--pink-l); border: 1px solid var(--pink-d); }
+.cal-legend .lg-full::before { background: var(--pink-dd); }
+
+/* Lista de eventos (Laboratori in programma) */
+.event-row { display: flex; align-items: center; gap: 1.1rem; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; box-shadow: var(--shadow-sm); }
+.event-row + .event-row { margin-top: .9rem; }
+.event-logo { flex: none; width: 52px; height: 52px; border-radius: 12px; display: grid; place-items: center; font-family: var(--serif); font-size: 1.3rem; color: #fff; background: var(--teal); }
+.event-info { flex: 1; }
+.event-info h4 { font-family: var(--serif); font-size: 1.08rem; }
+.event-info p { font-size: .88rem; color: var(--muted); }
+
+/* Franja de logos partners */
+.logo-strip { display: flex; gap: 1.2rem; overflow-x: auto; padding: 1rem .2rem; scrollbar-width: thin; }
+.logo-strip .plogo {
+  flex: none; width: 150px; height: 76px; border-radius: 14px; display: grid; place-items: center;
+  background: #fff; border: 1px solid var(--line); font-family: var(--serif); color: var(--muted); font-size: .9rem;
+}
+
+/* Galería */
+.gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1.6rem; }
+.gallery-grid .gph { aspect-ratio: 4/3; border-radius: 14px; overflow: hidden; background: linear-gradient(140deg, var(--pink), var(--teal-l)); display: grid; place-items: center; color: var(--muted); font-size: .85rem; }
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Perfil personal — Carta Habitacional */
+.microtests { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem; margin-top: 2rem; }
+.microtest { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.7rem; display: flex; flex-direction: column; box-shadow: var(--shadow-sm); }
+.microtest h3 { font-size: 1.2rem; }
+.microtest .state { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .6rem; }
+.microtest .state.done { color: var(--teal); }
+.microtest .state.locked { color: var(--muted); }
+.microtest .state.free { color: var(--coral); }
+.microtest p { color: var(--muted); font-size: .95rem; flex: 1; margin-top: .5rem; }
+.microtest .btn { margin-top: 1.2rem; align-self: flex-start; }
+
+/* Modal simple (pagos simulados / resultados) */
+.modal-bg { position: fixed; inset: 0; background: rgba(38,38,38,.5); display: none; place-items: center; z-index: 100; padding: 4vw; }
+.modal-bg.open { display: grid; }
+.modal { background: #fff; border-radius: var(--radius-lg); padding: 2rem; max-width: 560px; width: 100%; max-height: 85vh; overflow: auto; box-shadow: var(--shadow); }
+.modal h3 { font-size: 1.4rem; margin-bottom: .6rem; }
+.modal .close { float: right; border: 0; background: none; font-size: 1.4rem; cursor: pointer; color: var(--muted); }
+
+@media (max-width: 900px) {
+  .profiles-row, .microtests { grid-template-columns: repeat(2,1fr); }
+  .gallery-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 560px) {
+  .profiles-row, .microtests, .gallery-grid { grid-template-columns: 1fr; }
 }
