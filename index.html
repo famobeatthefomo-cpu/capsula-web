@@ -18,11 +18,12 @@
     <nav class="nav-links">
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
-      <a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
-      <a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
-      <a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
+      <a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
+      <a class="nav-coral" href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
+      <a class="nav-petrol" href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
       <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
       <a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a>
+      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
@@ -38,7 +39,17 @@
   <div class="wrap">
     <p class="eyebrow" data-i18n="hero.eyebrow">Consultoría de neuroarquitectura</p>
     <h1 data-i18n="hero.h1">Tu casa debería hacerte sentir bien. Tu bienestar se diseña.</h1>
-    <p data-i18n="hero.p">Cada persona vive el espacio de una manera distinta. Con Cápsula partimos de ti: ¿cómo percibes los estímulos del entorno? ¿Qué emociones te transmiten los colores, los materiales y la luz? ¿Qué experiencias necesitas para sentirte realmente bien, incluso mientras lees un libro o te relajas en el sofá? Nuestro método transforma estas respuestas en herramientas concretas para diseñar una casa realmente a tu medida. Haz un adelanto del test y descubre tu perfil habitacional. Después, elige tu Cápsula de bienestar con la que poner en práctica nuestro método.</p>
+    <p data-i18n="hero.p1">Cada persona vive el espacio de una manera distinta. Con Cápsula partimos de ti.</p>
+    <div class="prov-lines">
+      <p data-i18n="hero.q1">¿Cómo percibes los estímulos del entorno?</p>
+      <p data-i18n="hero.q2">¿Qué emociones te transmiten los colores, los materiales y la luz?</p>
+      <p data-i18n="hero.q3">¿Qué experiencias necesitas para sentirte realmente bien, incluso mientras lees un libro o te relajas en el sofá?</p>
+    </div>
+    <p data-i18n="hero.p2">Nuestro método transforma estas respuestas en herramientas concretas para diseñar una casa realmente a tu medida.</p>
+    <div class="hero-cta">
+      <a class="btn btn--ghost" href="#test" data-i18n="hero.cta1">Prueba el TEST de Cápsula</a>
+      <a class="btn btn--ghost" href="#niveles" data-i18n="hero.cta2">Elige tu Cápsula de bienestar</a>
+    </div>
   </div>
 </section>
 
@@ -46,11 +57,12 @@
 <section class="section" id="test" style="background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap center">
     <h2 data-i18n="home.testTitle">Empieza por conocerte. Es gratis.</h2>
-    <p class="lead" style="margin-top:.6rem"><strong data-i18n="home.testName">TEST “Mi casa a mi medida”</strong></p>
+    <p class="lead" style="margin-top:.6rem;max-width:60ch;margin-inline:auto" data-i18n="home.testDesc">Realiza la primera parte de nuestro TEST <em>Mi casa a mi medida</em> en solo 3 minutos y descubre tu <span style="color:var(--teal);font-weight:600">Perfil funcional</span></p>
     <a class="btn btn--capsule btn--coralc" href="accedi.html" style="margin-top:1.4rem" data-i18n="home.testCta">Prueba gratis</a>
   </div>
   <div class="wrap center" style="margin-top:3rem">
     <h3 style="font-size:1.5rem" data-i18n="home.profTitle">Perfil funcional</h3>
+    <p class="muted" style="max-width:66ch;margin:.8rem auto 0" data-i18n="home.profDesc">Integra modelos psicológicos consolidados sobre la sensibilidad sensorial y el funcionamiento cognitivo, reinterpretándolos en clave de neuroarquitectura para describir tu manera de percibir, elaborar y vivir los espacios.</p>
     <div class="profiles-row">
       <div><img src="assets/img/profilo-libellula.png" alt="La Libélula"><h3 data-i18n="home.pr1t">La Libélula</h3><p data-i18n="home.pr1">Perceptiva y matizada: aprecia la luz, el detalle y los equilibrios sutiles.</p></div>
       <div><img src="assets/img/profilo-orso.png" alt="El Oso"><h3 data-i18n="home.pr2t">El Oso</h3><p data-i18n="home.pr2">Estable y de fondo: necesita estímulos claros para activarse y sentirse presente.</p></div>
@@ -113,7 +125,7 @@
       <ul>
         <li><a href="index.html" data-i18n="nav.home">Home</a></li>
         <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
-        <li><a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
+        <li><a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
         <li><a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a></li>
         <li><a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a></li>
         <li><a href="galeria.html" data-i18n="nav.gallery">Galería</a></li>
@@ -135,8 +147,6 @@
   </div>
 </footer>
 
-<div class="mobile-cta"><a class="btn btn--capsule btn--coralc js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a></div>
-
 <script src="assets/i18n.js"></script>
 <script src="assets/globals-i18n.js"></script>
 <script>
@@ -144,11 +154,17 @@ CAPSULA_I18N.add({
   en: {
     "hero.eyebrow":"Neuroarchitecture consulting",
     "hero.h1":"Your home should make you feel good. Your wellbeing should be designed.",
-    "hero.p":"Every person experiences space differently. With Cápsula we start from you: how do you perceive the stimuli around you? What emotions do colours, materials and light convey to you? Which experiences do you need to feel truly well, even while reading a book or relaxing on the sofa? Our method turns these answers into concrete tools to design a home truly made for you. Get a taste of the test and discover your living profile. Then choose your wellbeing Cápsula to put our method into practice.",
+    "hero.p1":"Every person experiences space differently. With Cápsula we start from you.",
+    "hero.q1":"How do you perceive the stimuli around you?",
+    "hero.q2":"What emotions do colours, materials and light convey to you?",
+    "hero.q3":"Which experiences do you need to feel truly well, even while reading a book or relaxing on the sofa?",
+    "hero.p2":"Our method turns these answers into concrete tools to design a home truly made for you.",
+    "hero.cta1":"Try the Cápsula TEST","hero.cta2":"Choose your wellbeing Cápsula",
     "home.testTitle":"Start by knowing yourself. It’s free.",
-    "home.testName":"TEST “Mi casa a mi medida”",
+    "home.testDesc":"Take the first part of our <em>Mi casa a mi medida</em> TEST in just 3 minutes and discover your <span style='color:var(--teal);font-weight:600'>Functional profile</span>",
     "home.testCta":"Try it for free",
     "home.profTitle":"Functional profile",
+    "home.profDesc":"It integrates established psychological models on sensory sensitivity and cognitive functioning, reinterpreting them through a neuroarchitecture lens to describe the way you perceive, process and live spaces.",
     "home.pr1t":"The Dragonfly","home.pr1":"Perceptive and nuanced: appreciates light, detail and subtle balance.",
     "home.pr2t":"The Bear","home.pr2":"Steady and low-arousal: needs clear stimuli to engage and feel present.",
     "home.pr3t":"The Crab","home.pr3":"Sensitive and protective: needs shelter, softness and control over stimulation.",
@@ -166,11 +182,17 @@ CAPSULA_I18N.add({
   it: {
     "hero.eyebrow":"Consulenza di neuroarchitettura",
     "hero.h1":"La tua casa dovrebbe farti stare bene. Il tuo benessere va progettato.",
-    "hero.p":"Ogni persona vive lo spazio in modo diverso. Con Cápsula partiamo da te: come percepisci gli stimoli dell’ambiente? Quali emozioni ti trasmettono colori, materiali e luci? Di quali esperienze hai bisogno per sentirti davvero bene, anche mentre leggi un libro o ti rilassi sul divano? Il nostro metodo trasforma queste risposte in strumenti concreti per progettare una casa davvero su misura. Fai un assaggio del test e scopri il tuo profilo abitativo. Poi scegli la tua Cápsula di benessere con cui mettere in pratica il nostro metodo.",
+    "hero.p1":"Ogni persona vive lo spazio in modo diverso. Con Cápsula partiamo da te.",
+    "hero.q1":"Come percepisci gli stimoli dell’ambiente?",
+    "hero.q2":"Quali emozioni ti trasmettono colori, materiali e luci?",
+    "hero.q3":"Di quali esperienze hai bisogno per sentirti davvero bene, anche mentre leggi un libro o ti rilassi sul divano?",
+    "hero.p2":"Il nostro metodo trasforma queste risposte in strumenti concreti per progettare una casa davvero su misura.",
+    "hero.cta1":"Prova il TEST di Cápsula","hero.cta2":"Scegli la tua Cápsula di benessere",
     "home.testTitle":"Comincia col conoscerti. È gratis.",
-    "home.testName":"TEST “Mi casa a mi medida”",
+    "home.testDesc":"Svolgi la prima parte del nostro TEST <em>Mi casa a mi medida</em> in soli 3 minuti e scopri il tuo <span style='color:var(--teal);font-weight:600'>Profilo funzionale</span>",
     "home.testCta":"Prova gratis",
     "home.profTitle":"Profilo funzionale",
+    "home.profDesc":"Integra modelli psicologici consolidati sulla sensibilità sensoriale e sul funzionamento cognitivo, reinterpretandoli in chiave di neuroarchitettura per descrivere il tuo modo di percepire, elaborare e vivere gli spazi.",
     "home.pr1t":"La Libellula","home.pr1":"Percettiva e sfumata: apprezza la luce, il dettaglio e gli equilibri sottili.",
     "home.pr2t":"L’Orso","home.pr2":"Stabile e di fondo: ha bisogno di stimoli chiari per attivarsi e sentirsi presente.",
     "home.pr3t":"Il Granchio","home.pr3":"Sensibile e protettivo: ha bisogno di rifugio, morbidezza e controllo dello stimolo.",

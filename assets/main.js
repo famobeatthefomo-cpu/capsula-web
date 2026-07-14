@@ -60,8 +60,9 @@
     if (user && user.name) {
       document.querySelectorAll(".js-auth-cta").forEach(function (a) {
         a.setAttribute("data-i18n", "cta.profile");
-        a.dataset.es = "Carta Habitacional";
-        a.innerHTML = "Carta Habitacional";
+        a.dataset.es = "Tu Carta Habitacional";
+        a.innerHTML = "Tu Carta Habitacional";
+        a.classList.add("logged");
       });
       var lang = "es";
       try { lang = localStorage.getItem("capsula_lang") || "es"; } catch (e) {}

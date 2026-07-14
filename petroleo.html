@@ -17,11 +17,12 @@
     <nav class="nav-links">
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
-      <a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
-      <a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
-      <a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
+      <a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
+      <a class="nav-coral" href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
+      <a class="nav-petrol" href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
       <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
       <a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a>
+      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
@@ -35,12 +36,16 @@
   <div class="wrap">
     <p class="prov" data-i18n="pet.prov">¿Necesitas elegir mobiliario, materiales y acabados sin perderte entre posibilidades infinitas?</p>
     <h1><span class="pill-ico pill-ico--petrol"></span>Cápsula Petróleo</h1>
-    <p class="muted" style="max-width:70ch;margin-top:1.2rem" data-i18n="pet.p1">Cuando llega el momento de comprar, orientarse entre catálogos, tiendas, productos online e inspiraciones puede volverse dispersivo. El riesgo es comprar piezas que funcionan por separado, pero que no construyen una casa realmente coherente, duradera y adecuada para ti.</p>
-    <p class="muted" style="max-width:70ch;margin-top:1rem" data-i18n="pet.p2">El catálogo nace de los resultados del test y de selecciones estudiadas por nosotras en colaboración con tiendas físicas, productores, carpinteros, artesanos y comercios locales afiliados. Elegir local no significa necesariamente gastar más o esperar más tiempo. A menudo, el valor de los profesionales del territorio está precisamente en su capacidad de encontrar soluciones adecuadas a tu presupuesto, más rápidas, más personalizadas y más sostenibles en el tiempo.</p>
+    <p class="muted" style="max-width:70ch;margin-top:1.2rem" data-i18n="pet.p1">Cuando llega el momento de comprar, orientarse entre catálogos, tiendas, productos online e inspiraciones puede volverse dispersivo... El riesgo es comprar piezas que funcionan por separado, pero que no construyen una casa realmente coherente, duradera y adecuada para ti.</p>
+    <div class="hl-box" data-i18n="pet.hl">Con una dosis de Cápsula Petróleo recibirás un catálogo personalizado de mobiliario y acabados coherente con tu perfil neuropsicológico. Productos no solo bonitos o de moda, sino pensados para tu bienestar.</div>
+    <p class="muted" style="max-width:70ch;margin-top:1.2rem" data-i18n="pet.p2">El catálogo nace de los resultados del test y de selecciones estudiadas por nosotras en colaboración con tiendas físicas, productores, carpinteros, artesanos y comercios locales afiliados.</p>
     <p class="muted" style="max-width:70ch;margin-top:1rem" data-i18n="pet.p3">No es una lista genérica de productos online, sino una guía para comprar con más criterio, valorizar la venta física y local y contrarrestar la fast fashion del interiorismo.</p>
-    <div class="hero-cta">
-      <a class="btn btn--capsule btn--petrolc" href="#catalogo" data-i18n="pet.cta1">Compra tu catálogo personalizado</a>
-      <a class="btn btn--capsule btn--petrolc" href="#shoppinglist" data-i18n="pet.cta2">Solicita una Shopping List</a>
+    <div class="grid-2" style="align-items:center;margin-top:1.6rem">
+      <div class="hero-cta" style="margin-top:0">
+        <a class="btn btn--capsule btn--petrolc" href="#catalogo" data-i18n="pet.cta1">Compra tu catálogo personalizado</a>
+        <a class="btn btn--capsule btn--petrolc" href="#shoppinglist" data-i18n="pet.cta2">Solicita una Shopping List</a>
+      </div>
+      <div class="aside-note" data-i18n="pet.aside">Elegir local no significa necesariamente gastar más o esperar más tiempo. A menudo, el valor de los profesionales del territorio está precisamente en su capacidad de encontrar soluciones adecuadas a tu presupuesto, más rápidas, más personalizadas y más sostenibles en el tiempo.</div>
     </div>
   </div>
 </section>
@@ -49,17 +54,26 @@
 <section class="section" id="catalogo">
   <div class="wrap center"><p class="eyebrow" data-i18n="pet.catEyebrow">El catálogo</p><h2 data-i18n="pet.catTitle">Compra tu catálogo personalizado</h2></div>
   <div class="wrap">
-    <p class="muted" style="max-width:74ch;margin:1.2rem auto 0" data-i18n="pet.catDesc">Eligiendo uno de los packs (con precios según sea para una o más personas), podrás realizar los mismos tres microtests de la Cápsula Coral, si aún no los has hecho (siempre con registro previo), pero esta vez obteniendo como resultado —además del perfil funcional, la paleta y el estilo, si aún no tienes tu Carta Habitacional en el perfil— un catálogo personalizado de mobiliario y acabados coherente con los resultados del test Coral, que aparecerá en tu perfil personal (el área “Carta Habitacional”).</p>
-    <p class="muted" style="max-width:74ch;margin:1rem auto 0" data-i18n="pet.catDesc2">El mobiliario y los acabados son algunos de los productos vendidos por tiendas afiliadas (partners colaboradores).</p>
-    <div style="overflow-x:auto"><table class="price-table" style="margin-top:1.6rem;min-width:560px">
-      <thead><tr><th data-i18n="pet.thPack">Pack</th><th data-i18n="pet.thPrice">Precio</th><th></th></tr></thead>
-      <tbody>
-        <tr><td data-i18n="pet.pk1">Para una persona</td><td>35 €</td><td style="text-align:right"><a class="btn btn--capsule btn--petrolc" href="accedi.html" data-i18n="cta.buy">Compra</a></td></tr>
-        <tr><td data-i18n="pet.pk2">Núcleo familiar / convivientes de 2 personas</td><td>50 €</td><td style="text-align:right"><a class="btn btn--capsule btn--petrolc" href="accedi.html" data-i18n="cta.buy">Compra</a></td></tr>
-        <tr><td data-i18n="pet.pk3">Núcleo familiar de 3–5 personas</td><td data-i18n="pet.pk3p">80 € + 20 € por cada miembro extra</td><td style="text-align:right"><a class="btn btn--capsule btn--petrolc" href="accedi.html" data-i18n="cta.buy">Compra</a></td></tr>
-      </tbody>
-    </table></div>
-    <p class="note" data-i18n="pet.famNote">Los núcleos familiares se registran bajo el mismo perfil con una única dirección de email.</p>
+    <p class="muted" style="max-width:74ch;margin:1.2rem auto 0" data-i18n="pet.catDesc">Comprando un catálogo personalizado, para ti o para toda la familia, podrás realizar el TEST <em>Mi casa a mi medida</em>, si aún no lo has hecho. En tu área personal de la Carta Habitacional aparecerán también los catálogos para descargar y consultar en cualquier momento. ¡Allí encontrarás también direcciones y contactos de todos los vendedores!</p>
+    <div class="pcards" style="margin-top:2rem">
+      <div class="pcard pcard--center">
+        <h4 data-i18n="pet.pk1">Para una persona</h4>
+        <div class="amount">35 €</div>
+        <a class="btn btn--capsule btn--petrolc" href="accedi.html" data-i18n="cta.buy">Compra</a>
+      </div>
+      <div class="pcard pcard--center">
+        <h4 data-i18n="pet.pk2">Núcleo familiar / convivientes de 2 personas</h4>
+        <div class="amount">50 €</div>
+        <a class="btn btn--capsule btn--petrolc" href="accedi.html" data-i18n="cta.buy">Compra</a>
+      </div>
+      <div class="pcard pcard--center">
+        <h4 data-i18n="pet.pk3">Núcleo familiar de 3–5 personas</h4>
+        <div class="amount">80 €</div>
+        <p class="cond"><em data-i18n="pet.pk3p">+ 20 € por cada miembro extra</em></p>
+        <a class="btn btn--capsule btn--petrolc" href="accedi.html" data-i18n="cta.buy">Compra</a>
+      </div>
+    </div>
+    <p class="note center" data-i18n="pet.famNote">Los núcleos familiares se registran bajo el mismo perfil con una única dirección de email.</p>
   </div>
 </section>
 
@@ -69,21 +83,26 @@
   <div class="wrap grid-2" style="margin-top:1.8rem">
     <div class="pain">
       <p data-i18n="pet.slDesc">Con esta función puedes enviar una solicitud de asesoría única y exclusivamente para la shopping list, para tener:</p>
-      <ul class="bene" style="margin-top:.9rem">
+      <ul class="bene bene--pill" style="margin-top:.9rem">
         <li style="color:#fdeee9" data-i18n="pet.sl1">Apoyo en la elección de mobiliario y acabados, seleccionando del catálogo de tu resultado (por ejemplo, para cruzar los resultados de los distintos convivientes).</li>
         <li style="color:#fdeee9" data-i18n="pet.sl2">Mayor control del presupuesto.</li>
         <li style="color:#fdeee9" data-i18n="pet.sl3">Apoyo en la interlocución con los vendedores.</li>
         <li style="color:#fdeee9" data-i18n="pet.sl4">Apoyo en la planificación y gestión de los pedidos.</li>
       </ul>
       <p class="note" style="color:#cfe9e6;margin-top:.9rem" data-i18n="pet.slCond">Este servicio de asesoría está subordinado a la compra del catálogo personalizado.</p>
-      <p class="note" style="color:#cfe9e6" data-i18n="pet.slPrices">Precios: opción base 10 €/m² · opción premium 20 €/m² (según el nivel de detalle y si gestionamos también la compra).</p>
     </div>
-    <form class="form card" data-demo>
-      <div><label data-i18n="form.name">Nombre y apellidos</label><input type="text" required></div>
-      <div><label data-i18n="form.email">Email</label><input type="email" required></div>
-      <button class="btn btn--capsule btn--petrolc" type="submit" data-i18n="pet.slCta">Solicita información</button>
-      <p class="form-msg note" hidden data-i18n="form.thanks">¡Gracias! Te recontactaremos en breve.</p>
-    </form>
+    <div>
+      <h3 style="color:#fff" data-i18n="pet.slPricesT">Precios</h3>
+      <p class="note" style="color:#cfe9e6" data-i18n="pet.slPricesN">(según el nivel de detalle y si gestionamos también la compra)</p>
+      <p style="color:#fdeee9;margin-top:.5rem" data-i18n="pet.slP1">opción base: 10 €/m²</p>
+      <p style="color:#fdeee9" data-i18n="pet.slP2">opción premium: 20 €/m²</p>
+      <form class="form card" data-demo style="margin-top:1.1rem;gap:.6rem;padding:1.2rem">
+        <div><label data-i18n="form.name">Nombre y apellidos</label><input type="text" required></div>
+        <div><label data-i18n="form.email">Email</label><input type="email" required></div>
+        <button class="btn btn--capsule btn--petrolc" type="submit" style="font-size:.82rem;padding:.6em 1.3em;align-self:flex-start" data-i18n="pet.slCta">Solicita información</button>
+        <p class="form-msg note" hidden data-i18n="form.thanks">¡Gracias! Te recontactaremos en breve.</p>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -106,7 +125,7 @@
     <div><h4 data-i18n="footer.explore">Explora</h4><ul>
       <li><a href="index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
-      <li><a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
+      <li><a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
       <li><a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a></li>
       <li><a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a></li>
       <li><a href="galeria.html" data-i18n="nav.gallery">Galería</a></li>
@@ -129,15 +148,16 @@
 CAPSULA_I18N.add({
   en: {
     "pet.prov":"Do you need to choose furniture, materials and finishes without getting lost among endless possibilities?",
-    "pet.p1":"When the time to buy arrives, navigating catalogues, stores, online products and inspiration can become dispersive. The risk is buying pieces that work on their own, but don’t build a home that is truly coherent, lasting and right for you.",
-    "pet.p2":"The catalogue is born from your test results and from selections curated by us in collaboration with physical stores, producers, carpenters, artisans and affiliated local businesses. Choosing local doesn’t necessarily mean spending more or waiting longer. Often the value of local professionals lies precisely in their ability to find solutions suited to your budget — faster, more personalized and more sustainable over time.",
+    "pet.p1":"When the time to buy arrives, navigating catalogues, stores, online products and inspiration can become dispersive... The risk is buying pieces that work on their own, but don’t build a home that is truly coherent, lasting and right for you.",
+    "pet.hl":"With a dose of Cápsula Petróleo you’ll receive a personalized catalogue of furniture and finishes coherent with your neuropsychological profile. Products that aren’t just pretty or trendy, but designed for your wellbeing.",
+    "pet.p2":"The catalogue is born from your test results and from selections curated by us in collaboration with physical stores, producers, carpenters, artisans and affiliated local businesses.",
     "pet.p3":"It’s not a generic list of online products, but a guide to buying with more criteria, valuing physical and local retail and countering the fast fashion of interior design.",
+    "pet.aside":"Choosing local doesn’t necessarily mean spending more or waiting longer. Often the value of local professionals lies precisely in their ability to find solutions suited to your budget — faster, more personalized and more sustainable over time.",
     "pet.cta1":"Buy your personalized catalogue","pet.cta2":"Request a Shopping List",
     "pet.catEyebrow":"The catalogue","pet.catTitle":"Buy your personalized catalogue",
-    "pet.catDesc":"By choosing one of the packs (priced for one or more people), you can take the same three microtests as Cápsula Coral, if you haven’t yet (always with prior registration), but this time obtaining as a result —besides your functional profile, palette and style, if you don’t yet have your Living Chart in your profile— a personalized catalogue of furniture and finishes coherent with the Coral test results, which will appear in your personal profile (the “Living Chart” area).",
-    "pet.catDesc2":"The furniture and finishes are some of the products sold by affiliated stores (collaborating partners).",
-    "pet.thPack":"Pack","pet.thPrice":"Price","cta.buy":"Buy",
-    "pet.pk1":"For one person","pet.pk2":"Household / 2 cohabitants","pet.pk3":"Household of 3–5 people","pet.pk3p":"€80 + €20 per extra member",
+    "pet.catDesc":"By buying a personalized catalogue, for yourself or the whole family, you can take the <em>Mi casa a mi medida</em> TEST, if you haven’t yet. In your personal Living Chart area you’ll also find the catalogues to download and consult at any time. There you’ll also find addresses and contacts of all the sellers!",
+    "cta.buy":"Buy",
+    "pet.pk1":"For one person","pet.pk2":"Household / 2 cohabitants","pet.pk3":"Household of 3–5 people","pet.pk3p":"+ €20 per extra member",
     "pet.famNote":"Households are registered under the same profile with a single email address.",
     "pet.slTitle":"Request a Shopping List",
     "pet.slDesc":"With this function you can send an advisory request solely and exclusively for the shopping list, so you get:",
@@ -146,7 +166,8 @@ CAPSULA_I18N.add({
     "pet.sl3":"Support in dealing with the sellers.",
     "pet.sl4":"Support in planning and managing the orders.",
     "pet.slCond":"This advisory service is subject to the purchase of the personalized catalogue.",
-    "pet.slPrices":"Prices: base option €10/m² · premium option €20/m² (depending on the level of detail and whether we also manage the purchase).",
+    "pet.slPricesT":"Prices","pet.slPricesN":"(depending on the level of detail and whether we also manage the purchase)",
+    "pet.slP1":"base option: €10/m²","pet.slP2":"premium option: €20/m²",
     "form.name":"Full name","form.email":"Email","pet.slCta":"Request information",
     "pet.ctaTitle":"Do you run a business in the interior design sector?",
     "pet.ctaSub":"If you are a store, a showroom, an artisan, a producer, a carpenter, a restorer, a coverings retailer or other, and you need more visibility and customers who already know what they’re looking for, get in touch with us. Become an affiliate and join the Cápsula network.",
@@ -154,15 +175,16 @@ CAPSULA_I18N.add({
   },
   it: {
     "pet.prov":"Hai bisogno di scegliere arredi, materiali e finiture senza perderti tra possibilità infinite?",
-    "pet.p1":"Quando arriva il momento di acquistare, orientarsi tra cataloghi, negozi, prodotti online e ispirazioni può diventare dispersivo. Il rischio è comprare pezzi che funzionano singolarmente, ma che non costruiscono una casa davvero coerente, duratura e adatta a te.",
-    "pet.p2":"Il catalogo nasce dai risultati del test e da selezioni studiate da noi in collaborazione con negozi fisici, produttori, falegnami, artigiani e realtà locali affiliate. Scegliere locale non significa necessariamente spendere di più o aspettare più a lungo. Spesso il valore dei professionisti del territorio sta proprio nella loro capacità di trovare soluzioni adatte al tuo budget, più rapide, più personalizzate e più sostenibili nel tempo.",
+    "pet.p1":"Quando arriva il momento di acquistare, orientarsi tra cataloghi, negozi, prodotti online e ispirazioni può diventare dispersivo... Il rischio è comprare pezzi che funzionano singolarmente, ma che non costruiscono una casa davvero coerente, duratura e adatta a te.",
+    "pet.hl":"Con una dose di Capsula Petrolio riceverai un catalogo personalizzato di arredi e finiture coerente con il tuo profilo neuropsicologico. Prodotti non solo belli o di moda, ma pensati per il tuo benessere.",
+    "pet.p2":"Il catalogo nasce dai risultati del test e da selezioni studiate da noi in collaborazione con negozi fisici, produttori, falegnami, artigiani e realtà locali affiliate.",
     "pet.p3":"Non è una lista generica di prodotti online, ma una guida per acquistare con più criterio, valorizzare la vendita fisica e locale e contrastare la fast fashion dell’interior design.",
+    "pet.aside":"Scegliere locale non significa necessariamente spendere di più o aspettare più a lungo. Spesso il valore dei professionisti del territorio sta proprio nella loro capacità di trovare soluzioni adatte al tuo budget, più rapide, più personalizzate e più sostenibili nel tempo.",
     "pet.cta1":"Acquista il tuo catalogo personalizzato","pet.cta2":"Richiedi una Shopping List",
     "pet.catEyebrow":"Il catalogo","pet.catTitle":"Acquista il tuo catalogo personalizzato",
-    "pet.catDesc":"Scegliendo uno dei pacchetti (con prezzi a seconda che sia per una o più persone), potrai svolgere gli stessi tre microtest della Cápsula Corallo, se ancora non svolti (quindi sempre con previa registrazione), ma questa volta ottenendo come risultato —oltre a profilo funzionale, palette e stile, se ancora non si ha la propria Carta Abitativa nel profilo— un catalogo personalizzato di arredi e finiture coerente con i risultati del test Corallo, che apparirà nel tuo profilo personale (l’area “Carta Abitativa”).",
-    "pet.catDesc2":"Gli arredi e le finiture sono alcuni dei prodotti venduti da negozi affiliati (partner collaboratori).",
-    "pet.thPack":"Pacchetto","pet.thPrice":"Prezzo","cta.buy":"Acquista",
-    "pet.pk1":"Per una persona","pet.pk2":"Nucleo familiare / coabitanti di 2 persone","pet.pk3":"Nucleo familiare di 3–5 persone","pet.pk3p":"80 € + 20 € per ogni membro extra",
+    "pet.catDesc":"Acquistando un catalogo personalizzato, per te o per tutta la famiglia, potrai svolgere il TEST <em>Mi casa a mi medida</em>, se ancora non svolto. Nella tua area personale della Carta Abitativa appariranno anche i cataloghi da scaricare e consultare in qualsiasi momento. Lì troverai anche indirizzi e contatti di tutti i venditori!",
+    "cta.buy":"Acquista",
+    "pet.pk1":"Per una persona","pet.pk2":"Nucleo familiare / coabitanti di 2 persone","pet.pk3":"Nucleo familiare di 3–5 persone","pet.pk3p":"+ 20 € per ogni membro extra",
     "pet.famNote":"I nuclei familiari vengono registrati sotto lo stesso profilo con un’unica mail.",
     "pet.slTitle":"Richiedi una Shopping List",
     "pet.slDesc":"Con questa funzione si può inoltrare una richiesta di consulenza solo ed esclusivamente per la shopping list, in modo da avere:",
@@ -171,7 +193,8 @@ CAPSULA_I18N.add({
     "pet.sl3":"Supporto nella interlocuzione con i negozianti.",
     "pet.sl4":"Supporto nella pianificazione e gestione degli ordini.",
     "pet.slCond":"Questo servizio di consulenza è subordinato all’acquisto del catalogo personalizzato.",
-    "pet.slPrices":"Prezzi: opzione base 10 €/mq · opzione premium 20 €/mq (in base al livello di dettaglio e se gestendo anche l’acquisto).",
+    "pet.slPricesT":"Prezzi","pet.slPricesN":"(in base al livello di dettaglio e se gestendo anche l’acquisto)",
+    "pet.slP1":"opzione base: 10 €/mq","pet.slP2":"opzione premium: 20 €/mq",
     "form.name":"Nome e cognome","form.email":"Email","pet.slCta":"Richiedi informazioni",
     "pet.ctaTitle":"Hai un’attività nel settore dell’interior design?",
     "pet.ctaSub":"Se sei un negozio, uno showroom, un artigiano, un produttore, un falegname, un restauratore, un rivenditore di rivestimenti o altro, e hai bisogno di più visibilità e clienti che sanno già cosa cercano, mettiti in contatto con noi. Diventa un nostro affiliato e entra nella rete di Capsula.",

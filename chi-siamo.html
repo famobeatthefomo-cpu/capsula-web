@@ -17,11 +17,12 @@
     <nav class="nav-links">
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
-      <a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
-      <a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
-      <a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
+      <a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
+      <a class="nav-coral" href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
+      <a class="nav-petrol" href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
       <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
       <a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a>
+      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
@@ -34,19 +35,19 @@
 <section class="page-hero ph--teal">
   <div class="wrap">
     <p class="eyebrow" data-i18n="nav.about">Quiénes somos</p>
-    <h1 data-i18n="about.h1">No miramos solo tu casa. Te miramos a ti.</h1>
+    <h1 data-i18n="about.h1">No miramos solo tu casa.<br>Te miramos a ti.</h1>
     <p class="tag" data-i18n="about.lead">Somos una de las primeras start-ups de neuroarquitectura. Acompañamos el proceso proyectual en el diseño de ambientes domésticos, con atención al impacto real que producen en el cuerpo y en la mente de quien los habita.</p>
   </div>
 </section>
 
 <section class="section section--tight">
-  <div class="wrap grid-2">
-    <div>
+  <div class="wrap">
+    <div class="quote quote--capsule"><p data-i18n="about.quote">“Diseñar con conciencia no es un capricho: es una herramienta para vivir mejor.”</p></div>
+    <div style="max-width:74ch;margin:2.6rem auto 0">
       <h2 data-i18n="about.philoTitle">Diseñar con conciencia</h2>
-      <p class="muted" data-i18n="about.philo1">Creamos Cápsula porque tu casa no debería ser solo un refugio funcional o un lugar “bonito”, sino un agente activo de tu bienestar físico y mental. Vamos a la raíz: a quién eres y a cómo, de forma única, percibes el entorno, según tu historia personal y la biología de tu sistema nervioso.</p>
-      <p class="muted" style="margin-top:1rem" data-i18n="about.philo2">Así buscamos tu “cápsula”: la herramienta para diseñar un hogar a tu medida y potenciar tu bienestar, con un enfoque de <em>evidence-based design</em>.</p>
+      <p class="muted" style="margin-top:1rem" data-i18n="about.philo1">Creamos Cápsula porque tu casa no debería ser solo un refugio funcional o un lugar “bonito”, sino un agente activo de tu bienestar físico y mental. <em>Vamos a la raíz: a quién eres y a cómo, de forma única, percibes el entorno, según tu historia personal y la biología de tu sistema nervioso.</em></p>
+      <p class="muted" style="margin-top:1rem" data-i18n="about.philo2">Así encontramos tu “cápsula”: la herramienta para diseñar un hogar a tu medida y potenciar tu bienestar, con un enfoque de <em>evidence-based design</em>.</p>
     </div>
-    <div class="quote"><p data-i18n="about.quote">“Diseñar con conciencia no es un capricho: es una herramienta para vivir mejor.”</p></div>
   </div>
 </section>
 
@@ -73,17 +74,17 @@
     <article class="founder">
       <img class="team-photo" src="assets/img/team-giulia.jpg" alt="Giulia">
       <h3>Giulia</h3><p class="role" data-i18n="about.r1">Neuro-arquitecta &amp; interior designer</p>
-      <p class="muted" data-i18n="about.b1">Arquitecta e interiorista especializada en arquitectura participativa y neuroarquitectura. Desde la escucha profunda, ayuda a que cada hogar sea reflejo auténtico de quien lo habita, articulando el espacio en micro-ambientes con mobiliario fijo a medida.</p>
+      <p class="muted" data-i18n="about.b1">Arquitecta e interior designer especializada en arquitectura participativa y neuroarquitectura. A través de la escucha profunda, ayuda a que cada casa se convierta en un reflejo auténtico de quien la habita.</p>
     </article>
     <article class="founder">
       <img class="team-photo" src="assets/img/team-marialucia.jpg" alt="Maria Lucia">
       <h3>Maria Lucia</h3><p class="role" data-i18n="about.r2">Bio-arquitecta &amp; interior designer</p>
-      <p class="muted" data-i18n="about.b2">Arquitecta interiorista especializada en arquitectura saludable, color y bienestar. Con su proyecto Archicromia investiga la relación entre color, percepción y salud, y en Cápsula usa el color como herramienta estratégica de diseño.</p>
+      <p class="muted" data-i18n="about.b2">Arquitecta de interiores especializada en arquitectura saludable, color y bienestar. Con su proyecto en paralelo Archicromia investiga la relación entre color, percepción y salud, y en Cápsula usa el color como herramienta estratégica de proyecto.</p>
     </article>
     <article class="founder">
-      <img class="team-photo" src="assets/img/team-nadia.jpg" alt="Nadia">
-      <h3>Nadia</h3><p class="role" data-i18n="about.r3">Diseñadora especializada en comunicación e interior design</p>
-      <p class="muted" data-i18n="about.b3">En Cápsula traduce tu identidad y tu manera de habitar en conceptos visuales, materiales y atmosféricos que te ayudan a reconectar con tu entorno.</p>
+      <img class="team-photo" src="assets/img/team-nadia.jpg" alt="Nadia" style="object-position:52% 22%">
+      <h3>Nadia</h3><p class="role" data-i18n="about.r3">Graphic &amp; interior designer</p>
+      <p class="muted" data-i18n="about.b3">Diseñadora especializada en comunicación e interior design. En Cápsula traduce tu identidad y tu manera de habitar en conceptos visuales, materiales y atmosféricos que te ayudan a reconectar con tu entorno.</p>
     </article>
   </div>
 </section>
@@ -105,7 +106,7 @@
     <div><h4 data-i18n="footer.explore">Explora</h4><ul>
       <li><a href="index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
-      <li><a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
+      <li><a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
       <li><a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a></li>
       <li><a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a></li>
       <li><a href="galeria.html" data-i18n="nav.gallery">Galería</a></li>
@@ -127,10 +128,10 @@
 <script>
 CAPSULA_I18N.add({
   en: {
-    "about.h1":"We don’t just look at your house. We look at you.",
+    "about.h1":"We don’t just look at your house.<br>We look at you.",
     "about.lead":"We are one of the first neuroarchitecture start-ups. We provide design support for domestic environments, focusing on the real impact they produce on the body and mind of those who inhabit them.",
     "about.philoTitle":"Designing with awareness",
-    "about.philo1":"We created Cápsula because your home shouldn’t be just a functional shelter or a “pretty” place, but an active agent of your physical and mental wellbeing. We go to the root: who you are and how, uniquely, you perceive your surroundings — shaped by your personal history and the biology of your nervous system.",
+    "about.philo1":"We created Cápsula because your home shouldn’t be just a functional shelter or a “pretty” place, but an active agent of your physical and mental wellbeing. <em>We go to the root: who you are and how, uniquely, you perceive your surroundings — shaped by your personal history and the biology of your nervous system.</em>",
     "about.philo2":"That’s how we find your “capsule”: the tool to design a home made to your measure and boost your wellbeing, with an <em>evidence-based design</em> approach.",
     "about.quote":"“Designing with awareness isn’t a luxury: it’s a tool for living better.”",
     "about.methodEyebrow":"Our method","about.methodTitle":"We explain it in 3 steps",
@@ -140,19 +141,19 @@ CAPSULA_I18N.add({
     "about.teamEyebrow":"Meet us","about.teamTitle":"We are Giulia, Maria Lucia and Nadia",
     "about.teamSub":"Three disciplines, one question: how should your home feel so you live better?",
     "about.r1":"Neuro-architect & interior designer",
-    "about.b1":"Architect and interior designer specialized in participatory architecture and neuroarchitecture. Through deep listening, she helps every home become an authentic reflection of its inhabitant, shaping the space into micro-environments with custom built-in furniture.",
+    "about.b1":"Architect and interior designer specialized in participatory architecture and neuroarchitecture. Through deep listening, she helps every home become an authentic reflection of its inhabitant.",
     "about.r2":"Bio-architect & interior designer",
-    "about.b2":"Interior architect specialized in healthy architecture, colour and wellbeing. Through her project Archicromia she researches the relationship between colour, perception and health, and at Cápsula uses colour as a strategic design tool.",
-    "about.r3":"Designer specialized in communication & interior design",
-    "about.b3":"At Cápsula she translates your identity and your way of inhabiting into visual, material and atmospheric concepts that help you reconnect with your environment.",
+    "about.b2":"Interior architect specialized in healthy architecture, colour and wellbeing. Through her side project Archicromia she researches the relationship between colour, perception and health, and at Cápsula uses colour as a strategic design tool.",
+    "about.r3":"Graphic & interior designer",
+    "about.b3":"Designer specialized in communication and interior design. At Cápsula she translates your identity and your way of inhabiting into visual, material and atmospheric concepts that help you reconnect with your environment.",
     "about.whyTitle":"Why “Cápsula”?",
     "about.why":"A capsule is tool, shelter and vehicle at once: something made to your measure that protects you and carries you toward a better state. That’s what we want your home to be."
   },
   it: {
-    "about.h1":"Non guardiamo solo la tua casa. Guardiamo te.",
+    "about.h1":"Non guardiamo solo la tua casa.<br>Guardiamo te.",
     "about.lead":"Siamo una delle prime start-up di neuroarchitettura. Facciamo da accompagnamento progettuale per la progettazione di ambienti domestici con attenzione all’impatto reale che producono nel corpo e nella mente di chi li abita.",
     "about.philoTitle":"Progettare con consapevolezza",
-    "about.philo1":"Abbiamo creato Cápsula perché la tua casa non dovrebbe essere solo un rifugio funzionale o un posto “bello”, ma un agente attivo del tuo benessere fisico e mentale. Andiamo alla radice: chi sei e come, in modo unico, percepisci l’ambiente — secondo la tua storia personale e la biologia del tuo sistema nervoso.",
+    "about.philo1":"Abbiamo creato Cápsula perché la tua casa non dovrebbe essere solo un rifugio funzionale o un posto “bello”, ma un agente attivo del tuo benessere fisico e mentale. <em>Andiamo alla radice: chi sei e come, in modo unico, percepisci l’ambiente, secondo la tua storia personale e la biologia del tuo sistema nervoso.</em>",
     "about.philo2":"È così che troviamo la tua “capsula”: lo strumento per progettare una casa su misura e potenziare il tuo benessere, con approccio <em>evidence-based design</em>.",
     "about.quote":"“Progettare con consapevolezza non è un capriccio: è uno strumento per vivere meglio.”",
     "about.methodEyebrow":"Il nostro metodo","about.methodTitle":"Te lo spieghiamo in 3 passaggi",
@@ -162,11 +163,11 @@ CAPSULA_I18N.add({
     "about.teamEyebrow":"Ci presentiamo","about.teamTitle":"Siamo Giulia, Maria Lucia e Nadia",
     "about.teamSub":"Tre discipline, una sola domanda: come dovrebbe farti sentire la tua casa per vivere meglio?",
     "about.r1":"Neuro-architetta & interior designer",
-    "about.b1":"Architetta e interior designer specializzata in architettura partecipativa e neuroarchitettura. Attraverso l’ascolto profondo, aiuta ogni casa a diventare un riflesso autentico di chi la abita, articolando lo spazio in micro-ambienti con arredi fissi su misura.",
+    "about.b1":"Architetta e interior designer specializzata in architettura partecipativa e neuroarchitettura. Attraverso l’ascolto profondo, aiuta ogni casa a diventare un riflesso autentico di chi la abita.",
     "about.r2":"Bio-architetta & interior designer",
-    "about.b2":"Architetta d’interni specializzata in architettura salubre, colore e benessere. Con il suo progetto Archicromia indaga la relazione tra colore, percezione e salute, e in Cápsula usa il colore come strumento strategico di progetto.",
-    "about.r3":"Designer specializzata in comunicazione e interior design",
-    "about.b3":"In Cápsula traduce la tua identità e il tuo modo di abitare in concetti visivi, materiali e atmosferici che ti aiutano a riconnetterti con il tuo ambiente.",
+    "about.b2":"Architetta d’interni specializzata in architettura salubre, colore e benessere. Con il suo progetto in parallelo Archicromia indaga la relazione tra colore, percezione e salute, e in Cápsula usa il colore come strumento strategico di progetto.",
+    "about.r3":"Graphic & interior designer",
+    "about.b3":"Designer specializzata in comunicazione e interior design. In Cápsula traduce la tua identità e il tuo modo di abitare in concetti visivi, materiali e atmosferici che ti aiutano a riconnetterti con il tuo ambiente.",
     "about.whyTitle":"Perché “Cápsula”?",
     "about.why":"Una capsula è insieme strumento, rifugio e veicolo: qualcosa fatto su misura per te che ti protegge e ti porta verso uno stato migliore. È ciò che vogliamo sia la tua casa."
   }

@@ -17,11 +17,12 @@
     <nav class="nav-links">
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
-      <a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
-      <a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
-      <a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
+      <a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
+      <a class="nav-coral" href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
+      <a class="nav-petrol" href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
       <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
       <a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a>
+      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
@@ -36,27 +37,61 @@
     <p class="prov" data-i18n="coral.prov">¿Has comprado casa, la estás buscando o tienes que empezar un proyecto y necesitas una dirección clara?</p>
     <h1><span class="pill-ico pill-ico--coral"></span>Cápsula Coral</h1>
     <p class="muted" style="max-width:70ch;margin-top:1.2rem" data-i18n="coral.p1">Cuando se diseña una casa, las decisiones se multiplican enseguida: colores, materiales, estilo, distribución, funciones, atmósferas. El riesgo es partir de imágenes, tendencias o gustos del momento, sin saber si esas elecciones respetan tu funcionamiento neuropsicológico y contribuyen de verdad a tu bienestar cotidiano.</p>
-    <p class="muted" style="max-width:70ch;margin-top:1rem" data-i18n="coral.p2">Con una dosis de Cápsula Coral recibirás una guía de diseño a tu medida, con indicaciones que responden a tu manera única de habitar. No esperes más y compra ya el test completo.</p>
-    <p class="muted" style="max-width:70ch;margin-top:1rem" data-i18n="coral.p3">Si ya has hecho el microtest gratuito, podrás desbloquear los otros dos microtests y todos los resultados que componen tu Carta Habitacional: entrarás en tu página personal y allí podrás consultar en todo momento tu perfil funcional, con una lista de tips de diseño específicos, tu paleta cromática personalizada y el estilo de interiorismo más coherente.</p>
-    <p class="muted" style="max-width:70ch;margin-top:1rem" data-i18n="coral.p4">Desde ahí, podrás decidir si usar tu Carta como herramienta de autoproyección guiada o como base para el servicio de asesoría profesional que más te convenga.</p>
+    <div class="hl-box" data-i18n="coral.hl">Con una dosis de Cápsula Coral recibirás una guía de diseño a tu medida, con indicaciones que responden a tu manera única de habitar. No esperes más y compra ya el test completo.</div>
+    <p class="muted" style="max-width:70ch;margin-top:1.2rem" data-i18n="coral.p3">Si ya has hecho la prueba de test gratuita, podrás desbloquear los otros dos microtests y todos los resultados que componen tu <strong style="color:var(--coral);font-family:var(--serif);font-style:italic">Carta Habitacional</strong>.</p>
+    <p class="muted" style="max-width:70ch;margin-top:1rem" data-i18n="coral.p4">Estará en tus manos decidir si usarla como herramienta de autoproyección guiada o como base para el servicio de asesoría profesional que más te convenga.</p>
     <div class="hero-cta">
-      <a class="btn btn--capsule btn--coralc" href="#precios-test" data-i18n="coral.cta1">Compra tu Carta Habitacional completa</a>
+      <a class="btn btn--capsule btn--coralc" href="#precios-test" data-i18n="coral.cta1">Compra el test completo</a>
       <a class="btn btn--capsule btn--coralc" href="#asesorias" data-i18n="coral.cta2">Solicita asesoría</a>
     </div>
   </div>
 </section>
 
-<!-- PRECIOS TEST COMPLETO -->
+<!-- TEST COMPLETO -->
 <section class="section" id="precios-test">
-  <div class="wrap center"><p class="eyebrow" data-i18n="coral.t1Eyebrow">Test completo</p><h2 data-i18n="coral.t1">Compra tu Carta Habitacional completa</h2></div>
+  <div class="wrap center"><p class="eyebrow" data-i18n="coral.t1Eyebrow">TEST Mi casa a mi medida</p><h2 data-i18n="coral.t1">Compra el test completo</h2></div>
   <div class="wrap">
-    <p class="muted" style="max-width:74ch;margin:1.2rem auto 0" data-i18n="coral.t1desc">Efectuado el pago con registro/acceso, se abre tu perfil, donde aparecen el resultado del primer microtest gratuito con nuevos “tips” desbloqueados y los otros dos microtests por realizar. <strong>Test paleta cromática:</strong> identifica la paleta cromática más adecuada del encuentro entre perfil funcional y estación armocromática, definiendo también algunos colores simbólicos asociados a las emociones para las tres zonas funcionales principales de la casa. <strong>Test estilo de interiorismo:</strong> identifica el estilo de interiorismo más adecuado (con su materialboard) del encuentro entre perfil funcional y las experiencias de vida que la persona asocia a cada acción cotidiana, definiendo también el concept en palabras clave (emociones-atmósferas) para las tres zonas funcionales principales de la casa.</p>
-    <table class="price-table" style="margin-top:1.6rem"><tbody>
-      <tr><td data-i18n="coral.t1a">Para una persona</td><td>20 €</td><td style="text-align:right"><a class="btn btn--capsule btn--coralc" href="accedi.html" data-i18n="cta.buy">Compra</a></td></tr>
-      <tr><td data-i18n="coral.t1b">Núcleo familiar / convivientes de 2 personas</td><td>30 €</td><td style="text-align:right"><a class="btn btn--capsule btn--coralc" href="accedi.html" data-i18n="cta.buy">Compra</a></td></tr>
-      <tr><td data-i18n="coral.t1c">Núcleo familiar de 3–5 personas</td><td data-i18n="coral.t1cp">50 € + 10 € por cada miembro extra</td><td style="text-align:right"><a class="btn btn--capsule btn--coralc" href="accedi.html" data-i18n="cta.buy">Compra</a></td></tr>
-    </tbody></table>
-    <p class="note" data-i18n="coral.t1famNote">Los núcleos familiares se registran bajo el mismo perfil con una única dirección de email.</p>
+    <p class="muted" style="max-width:74ch;margin:1.2rem auto 0" data-i18n="coral.t1desc">Efectuando el pago, entrarás en tu página personal, donde podrás realizar los tres microtests audiovisuales y consultar en todo momento los resultados de tu Carta Habitacional (¡y también los de los demás miembros de tu núcleo habitacional!)</p>
+
+    <div class="mt-item">
+      <img src="assets/img/test-profili.png" alt="Perfiles funcionales">
+      <h4 data-i18n="coral.mt1t">Test perfil funcional</h4>
+      <p data-i18n="coral.mt1d">Identifica el tipo de perfil sensorial y cognitivo al que perteneces según tu funcionamiento neuropsicológico y, por tanto, según tu respuesta a los estímulos del entorno que te rodea.</p>
+      <p class="durata" data-i18n="coral.mtTime">Duración: 2-3 min.</p>
+      <p class="mt-nota" data-i18n="coral.mt1n">Este primer test es gratuito, pero comprando el test completo se desbloquearán nuevos “tips” de diseño.</p>
+    </div>
+    <div class="mt-item">
+      <img src="assets/img/test-palette.png" alt="Paletas cromáticas">
+      <h4 data-i18n="coral.mt2t">Test paleta cromática</h4>
+      <p data-i18n="coral.mt2d">Identifica la paleta cromática más adecuada del encuentro entre perfil funcional y estación armocromática, definiendo también algunos colores simbólicos asociados a las emociones para las tres zonas funcionales principales de la casa.</p>
+      <p class="durata" data-i18n="coral.mtTime">Duración: 2-3 min.</p>
+    </div>
+    <div class="mt-item">
+      <img src="assets/img/test-stile.png" alt="Estilos de interiorismo">
+      <h4 data-i18n="coral.mt3t">Test estilo de interiorismo</h4>
+      <p data-i18n="coral.mt3d">Identifica el estilo de interiorismo más adecuado (con su materialboard) del encuentro entre perfil funcional y las experiencias de vida que la persona asocia a cada acción cotidiana, definiendo también el concept en palabras clave (emociones-atmósferas) para las tres zonas funcionales principales de la casa.</p>
+      <p class="durata" data-i18n="coral.mtTime">Duración: 2-3 min.</p>
+    </div>
+
+    <div class="pcards" style="margin-top:2.4rem">
+      <div class="pcard pcard--center">
+        <h4 data-i18n="coral.t1a">Para una persona</h4>
+        <div class="amount">20 €</div>
+        <a class="btn btn--capsule btn--coralc" href="accedi.html" data-i18n="cta.buy">Compra</a>
+      </div>
+      <div class="pcard pcard--center">
+        <h4 data-i18n="coral.t1b">Núcleo familiar / convivientes de 2 personas</h4>
+        <div class="amount">30 €</div>
+        <a class="btn btn--capsule btn--coralc" href="accedi.html" data-i18n="cta.buy">Compra</a>
+      </div>
+      <div class="pcard pcard--center">
+        <h4 data-i18n="coral.t1c">Núcleo familiar de 3–5 personas</h4>
+        <div class="amount">50 €</div>
+        <p class="cond"><em data-i18n="coral.t1cp">+ 10 € por cada miembro extra</em></p>
+        <a class="btn btn--capsule btn--coralc" href="accedi.html" data-i18n="cta.buy">Compra</a>
+      </div>
+    </div>
+    <p class="note center" data-i18n="coral.t1famNote">Los núcleos familiares se registran bajo el mismo perfil con una única dirección de email.</p>
   </div>
 </section>
 
@@ -65,45 +100,82 @@
   <div class="wrap center"><p class="eyebrow" style="color:#fbd8cd" data-i18n="coral.aEyebrow">Asesorías</p><h2 data-i18n="coral.aTitle">Tres servicios de asesoría profesional</h2></div>
 
   <div class="wrap" style="margin-top:2rem">
-    <div class="card"><h3 data-i18n="coral.t2">Asesoría flash de concepto · “Ayúdame a hacerlo con criterio”</h3>
-      <p class="muted" style="margin-top:.6rem" data-i18n="coral.t2desc">Solo líneas guía de diseño de neuroarquitectura, para confiarlas a otro arquitecto que siga las obras, directamente a una empresa o para hacerlo por tu cuenta.</p>
-      <p class="note" data-i18n="coral.t2note">Incluye 1 encuentro de conocimiento por videollamada/presencial + únicamente 3 alternativas de diseño; no está prevista ninguna revisión. Encuentro extra de revisión: 30 € · Eventuales modificaciones → 4ª alternativa (final): 100 €.</p>
-      <p style="margin:.8rem 0"><a class="btn btn--link" href="#" data-i18n="cta.sample">Ver Sample ↓</a></p>
-      <div style="overflow-x:auto"><table class="price-table" style="min-width:520px">
-        <thead><tr><th data-i18n="coral.thCase">Caso</th><th data-i18n="coral.thPrice">Precio</th></tr></thead>
-        <tbody>
-          <tr><td data-i18n="coral.c1">1 estancia (9–15 m²)</td><td>250 €</td></tr>
-          <tr><td data-i18n="coral.c2">1 estancia (15–20 m²)</td><td>300 €</td></tr>
-          <tr><td data-i18n="coral.c3">1 estancia (21 m² en adelante)</td><td>350 €</td></tr>
-          <tr><td data-i18n="coral.c4">Casa entera: estudio o apartamento de 30–50 m²</td><td>400 €</td></tr>
-          <tr><td data-i18n="coral.c5">Casa entera de 51–80 m²</td><td>550 €</td></tr>
-          <tr><td data-i18n="coral.c6">Casa entera de 81–110 m²</td><td>700 €</td></tr>
-          <tr><td data-i18n="coral.c7">Casa entera &gt; 110 m²</td><td data-i18n="coral.c7p">+5 € por cada m² adicional</td></tr>
-        </tbody>
-      </table></div>
-      <a class="btn btn--capsule btn--coralc" style="margin-top:1.2rem" href="#form-asesoria" data-i18n="coral.reqCta">Solicita asesoría</a>
+    <div class="card">
+      <h3 style="color:var(--coral);font-size:1.7rem" data-i18n="coral.t2">Ayúdame a hacerlo con criterio</h3>
+      <p class="lead" style="font-size:1.05rem;margin-top:.2rem" data-i18n="coral.t2sub">Asesoría flash de concepto</p>
+      <p class="muted" style="margin-top:.7rem" data-i18n="coral.t2desc">Para recibir únicamente líneas guía de diseño de neuroarquitectura, que podrás confiar a otro profesional que siga las obras o usar como guía para hacerlo por tu cuenta.</p>
+      <p class="note" data-i18n="coral.t2note">Incluye un único encuentro de conocimiento por videollamada/presencial + únicamente 3 alternativas de diseño; no está prevista ninguna revisión. Consulta el precio para encuentros extra de revisión y eventuales modificaciones.</p>
+      <p style="margin:.8rem 0"><a class="btn btn--link" href="#" download data-i18n="cta.sample">Ver Sample ↓</a></p>
+      <div class="pcards pcards--2">
+        <div class="pcard">
+          <h4 data-i18n="coral.pcRoom">Estancia</h4>
+          <div class="pline"><span data-i18n="coral.pc1">9–15 m²</span><b>250 €</b></div>
+          <div class="pline"><span data-i18n="coral.pc2">15–20 m²</span><b>300 €</b></div>
+          <div class="pline"><span data-i18n="coral.pc3">Desde 21 m²</span><b>350 €</b></div>
+        </div>
+        <div class="pcard">
+          <h4 data-i18n="coral.pcHouse">Casa entera</h4>
+          <div class="pline"><span>30–50 m²</span><b>400 €</b></div>
+          <div class="pline"><span>51–80 m²</span><b>550 €</b></div>
+          <div class="pline"><span>81–110 m²</span><b>700 €</b></div>
+          <div class="pline"><span data-i18n="coral.pcOver">Más de 110 m²</span><b>+5 €/m²</b></div>
+        </div>
+      </div>
+      <a class="btn btn--capsule btn--coralc" style="margin-top:1.4rem" href="#form-asesoria" data-i18n="coral.reqCta">Solicita asesoría</a>
     </div>
 
-    <div class="card" style="margin-top:1.5rem"><h3 data-i18n="coral.t3">Proyecto completo · “Encárgate tú”</h3>
-      <p class="muted" style="margin-top:.6rem" data-i18n="coral.t3desc">Proyecto íntegro y dirección de obras.</p>
-      <p class="note" data-i18n="coral.t3note">Incluye 1 encuentro de conocimiento por videollamada/presencial + 3 propuestas iniciales + un total de revisiones que se establece y comunica desde el inicio.</p>
-      <p style="margin:.8rem 0"><a class="btn btn--link" href="#" data-i18n="cta.sample">Ver Sample ↓</a></p>
-      <table class="price-table"><tbody>
-        <tr><td data-i18n="coral.t3a">Opción casa Low budget</td><td data-i18n="coral.t3ap">Forfait mínimo: 2.500 € hasta 50 m²; después 40–50 €/m² extra</td></tr>
-        <tr><td data-i18n="coral.t3b">Opción casa Calidad</td><td data-i18n="coral.t3bp">Forfait mínimo: 4.000 € hasta 50 m²; después 70–90 €/m² extra</td></tr>
-        <tr><td data-i18n="coral.t3c">Opción con Shopping List</td><td data-i18n="coral.t3cp">+10–20 €/m² (según el nivel de detalle y si gestionamos también la compra)</td></tr>
-      </tbody></table>
-      <a class="btn btn--capsule btn--coralc" style="margin-top:1.2rem" href="#form-asesoria" data-i18n="coral.reqCta">Solicita asesoría</a>
+    <div class="card" style="margin-top:1.5rem">
+      <h3 style="color:var(--coral);font-size:1.7rem" data-i18n="coral.t3">Encárgate tú</h3>
+      <p class="lead" style="font-size:1.05rem;margin-top:.2rem" data-i18n="coral.t3sub">Proyecto completo</p>
+      <p class="muted" style="margin-top:.7rem" data-i18n="coral.t3desc">Para confiarnos el proyecto íntegro y la dirección de obras.</p>
+      <p class="note" data-i18n="coral.t3note">Incluye un único encuentro de conocimiento por videollamada/presencial + 3 propuestas iniciales + un total de revisiones que se establece y comunica desde el inicio.</p>
+      <p style="margin:.8rem 0"><a class="btn btn--link" href="#" download data-i18n="cta.sample">Ver Sample ↓</a></p>
+      <div class="pcards">
+        <div class="pcard">
+          <h4 data-i18n="coral.pj1">Casa Low Budget</h4>
+          <div class="pline"><span data-i18n="coral.pjUp50">Hasta 50 m²</span><b>2.500 €</b></div>
+          <div class="pline"><span data-i18n="coral.pjOver50">Más de 50 m²</span><b>+40–50 €/m²</b></div>
+        </div>
+        <div class="pcard">
+          <h4 data-i18n="coral.pj2">Casa Calidad</h4>
+          <div class="pline"><span data-i18n="coral.pjUp50">Hasta 50 m²</span><b>4.000 €</b></div>
+          <div class="pline"><span data-i18n="coral.pjOver50">Más de 50 m²</span><b>+70–90 €/m²</b></div>
+        </div>
+        <div class="pcard">
+          <h4>Shopping List</h4>
+          <div class="pline"><span data-i18n="coral.pjSup">Suplemento</span><b>+10–20 €/m²</b></div>
+          <p class="cond" data-i18n="coral.pjSupN">Según el nivel de detalle y la gestión de las compras.</p>
+        </div>
+      </div>
+      <a class="btn btn--capsule btn--coralc" style="margin-top:1.4rem" href="#form-asesoria" data-i18n="coral.reqCta">Solicita asesoría</a>
     </div>
 
-    <div class="card" style="margin-top:1.5rem"><h3 data-i18n="coral.t4">Asesoría para la elección de la casa · “Ayúdame a elegirla”</h3>
-      <p class="muted" style="margin-top:.6rem" data-i18n="coral.t4desc">Un parecer cualificado sobre las casas que estás valorando comprar, para elegir con mayor conciencia la más a tu medida, con acompañamiento a la visita (online/presencial) y propuestas de líneas guía de diseño con parecer favorable/desfavorable.</p>
-      <table class="price-table" style="margin-top:.8rem"><tbody>
-        <tr><td data-i18n="coral.t4a">Acompañamiento a visitas online</td><td data-i18n="coral.t4ap">150 € pack 3 visitas · 230 € pack 5 visitas · 60 € visita extra</td></tr>
-        <tr><td data-i18n="coral.t4b">Acompañamiento a visitas presenciales (solo Barcelona)</td><td data-i18n="coral.t4bp">250 € pack 3 visitas · 390 € pack 5 visitas · 90 € visita extra</td></tr>
-        <tr><td data-i18n="coral.t4c">Propuestas de líneas guía y parecer final</td><td data-i18n="coral.t4cp">200 €/casa (solo las de parecer favorable) · 450 € pack 3 casas (solo con parecer favorable)</td></tr>
-      </tbody></table>
-      <a class="btn btn--capsule btn--coralc" style="margin-top:1.2rem" href="#form-asesoria" data-i18n="coral.reqCta">Solicita asesoría</a>
+    <div class="card" style="margin-top:1.5rem">
+      <h3 style="color:var(--coral);font-size:1.7rem" data-i18n="coral.t4">Ayúdame a elegirla</h3>
+      <p class="lead" style="font-size:1.05rem;margin-top:.2rem" data-i18n="coral.t4sub">Asesoría para la elección de la casa</p>
+      <p class="muted" style="margin-top:.7rem" data-i18n="coral.t4desc">Para tener un parecer cualificado sobre las casas que estás valorando comprar y elegir con mayor conciencia la más a tu medida. Ofrecemos acompañamiento a las visitas (online o en vivo) y parecer favorable/desfavorable con posibles soluciones de diseño (en formato de líneas guía).</p>
+      <div class="pcards">
+        <div class="pcard">
+          <h4 data-i18n="coral.v1">Acompañamiento visitas online</h4>
+          <div class="pline"><span data-i18n="coral.vp3">Pack 3 visitas</span><b>150 €</b></div>
+          <div class="pline"><span data-i18n="coral.vp5">Pack 5 visitas</span><b>230 €</b></div>
+          <div class="pline"><span data-i18n="coral.vpx">Visita extra</span><b>60 €</b></div>
+        </div>
+        <div class="pcard">
+          <h4 data-i18n="coral.v2">Acompañamiento visitas presenciales</h4>
+          <p class="cond" data-i18n="coral.v2n">Solo Barcelona</p>
+          <div class="pline"><span data-i18n="coral.vp3">Pack 3 visitas</span><b>250 €</b></div>
+          <div class="pline"><span data-i18n="coral.vp5">Pack 5 visitas</span><b>390 €</b></div>
+          <div class="pline"><span data-i18n="coral.vpx">Visita extra</span><b>90 €</b></div>
+        </div>
+        <div class="pcard pcard--alt">
+          <h4 data-i18n="coral.v3">Propuestas de líneas guía y parecer final</h4>
+          <div class="pline"><span data-i18n="coral.v3a">1 casa</span><b>200 €</b></div>
+          <div class="pline"><span data-i18n="coral.v3b">Pack 3 casas</span><b>450 €</b></div>
+          <p class="cond" data-i18n="coral.v3n">Solo con parecer favorable.</p>
+        </div>
+      </div>
+      <a class="btn btn--capsule btn--coralc" style="margin-top:1.4rem" href="#form-asesoria" data-i18n="coral.reqCta">Solicita asesoría</a>
     </div>
   </div>
 </section>
@@ -138,7 +210,7 @@
     <div><h4 data-i18n="footer.explore">Explora</h4><ul>
       <li><a href="index.html" data-i18n="nav.home">Home</a></li>
       <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
-      <li><a href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
+      <li><a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
       <li><a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a></li>
       <li><a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a></li>
       <li><a href="galeria.html" data-i18n="nav.gallery">Galería</a></li>
@@ -153,7 +225,7 @@
   <div class="wrap footer-bottom"><span>© 2026 Cápsula · Barcelona</span><span><a href="#" data-i18n="footer.privacy">Privacidad</a> · <a href="#" data-i18n="footer.terms">Términos</a></span></div>
 </footer>
 
-<div class="mobile-cta"><a class="btn btn--capsule btn--coralc" href="#precios-test" data-i18n="coral.cta1">Compra tu Carta Habitacional completa</a></div>
+<div class="mobile-cta"><a class="btn btn--capsule btn--coralc" href="#precios-test" data-i18n="coral.cta1">Compra el test completo</a></div>
 
 <script src="assets/i18n.js"></script>
 <script src="assets/globals-i18n.js"></script>
@@ -162,34 +234,41 @@ CAPSULA_I18N.add({
   en: {
     "coral.prov":"You’ve bought a home, you’re looking for one, or you need to start a project and want a clear direction?",
     "coral.p1":"When designing a home, the decisions pile up fast: colours, materials, style, layout, functions, atmospheres. The risk is starting from images, trends or the tastes of the moment, without knowing whether those choices respect your neuropsychological functioning and truly contribute to your everyday wellbeing.",
-    "coral.p2":"With a dose of Cápsula Coral you’ll receive a design guide made for you, with indications that answer your unique way of inhabiting. Don’t wait — buy the full test now.",
-    "coral.p3":"If you’ve already taken the free microtest, you can unlock the other two microtests and all the results that make up your Living Chart: you’ll enter your personal page, where you can consult at any time your functional profile with a list of targeted design tips, your personalized colour palette and the most coherent interior style.",
-    "coral.p4":"From there, you can decide whether to use your Chart as a guided self-design tool or as the basis for the professional advisory service that suits you best.",
-    "coral.cta1":"Buy your complete Living Chart","coral.cta2":"Request advisory",
-    "coral.t1Eyebrow":"Full test","coral.t1":"Buy your complete Living Chart",
-    "coral.t1desc":"After payment with registration/login, your profile opens, showing the result of the first free microtest with new unlocked “tips” and the other two microtests to take. <strong>Colour palette test:</strong> identifies the most suitable colour palette from the meeting of functional profile and colour season, also defining some symbolic colours associated with emotions for the three main functional areas of the home. <strong>Interior style test:</strong> identifies the most suitable interior design style (with its material board) from the meeting of functional profile and the life experiences the person associates with each everyday action, also defining the concept in keywords (emotions–atmospheres) for the three main functional areas of the home.",
-    "coral.t1a":"For one person","coral.t1b":"Household / 2 cohabitants","coral.t1c":"Household of 3–5 people","coral.t1cp":"€50 + €10 per extra member",
+    "coral.hl":"With a dose of Cápsula Coral you’ll receive a design guide made for you, with indications that answer your unique way of inhabiting. Don’t wait — buy the full test now.",
+    "coral.p3":"If you’ve already taken the free test trial, you can unlock the other two microtests and all the results that make up your <strong style='color:var(--coral);font-family:var(--serif);font-style:italic'>Living Chart</strong>.",
+    "coral.p4":"It will then be up to you to decide whether to use it as a guided self-design tool or as the basis for the professional advisory service that suits you best.",
+    "coral.cta1":"Buy the full test","coral.cta2":"Request advisory",
+    "coral.t1Eyebrow":"Mi casa a mi medida TEST","coral.t1":"Buy the full test",
+    "coral.t1desc":"After payment, you’ll enter your personal page, where you can take the three audiovisual microtests and consult at any time the results of your Living Chart (and those of the other members of your household too!)",
+    "coral.mt1t":"Functional profile test",
+    "coral.mt1d":"It identifies the type of sensory and cognitive profile you belong to according to your neuropsychological functioning and, therefore, to your response to the stimuli of the environment around you.",
+    "coral.mt1n":"This first test is free, but buying the full test unlocks new design “tips”.",
+    "coral.mt2t":"Colour palette test",
+    "coral.mt2d":"It identifies the most suitable colour palette from the meeting of functional profile and colour season, also defining some symbolic colours associated with emotions for the three main functional areas of the home.",
+    "coral.mt3t":"Interior style test",
+    "coral.mt3d":"It identifies the most suitable interior design style (with its material board) from the meeting of functional profile and the life experiences the person associates with each everyday action, also defining the concept in keywords (emotions–atmospheres) for the three main functional areas of the home.",
+    "coral.mtTime":"Duration: 2-3 min.",
+    "coral.t1a":"For one person","coral.t1b":"Household / 2 cohabitants","coral.t1c":"Household of 3–5 people","coral.t1cp":"+ €10 per extra member",
     "coral.t1famNote":"Households are registered under the same profile with a single email address.",
     "cta.buy":"Buy","cta.sample":"See Sample ↓",
     "coral.aEyebrow":"Advisory","coral.aTitle":"Three professional advisory services",
-    "coral.t2":"Flash concept advisory · “Help me do it with criteria”",
-    "coral.t2desc":"Only neuroarchitecture design guidelines, to hand over to another architect who will follow the works, directly to a builder, or to do it yourself.",
-    "coral.t2note":"Includes 1 introductory meeting by video call/in person + only 3 design alternatives; no revisions are included. Extra review meeting: €30 · Possible changes → 4th (final) alternative: €100.",
-    "coral.thCase":"Case","coral.thPrice":"Price",
-    "coral.c1":"1 room (9–15 m²)","coral.c2":"1 room (15–20 m²)","coral.c3":"1 room (21 m² and up)",
-    "coral.c4":"Whole home: studio or one-bedroom, 30–50 m²","coral.c5":"Whole home, 51–80 m²","coral.c6":"Whole home, 81–110 m²",
-    "coral.c7":"Whole home > 110 m²","coral.c7p":"+€5 per additional m²",
+    "coral.t2":"Help me do it with criteria","coral.t2sub":"Flash concept advisory",
+    "coral.t2desc":"To receive only neuroarchitecture design guidelines, which you can hand over to another professional who will follow the works, or use as a guide to do it yourself.",
+    "coral.t2note":"Includes a single introductory meeting by video call/in person + only 3 design alternatives; no revisions are included. Check the price for extra review meetings and possible changes.",
+    "coral.pcRoom":"Room","coral.pc1":"9–15 m²","coral.pc2":"15–20 m²","coral.pc3":"From 21 m²",
+    "coral.pcHouse":"Whole home","coral.pcOver":"Over 110 m²",
     "coral.reqCta":"Request advisory",
-    "coral.t3":"Full project · “You take care of it”","coral.t3desc":"Complete project and works management.",
-    "coral.t3note":"Includes 1 introductory meeting by video call/in person + 3 initial proposals + a total of revisions set and communicated from the start.",
-    "coral.t3a":"Low-budget home option","coral.t3ap":"Minimum flat fee: €2,500 up to 50 m²; then €40–50 per extra m²",
-    "coral.t3b":"Quality home option","coral.t3bp":"Minimum flat fee: €4,000 up to 50 m²; then €70–90 per extra m²",
-    "coral.t3c":"Shopping List option","coral.t3cp":"+€10–20/m² (depending on the level of detail and whether we also manage the purchase)",
-    "coral.t4":"House-choice advisory · “Help me choose it”",
-    "coral.t4desc":"A qualified opinion on the homes you’re considering buying, to choose more consciously the one made for you, with accompanied visits (online/in person) and proposed design guidelines with a favourable/unfavourable opinion.",
-    "coral.t4a":"Accompanied online visits","coral.t4ap":"€150 pack of 3 visits · €230 pack of 5 visits · €60 extra visit",
-    "coral.t4b":"Accompanied in-person visits (Barcelona only)","coral.t4bp":"€250 pack of 3 visits · €390 pack of 5 visits · €90 extra visit",
-    "coral.t4c":"Proposed guidelines and final opinion","coral.t4cp":"€200/home (favourable opinions only) · €450 pack of 3 homes (favourable opinions only)",
+    "coral.t3":"You take care of it","coral.t3sub":"Full project",
+    "coral.t3desc":"To entrust us with the complete project and works management.",
+    "coral.t3note":"Includes a single introductory meeting by video call/in person + 3 initial proposals + a total of revisions set and communicated from the start.",
+    "coral.pj1":"Low Budget home","coral.pj2":"Quality home",
+    "coral.pjUp50":"Up to 50 m²","coral.pjOver50":"Over 50 m²",
+    "coral.pjSup":"Supplement","coral.pjSupN":"Depending on the level of detail and purchase management.",
+    "coral.t4":"Help me choose it","coral.t4sub":"House-choice advisory",
+    "coral.t4desc":"To get a qualified opinion on the homes you’re considering buying and choose more consciously the one made for you. We offer accompanied visits (online or in person) and a favourable/unfavourable opinion with possible design solutions (as guidelines).",
+    "coral.v1":"Accompanied online visits","coral.v2":"Accompanied in-person visits","coral.v2n":"Barcelona only",
+    "coral.vp3":"Pack of 3 visits","coral.vp5":"Pack of 5 visits","coral.vpx":"Extra visit",
+    "coral.v3":"Proposed guidelines and final opinion","coral.v3a":"1 home","coral.v3b":"Pack of 3 homes","coral.v3n":"Favourable opinions only.",
     "coral.formTitle":"Request your advisory",
     "form.name":"Full name","form.email":"Email",
     "coral.fSel":"Choose one of the three advisory services",
@@ -201,34 +280,41 @@ CAPSULA_I18N.add({
   it: {
     "coral.prov":"Hai comprato casa, la stai cercando o devi iniziare un progetto e hai bisogno di una direzione chiara?",
     "coral.p1":"Quando si progetta una casa, le decisioni diventano subito tante: colori, materiali, stile, distribuzione, funzioni, atmosfere. Il rischio è partire da immagini, tendenze o gusti del momento, senza sapere se quelle scelte rispettano il tuo funzionamento neuropsicologico e contribuiscono davvero al tuo benessere quotidiano.",
-    "coral.p2":"Con una dose di Cápsula Corallo riceverai una guida progettuale su misura per te, con indicazioni che rispondano al tuo modo unico di abitare. Non aspettare e acquista subito il test completo.",
-    "coral.p3":"Se hai già fatto il microtest gratuito, potrai sbloccare gli altri due microtest e tutti i risultati che compongono la tua Carta Abitativa: entrerai nella tua pagina personale e lì potrai consultare in ogni momento il tuo profilo funzionale, con una lista di tips progettuali mirati, la tua palette cromatica personalizzata e lo stile di arredamento più coerente.",
-    "coral.p4":"Da lì, potrai decidere se usare la tua Carta come strumento di autoprogettazione guidata oppure come base per il servizio di consulenza professionale che fa più a caso tuo.",
-    "coral.cta1":"Acquista la tua Carta Abitativa completa","coral.cta2":"Richiedi consulenza",
-    "coral.t1Eyebrow":"Test completo","coral.t1":"Acquista la tua Carta Abitativa completa",
-    "coral.t1desc":"Effettuato il pagamento con registrazione/accesso, si apre il tuo profilo, in cui appaiono il risultato del primo microtest gratuito con nuovi “tips” sbloccati e gli altri due microtest da svolgere. <strong>Test palette cromatica:</strong> individua la palette cromatica più adatta dall’incontro tra profilo funzionale e stagione armocromatica, definendo anche alcuni colori simbolici associati alle emozioni per le tre zone funzionali principali della casa. <strong>Test stile di arredamento:</strong> individua lo stile di interior design più adatto (con relativa materialboard) dall’incontro tra profilo funzionale ed esperienze di vita che la persona associa a ciascuna azione di vita, definendo anche il concept in parole chiave (emozioni-atmosfere) per le tre zone funzionali principali della casa.",
-    "coral.t1a":"Per una persona","coral.t1b":"Nucleo familiare / coabitanti di 2 persone","coral.t1c":"Nucleo familiare di 3–5 persone","coral.t1cp":"50 € + 10 € per ogni membro extra",
+    "coral.hl":"Con una dose di Cápsula Corallo riceverai una guida progettuale su misura per te, con indicazioni che rispondano al tuo modo unico di abitare. Non aspettare e acquista subito il test completo.",
+    "coral.p3":"Se hai già fatto la prova di test gratuita, potrai sbloccare gli altri due microtest e tutti i risultati che compongono la tua <strong style='color:var(--coral);font-family:var(--serif);font-style:italic'>Carta Abitativa</strong>.",
+    "coral.p4":"Starà a te poi decidere se usarla come strumento di autoprogettazione guidata oppure come base per il servizio di consulenza professionale che fa più a caso tuo.",
+    "coral.cta1":"Acquista il test completo","coral.cta2":"Richiedi consulenza",
+    "coral.t1Eyebrow":"TEST Mi casa a mi medida","coral.t1":"Acquista il test completo",
+    "coral.t1desc":"Effettuando il pagamento, entrerai nella tua pagina personale in cui poter svolgere i tre microtest audiovisivi e quindi consultare in ogni momento i risultati della tua Carta Abitativa (e anche degli altri membri del tuo nucleo abitativo!)",
+    "coral.mt1t":"Test profilo funzionale",
+    "coral.mt1d":"Individua il tipo di profilo sensoriale e cognitivo a cui appartieni in base al tuo funzionamento neuropsicologico e quindi in base alla tua risposta agli stimoli dell’ambiente che ti circonda.",
+    "coral.mt1n":"Questo primo test è gratuito, ma acquistando il test completo si sbloccheranno nuovi “tips” progettuali.",
+    "coral.mt2t":"Test palette cromatica",
+    "coral.mt2d":"Individua la palette cromatica più adatta dall’incontro tra profilo funzionale e stagione armocromatica, definendo anche alcuni colori simbolici associati alle emozioni per le tre zone funzionali principali della casa.",
+    "coral.mt3t":"Test stile di arredamento",
+    "coral.mt3d":"Individua lo stile di interior design più adatto (con relativa materialboard) dall’incontro tra profilo funzionale ed esperienze di vita che la persona associa a ciascuna azione di vita, definendo anche il concept in parole chiave (emozioni-atmosfere) per le tre zone funzionali principali della casa.",
+    "coral.mtTime":"Durata: 2-3 min.",
+    "coral.t1a":"Per una persona","coral.t1b":"Nucleo familiare / coabitanti di 2 persone","coral.t1c":"Nucleo familiare di 3–5 persone","coral.t1cp":"+ 10 € per ogni membro extra",
     "coral.t1famNote":"I nuclei familiari vengono registrati sotto lo stesso profilo con un’unica mail.",
     "cta.buy":"Acquista","cta.sample":"Vedi Sample ↓",
     "coral.aEyebrow":"Consulenze","coral.aTitle":"Tre servizi di consulenza professionale",
-    "coral.t2":"Consulenza flash di concept · “Aiutami a farlo con criterio”",
-    "coral.t2desc":"Solo linee guida progettuali di neuroarchitettura, da affidare a un altro architetto che seguirà i lavori, direttamente a un’impresa o per fare per conto proprio.",
-    "coral.t2note":"Include 1 incontro conoscitivo in videochiamata/in persona + unicamente 3 alternative progettuali; non è prevista alcuna revisione. Incontro extra di revisione: 30 € · Eventuali modifiche → 4ª alternativa (finale): 100 €.",
-    "coral.thCase":"Caso","coral.thPrice":"Prezzo",
-    "coral.c1":"1 stanza (9–15 m²)","coral.c2":"1 stanza (15–20 m²)","coral.c3":"1 stanza (da 21 m² in poi)",
-    "coral.c4":"Intera casa: monolocale o bilocale da 30 a 50 m²","coral.c5":"Intera casa da 51 a 80 m²","coral.c6":"Intera casa da 81 a 110 m²",
-    "coral.c7":"Intera casa > 110 m²","coral.c7p":"+5 € per ogni m² in più",
+    "coral.t2":"Aiutami a farlo con criterio","coral.t2sub":"Consulenza flash di concept",
+    "coral.t2desc":"Per ricevere unicamente linee guida progettuali di neuroarchitettura, da poter affidare a un altro professionista che seguirà i lavori o da usare come guida e fare per conto tuo.",
+    "coral.t2note":"Include un unico incontro conoscitivo in videochiamata/in persona + unicamente 3 alternative progettuali; non è prevista alcuna revisione. Consulta prezzo per incontri extra di revisione e eventuali modifiche.",
+    "coral.pcRoom":"Stanza","coral.pc1":"9–15 m²","coral.pc2":"15–20 m²","coral.pc3":"Da 21 m²",
+    "coral.pcHouse":"Intera casa","coral.pcOver":"Oltre 110 m²",
     "coral.reqCta":"Richiedi consulenza",
-    "coral.t3":"Progetto completo · “Pensaci tu”","coral.t3desc":"Intero progetto e direzione lavori.",
-    "coral.t3note":"Include 1 incontro conoscitivo in videochiamata/in persona + 3 proposte iniziali + un tot di revisioni da stabilire e comunicare sin da subito.",
-    "coral.t3a":"Opzione casa Low budget","coral.t3ap":"Forfait minimo: 2.500 € fino a 50 mq; poi 40–50 €/mq extra",
-    "coral.t3b":"Opzione casa Qualità","coral.t3bp":"Forfait minimo: 4.000 € fino a 50 mq; poi 70–90 €/mq extra",
-    "coral.t3c":"Opzione con Shopping List","coral.t3cp":"+10–20 €/mq (in base al livello di dettaglio e se gestendo anche l’acquisto)",
-    "coral.t4":"Consulenza per la scelta della casa · “Aiutami a sceglierla”",
-    "coral.t4desc":"Un parere qualificato sulle case che stai valutando di comprare, per scegliere con maggiore consapevolezza quella più su misura per te, attraverso accompagnamento alla visita (online/in presenza) e proposte di linee guida progettuali con parere favorevole/sfavorevole.",
-    "coral.t4a":"Accompagnamento visite online","coral.t4ap":"150 € pack 3 visite · 230 € pack 5 visite · 60 € visita extra",
-    "coral.t4b":"Accompagnamento visite in presenza (solo Barcellona)","coral.t4bp":"250 € pack 3 visite · 390 € pack 5 visite · 90 € visita extra",
-    "coral.t4c":"Proposte linee guida e parere finale","coral.t4cp":"200 €/casa (solo quelle con parere favorevole) · 450 € pack per 3 case (solo con parere favorevole)",
+    "coral.t3":"Pensaci tu","coral.t3sub":"Progetto completo",
+    "coral.t3desc":"Per affidare a noi l’intero progetto e direzione lavori.",
+    "coral.t3note":"Include un unico incontro conoscitivo in videochiamata/in persona + 3 proposte iniziali + un tot di revisioni da stabilire e comunicare sin da subito.",
+    "coral.pj1":"Casa Low Budget","coral.pj2":"Casa Qualità",
+    "coral.pjUp50":"Fino a 50 m²","coral.pjOver50":"Oltre 50 m²",
+    "coral.pjSup":"Supplemento","coral.pjSupN":"In base al livello di dettaglio e alla gestione degli acquisti.",
+    "coral.t4":"Aiutami a sceglierla","coral.t4sub":"Consulenza per la scelta della casa",
+    "coral.t4desc":"Per avere un parere qualificato sulle case che stai valutando da comprare e scegliere con maggiore consapevolezza quella più su misura per te. Offriamo accompagnamento alle visite (online o dal vivo) e parere favorevole/sfavorevole con possibili soluzioni progettuali (in formato linee guida).",
+    "coral.v1":"Accompagnamento visite online","coral.v2":"Accompagnamento visite in presenza","coral.v2n":"Solo Barcellona",
+    "coral.vp3":"Pack 3 visite","coral.vp5":"Pack 5 visite","coral.vpx":"Visita extra",
+    "coral.v3":"Proposte linee guida e parere finale","coral.v3a":"1 casa","coral.v3b":"Pack 3 case","coral.v3n":"Solo con parere favorevole.",
     "coral.formTitle":"Richiedi la tua consulenza",
     "form.name":"Nome e cognome","form.email":"Email",
     "coral.fSel":"Scegli una delle tre consulenze",

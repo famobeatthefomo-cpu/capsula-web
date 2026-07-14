@@ -4,7 +4,7 @@ CAPSULA_I18N.add({
   en: {
     "nav.home":"Home","nav.about":"About us","nav.rosa":"Cápsula Rosa","nav.coral":"Cápsula Coral","nav.petroleo":"Cápsula Petróleo",
     "nav.gallery":"Gallery","nav.collab":"Work with us",
-    "cta.login":"Log in","cta.profile":"Living Chart","cta.more":"Learn more",
+    "cta.login":"Log in","cta.profile":"Your Living Chart","cta.more":"Learn more",
     "footer.tag":"to inhabit · to inhabit yourself · to inhabit art",
     "footer.blurb":"We design homes that care for your mind and body.",
     "footer.explore":"Explore","footer.contactH":"Contact",
@@ -15,7 +15,7 @@ CAPSULA_I18N.add({
   it: {
     "nav.home":"Home","nav.about":"Chi siamo","nav.rosa":"Capsula Rosa","nav.coral":"Capsula Corallo","nav.petroleo":"Capsula Petrolio",
     "nav.gallery":"Galleria","nav.collab":"Collabora con noi",
-    "cta.login":"Accedi","cta.profile":"Carta Abitativa","cta.more":"Scopri di più",
+    "cta.login":"Accedi","cta.profile":"La tua Carta Abitativa","cta.more":"Scopri di più",
     "footer.tag":"abitare · abitar·ti · abit·arte",
     "footer.blurb":"Progettiamo case che si prendono cura di mente e corpo.",
     "footer.explore":"Esplora","footer.contactH":"Contatti",
