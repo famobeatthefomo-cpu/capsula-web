@@ -261,6 +261,8 @@ img { max-width: 100%; display: block; }
   font-family: var(--sans); font-size: 1rem; background: #fff;
 }
 .form textarea { min-height: 120px; resize: vertical; }
+/* Formulari su card bianca dentro sezioni scure: etichette grigio scuro (stesso grigio del footer) */
+.pains .form label { color: var(--ink); }
 .tab-forms { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
 
 /* ---------- Founders ---------- */
@@ -448,31 +450,33 @@ body.page-petrol .eyebrow { color: var(--teal); }
   .nav-links .nav-petrol { color: var(--teal); }
 }
 
-/* "Accedi" nel menu a scomparsa (solo mobile, ultima voce) */
+/* "Accedi" nel menu a scomparsa (solo mobile, ultima voce)
+   Stesso carattere delle altre voci, ma color corallo (anche da loggato) */
 .nav-links .nav-login { display: none; }
 @media (max-width: 1150px) {
-  .site-header.open .nav-links .nav-login { display: block; font-weight: 600; }
-  .site-header.open .nav-links .nav-login.logged { font-style: italic; font-family: var(--serif); }
+  .site-header.open .nav-links .nav-login { display: block; color: var(--coral); }
+  .site-header.open .nav-links .nav-login.logged { color: var(--coral); }
 }
 
 /* Riquadro citazione a forma di capsula */
 .quote--capsule { border-radius: 999px; padding: 2.2rem 3.2rem; }
 
-/* Riquadro evidenziato "Con una dose di..." */
+/* Testo "Con una dose di..." — corsivo colorato senza riquadro,
+   più grande del testo sopra (rapporto 10:13) */
 .hl-box {
-  background: #fff; border-radius: var(--radius-lg); padding: 1.5rem 2rem;
-  font-family: var(--serif); font-style: italic; font-size: 1.12rem; line-height: 1.55;
-  max-width: 70ch; margin-top: 1.2rem; box-shadow: var(--shadow-sm);
+  font-family: var(--serif); font-style: italic; font-size: 1.3rem; line-height: 1.55;
+  max-width: 70ch; margin-top: 1.4rem;
 }
-body.page-rosa .hl-box   { border: 2px solid var(--pink-d);  color: var(--pink-dd); }
-body.page-coral .hl-box  { border: 2px solid var(--coral);   color: var(--coral-d); }
-body.page-petrol .hl-box { border: 2px solid var(--teal);    color: var(--teal-d); }
+body.page-rosa .hl-box   { color: var(--pink-dd); font-size: 1.5rem; }
+body.page-coral .hl-box  { color: var(--coral); }
+body.page-petrol .hl-box { color: var(--teal); }
 
-/* Vignetta inserto in corsivo (petrolio) */
+/* Vignetta inserto in corsivo (petrolio) — a forma di capsula allungata,
+   sfondo bianco, scritta color petrolio, stessa dimensione del testo */
 .aside-note {
-  font-family: var(--serif); font-style: italic; color: var(--teal-d);
-  background: #fff; border-left: 5px solid var(--teal); border-radius: var(--radius);
-  padding: 1.3rem 1.5rem; box-shadow: var(--shadow-sm);
+  font-family: var(--serif); font-style: italic; color: var(--teal); font-size: 1rem;
+  background: #fff; border-radius: 999px;
+  padding: 1.7rem 2.6rem; box-shadow: var(--shadow-sm);
 }
 
 /* Card prezzi (sostituiscono le tabelle) */
@@ -493,9 +497,26 @@ body.page-petrol .hl-box { border: 2px solid var(--teal);    color: var(--teal-d
 .pline b { white-space: nowrap; }
 .pcard--alt { background: var(--teal-l); border-color: var(--teal); }
 
-/* Microtest illustrati (corallo) */
+/* Card consulenze (corallo): sfondo corallo chiaro chiaro + testo corallo scuro */
+.pcard--coral { background: var(--coral-l); border-color: var(--coral-l); }
+.pcard--coral h4, .pcard--coral .pline, .pcard--coral .pline b, .pcard--coral .cond { color: var(--coral-d); }
+.pcard--coral .pline { border-bottom-color: rgba(222,52,19,.28); }
+/* Card "shopping list" e "proposte linee guida": sfondo giallo chiaro + testo corallo */
+.pcard--giallo { background: var(--yellow-l); border-color: var(--yellow-l); }
+.pcard--giallo h4, .pcard--giallo .pline, .pcard--giallo .pline b, .pcard--giallo .cond { color: var(--coral); }
+.pcard--giallo .pline { border-bottom-color: rgba(255,76,43,.28); }
+
+/* Microtest illustrati (corallo) — card affiancate su desktop, in verticale su mobile */
+.mt-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2rem; }
+.mt-cards .mt-item {
+  margin-top: 0; background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow-sm);
+}
+@media (max-width: 900px) {
+  .mt-cards { grid-template-columns: 1fr; }
+}
 .mt-item { margin-top: 2rem; }
-.mt-item img { height: 54px; width: auto; }
+.mt-item img { height: 60px; width: auto; max-width: 100%; object-fit: contain; }
 .mt-item h4 { font-family: var(--serif); font-size: 1.25rem; margin-top: .6rem; }
 .mt-item p { color: var(--muted); max-width: 74ch; margin-top: .4rem; }
 .mt-item .durata { color: var(--coral); font-weight: 600; font-size: .9rem; margin-top: .4rem; }
@@ -507,11 +528,31 @@ body.page-petrol .hl-box { border: 2px solid var(--teal);    color: var(--teal-d
   background: #9ccfca; top: .5em;
 }
 
-/* Domande in corsivo nella home (stile .prov) */
-.hero .prov-lines { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--teal-d); margin-top: 1rem; }
+/* Domande in corsivo nella home (stile .prov) — più grandi del testo non in corsivo (rapporto 10:12) */
+.hero .prov-lines { font-family: var(--serif); font-style: italic; font-size: 1.44rem; color: var(--teal-d); margin-top: 1rem; }
 .hero .prov-lines p { margin: 0; font-size: inherit; color: inherit; }
 
 @media (max-width: 900px) {
   .pcards, .pcards--2 { grid-template-columns: 1fr; }
   .quote--capsule { border-radius: var(--radius-lg); padding: 2rem; }
+  .aside-note { border-radius: var(--radius-lg); padding: 1.4rem 1.7rem; }
+}
+
+/* ===========================================================
+   Chi siamo — capsula accanto al testo (desktop) / vicina al
+   testo (mobile) + fascia unica immagine-testo
+   =========================================================== */
+.about-hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 2.4rem; align-items: center; }
+.about-hero-grid .quote--capsule { margin: 0; }
+@media (max-width: 900px) {
+  .about-hero-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+  .about-hero-grid .quote--capsule { margin-top: .4rem; }
+}
+
+.philo-band { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; background: var(--white); }
+.philo-band > img { width: 100%; height: 100%; object-fit: cover; }
+.philo-band .philo-text { padding: clamp(2.2rem, 5vw, 4.5rem); align-self: center; }
+@media (max-width: 900px) {
+  .philo-band { grid-template-columns: 1fr; }
+  .philo-band > img { max-height: 320px; }
 }
