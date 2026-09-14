@@ -54,19 +54,12 @@
     });
 
     // ---- Auth mockup (localStorage) ----
-    // If logged in, the header capsule shows "Carta Habitacional" instead of "Accede".
+    // The header capsule always reads "Perfil Cápsula" (before AND after login);
+    // only the `logged` class changes, for styling hooks.
     var user = null;
     try { user = JSON.parse(localStorage.getItem("capsula_user")); } catch (e) {}
     if (user && user.name) {
-      document.querySelectorAll(".js-auth-cta").forEach(function (a) {
-        a.setAttribute("data-i18n", "cta.profile");
-        a.dataset.es = "Tu Carta Habitacional";
-        a.innerHTML = "Tu Carta Habitacional";
-        a.classList.add("logged");
-      });
-      var lang = "es";
-      try { lang = localStorage.getItem("capsula_lang") || "es"; } catch (e) {}
-      if (window.CAPSULA_I18N) CAPSULA_I18N.apply(lang);
+      document.querySelectorAll(".js-auth-cta").forEach(function (a) { a.classList.add("logged"); });
     }
 
     // Simple modals
@@ -83,5 +76,71 @@
         c.addEventListener("click", function () { bg.classList.remove("open"); });
       });
     });
+
+    // ---- Nav dropdown ("Servicios") ----
+    document.querySelectorAll(".nav-drop").forEach(function (drop) {
+      var btn = drop.querySelector(".nav-drop-t");
+      if (!btn) return;
+      function setOpen(v) {
+        drop.classList.toggle("open", v);
+        btn.setAttribute("aria-expanded", v ? "true" : "false");
+      }
+      // Pointer devices on wide screens open on hover; everything else on click,
+      // so the click must not immediately toggle an already hover-opened menu.
+      var hoverMq = window.matchMedia("(hover: hover) and (min-width: 1151px)");
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (hoverMq.matches && drop.classList.contains("open")) return;
+        setOpen(!drop.classList.contains("open"));
+      });
+      drop.addEventListener("mouseenter", function () { if (hoverMq.matches) setOpen(true); });
+      drop.addEventListener("mouseleave", function () { if (hoverMq.matches) setOpen(false); });
+      btn.addEventListener("focus", function () { if (hoverMq.matches) setOpen(true); });
+      drop.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () { setOpen(false); });
+      });
+      document.addEventListener("click", function (e) { if (!drop.contains(e.target)) setOpen(false); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+    });
+
+    // ---- Hero carousel: progress dots + click-to-advance ----
+    document.querySelectorAll(".js-hcar").forEach(function (car) {
+      var slides = Array.prototype.slice.call(car.querySelectorAll("img"));
+      if (!slides.length) return;
+      var dotsBox = car.parentNode.querySelector(".js-hcar-dots");
+      var dots = [];
+      if (dotsBox) {
+        slides.forEach(function (_, i) {
+          var d = document.createElement("b");
+          if (i === 0) d.classList.add("on");
+          dotsBox.appendChild(d);
+          dots.push(d);
+        });
+      }
+      function nearest() {
+        var mid = car.scrollLeft + car.clientWidth / 2, best = 0, bd = Infinity;
+        slides.forEach(function (im, i) {
+          var c = im.offsetLeft + im.offsetWidth / 2, d = Math.abs(c - mid);
+          if (d < bd) { bd = d; best = i; }
+        });
+        return best;
+      }
+      var raf;
+      car.addEventListener("scroll", function () {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(function () {
+          var i = nearest();
+          dots.forEach(function (d, n) { d.classList.toggle("on", n === i); });
+        });
+      }, { passive: true });
+      // clicking the partly visible neighbour scrolls to it
+      slides.forEach(function (im, i) {
+        im.addEventListener("click", function () {
+          if (i === nearest()) return;
+          im.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        });
+      });
+    });
+
   });
 })();

@@ -1,19 +1,21 @@
 /* Cápsula — lightweight i18n engine.
    Spanish is written inline in the HTML (default / fallback).
-   Each page registers EN + IT strings via CAPSULA_I18N.add({en:{...}, it:{...}}).
+   Each page registers CA + IT + EN strings via CAPSULA_I18N.add({ca:{...},it:{...},en:{...}}).
    Keys map to elements with [data-i18n="key"] (innerHTML) or
    [data-i18n-ph="key"] (input/textarea placeholder). */
 (function () {
-  var DICT = { en: {}, it: {} };
+  var LANGS = ["ca", "it", "en"];
+  var DICT = { ca: {}, it: {}, en: {} };
   var STORE = "capsula_lang";
 
   function add(obj) {
-    ["en", "it"].forEach(function (l) {
+    LANGS.forEach(function (l) {
       if (obj[l]) for (var k in obj[l]) DICT[l][k] = obj[l][k];
     });
   }
 
   function apply(lang) {
+    if (lang !== "es" && LANGS.indexOf(lang) === -1) lang = "es";
     document.documentElement.lang = lang;
     // text content
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
@@ -29,22 +31,35 @@
       if (lang === "es") el.setAttribute("placeholder", el.dataset.esPh);
       else el.setAttribute("placeholder", (DICT[lang] && DICT[lang][key] != null) ? DICT[lang][key] : el.dataset.esPh);
     });
+    // alt / aria labels
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-alt");
+      if (el.dataset.esAlt === undefined) el.dataset.esAlt = el.getAttribute("alt") || "";
+      if (lang === "es") el.setAttribute("alt", el.dataset.esAlt);
+      else el.setAttribute("alt", (DICT[lang] && DICT[lang][key] != null) ? DICT[lang][key] : el.dataset.esAlt);
+    });
     document.querySelectorAll(".lang-switch button").forEach(function (b) {
       b.classList.toggle("active", b.dataset.lang === lang);
     });
     try { localStorage.setItem(STORE, lang); } catch (e) {}
+    document.dispatchEvent(new CustomEvent("capsula:lang", { detail: { lang: lang } }));
+  }
+
+  function current() {
+    var saved = "es";
+    try { saved = localStorage.getItem(STORE) || "es"; } catch (e) {}
+    if (saved !== "es" && LANGS.indexOf(saved) === -1) saved = "es";
+    return saved;
   }
 
   function init() {
-    var saved = "es";
-    try { saved = localStorage.getItem(STORE) || "es"; } catch (e) {}
-    apply(saved);
+    apply(current());
     document.querySelectorAll(".lang-switch button").forEach(function (b) {
       b.addEventListener("click", function () { apply(b.dataset.lang); });
     });
   }
 
-  window.CAPSULA_I18N = { add: add, apply: apply };
+  window.CAPSULA_I18N = { add: add, apply: apply, current: current };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();

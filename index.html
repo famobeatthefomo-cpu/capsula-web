@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cápsula · Neuroarquitectura para un hogar que te cuida</title>
-<meta name="description" content="Cápsula diseña hogares que apoyan tu sistema nervioso, tus emociones y tu bienestar. Descubre tu perfil funcional con el test Mi casa a mi medida.">
+<title>Cápsula · Hogar a tu medida</title>
+<meta name="description" content="Cápsulas de neuroarquitectura: dosis accesibles de diseño especializado. Descubre tu Perfil Cápsula y diseña un hogar hecho a tu medida.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,119 +18,128 @@
     <nav class="nav-links">
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
-      <a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
-      <a class="nav-coral" href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
-      <a class="nav-petrol" href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
+      <div class="nav-drop">
+        <button class="nav-drop-t" type="button" aria-expanded="false"><span data-i18n="nav.services">Servicios</span><i aria-hidden="true"></i></button>
+        <div class="nav-drop-menu">
+          <a class="nav-coral" href="autoprogetta.html" data-i18n="nav.auto">Autodiseña</a>
+          <a class="nav-petrol" href="commissiona.html" data-i18n="nav.comm">Entrega</a>
+          <a class="nav-rosa" href="impara.html" data-i18n="nav.impara">Aprende</a>
+        </div>
+      </div>
       <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
-      <a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a>
-      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
+      <a href="colabora.html" data-i18n="nav.collab">Colaboramos</a>
+      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a>
     </nav>
     <div class="nav-actions">
-      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
-      <a class="btn btn--capsule btn--coralc desktop-only js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
+      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="ca">CA</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <a class="btn btn--capsule btn--coralc desktop-only js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a>
       <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-blob"></div>
+<section class="hero hero--petrol">
   <div class="wrap">
-    <p class="eyebrow" data-i18n="hero.eyebrow">Consultoría de neuroarquitectura</p>
-    <h1 data-i18n="hero.h1">Tu casa debería hacerte sentir bien. Tu bienestar se diseña.</h1>
-    <p data-i18n="hero.p1">Cada persona vive el espacio de una manera distinta. Con Cápsula partimos de ti.</p>
-    <div class="prov-lines">
-      <p data-i18n="hero.q1">¿Cómo percibes los estímulos del entorno?</p>
-      <p data-i18n="hero.q2">¿Qué emociones te transmiten los colores, los materiales y la luz?</p>
-      <p data-i18n="hero.q3">¿Qué experiencias necesitas para sentirte realmente bien, incluso mientras lees un libro o te relajas en el sofá?</p>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1 data-i18n="hero.h1">Hogar a tu medida.</h1>
+        <p class="hero-sub" data-i18n="hero.sub"><a href="#servicios">Cápsulas</a> de neuroarquitectura: dosis accesibles de diseño especializado.</p>
+      </div>
+      <div class="hcar-wrap">
+        <div class="hcar js-hcar" role="region" aria-label="Galería">
+          <img src="assets/img/hero/hero-01.jpg" alt="" loading="eager" decoding="async">
+          <img src="assets/img/hero/hero-02.jpg" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/hero/hero-03.jpg" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/hero/hero-04.jpg" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/hero/hero-05.jpg" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/hero/hero-06.jpg" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/hero/hero-07.jpg" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/hero/hero-08.jpg" alt="" loading="lazy" decoding="async">
+          <img src="assets/img/hero/hero-09.jpg" alt="" loading="lazy" decoding="async">
+        </div>
+        <div class="hcar-dots js-hcar-dots" aria-hidden="true"></div>
+      </div>
     </div>
-    <p data-i18n="hero.p2">Nuestro método transforma estas respuestas en herramientas concretas para diseñar una casa realmente a tu medida.</p>
-    <div class="hero-cta">
-      <a class="btn btn--ghost" href="#test" data-i18n="hero.cta1">Prueba el TEST de Cápsula</a>
-      <a class="btn btn--ghost" href="#niveles" data-i18n="hero.cta2">Elige tu Cápsula de bienestar</a>
+    <div class="hero-more">
+      <a class="btn btn--capsule btn--onpetrol" href="metodo.html" data-i18n="hero.more">Descubre más</a>
     </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="wrap center">
+    <p class="eyebrow" data-i18n="svc.eyebrow">Nuestros servicios</p>
+    <h2 data-i18n="svc.title">Diseñamos tu bienestar</h2>
+    <p class="lead" data-i18n="svc.sub">Elige tu dosis de Cápsula con la que poner en práctica nuestro método.</p>
+  </div>
+  <div class="wrap">
+    <div class="svc">
+      <article class="svc-item">
+        <span class="svc-tag" data-i18n="svc.1tag">Sigue nuestra guía</span>
+        <h3><span class="svc-pill svc-pill--coral"></span><span data-i18n="svc.1t">Autodiseña</span></h3>
+        <p data-i18n="svc.1d">Elige las herramientas que necesitas para diseñar por tu cuenta: profundiza en tu Perfil Cápsula, oriéntate con un manual práctico y traduce todo en decisiones concretas con un catálogo personalizado de mobiliario, materiales y acabados.</p>
+        <a class="btn btn--capsule btn--coralc" href="autoprogetta.html" data-i18n="cta.explora">Explora</a>
+      </article>
+      <article class="svc-item">
+        <span class="svc-tag" data-i18n="svc.2tag">Confíanos el proyecto</span>
+        <h3><span class="svc-pill svc-pill--petrol"></span><span data-i18n="svc.2t">Entrega</span></h3>
+        <p data-i18n="svc.2d">Elige el nivel de asesoría más adecuado para tu proyecto y confía en un diseño profesional construido realmente en torno a ti. Traducimos necesidades, identidad, bienestar y presupuesto en un espacio auténtico, coherente y pensado para durar en el tiempo.</p>
+        <a class="btn btn--capsule btn--petrolc" href="commissiona.html" data-i18n="cta.explora">Explora</a>
+      </article>
+      <article class="svc-item">
+        <span class="svc-tag" data-i18n="svc.3tag">Aprende a leer tu casa</span>
+        <h3><span class="svc-pill svc-pill--rosa"></span><span data-i18n="svc.3t">Aprende</span></h3>
+        <p data-i18n="svc.3d">Talleres formativos, experienciales y creativos para entender cómo el espacio influye en tu bienestar. Teoría y práctica te ayudan a leer mejor tu casa, tu manera de habitarla y las posibilidades para transformarla.</p>
+        <a class="btn btn--capsule btn--rosa" href="impara.html" data-i18n="cta.explora">Explora</a>
+      </article>
+    </div>
+    <p class="cap-motto" data-i18n="svc.motto">habitar <span class="dout">·</span> habitar<span class="din">·</span>te <span class="dout">·</span> habit<span class="din">·</span>arte</p>
   </div>
 </section>
 
 <!-- TEST -->
 <section class="section" id="test" style="background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap center">
-    <h2 data-i18n="home.testTitle">Empieza por conocerte. Es gratis.</h2>
-    <p class="lead" style="margin-top:.6rem;max-width:60ch;margin-inline:auto" data-i18n="home.testDesc">Realiza la primera parte de nuestro TEST <em>Mi casa a mi medida</em> en solo 3 minutos y descubre tu <span style="color:var(--teal);font-weight:600">Perfil funcional</span></p>
-    <a class="btn btn--capsule btn--coralc" href="accedi.html" style="margin-top:1.4rem" data-i18n="home.testCta">Prueba gratis</a>
-  </div>
-  <div class="wrap center" style="margin-top:3rem">
-    <h3 style="font-size:1.5rem" data-i18n="home.profTitle">Perfil funcional</h3>
-    <p class="muted" style="max-width:66ch;margin:.8rem auto 0" data-i18n="home.profDesc">Integra modelos psicológicos consolidados sobre la sensibilidad sensorial y el funcionamiento cognitivo, reinterpretándolos en clave de neuroarquitectura para describir tu manera de percibir, elaborar y vivir los espacios.</p>
-    <div class="profiles-row">
-      <div><img src="assets/img/profilo-libellula.png" alt="La Libélula"><h3 data-i18n="home.pr1t">La Libélula</h3><p data-i18n="home.pr1">Perceptiva y matizada: aprecia la luz, el detalle y los equilibrios sutiles.</p></div>
-      <div><img src="assets/img/profilo-orso.png" alt="El Oso"><h3 data-i18n="home.pr2t">El Oso</h3><p data-i18n="home.pr2">Estable y de fondo: necesita estímulos claros para activarse y sentirse presente.</p></div>
-      <div><img src="assets/img/profilo-granchio.png" alt="El Cangrejo"><h3 data-i18n="home.pr3t">El Cangrejo</h3><p data-i18n="home.pr3">Sensible y protector: necesita refugio, suavidad y control del estímulo.</p></div>
-      <div><img src="assets/img/profilo-colibri.png" alt="El Colibrí"><h3 data-i18n="home.pr4t">El Colibrí</h3><p data-i18n="home.pr4">Ágil y estimulado: busca color, movimiento y variedad sensorial.</p></div>
-    </div>
+    <h2 data-i18n="test.title">Empieza por conocerte. Es gratis.</h2>
+    <p class="lead" style="margin-top:.8rem;max-width:64ch;margin-inline:auto" data-i18n="test.desc">Haz una primera experiencia gratuita del Método Cápsula: descubre tu Perfil Cápsula y empieza a entender cómo tu manera de ser, percibir y vivir puede traducirse en el espacio que habitas.</p>
+    <a class="btn btn--capsule btn--coralc" href="accedi.html" style="margin-top:1.6rem" data-i18n="test.cta">Descubre tu Perfil Cápsula</a>
   </div>
 </section>
 
-<!-- SERVICIOS / CÁPSULAS -->
-<section class="section" id="niveles">
+<!-- POR QUÉ CÁPSULA -->
+<section class="section">
   <div class="wrap center">
-    <p class="eyebrow" data-i18n="tiers.eyebrow">Nuestros servicios</p>
-    <h2 data-i18n="tiers.title">Elige tu Cápsula de bienestar</h2>
-    <p class="lead" data-i18n="tiers.sub">Después del test, elige la Cápsula con la que poner en práctica nuestro método.</p>
+    <h2 data-i18n="why.title">¿Por qué “Cápsula”?</h2>
   </div>
   <div class="wrap">
-    <div class="tiers">
-      <article class="tier" style="background:none;box-shadow:none;border:0">
-        <span class="pill-tag" style="background:var(--pink-l)" data-i18n="tag.rosa">Aprende a leer tu casa</span>
-        <h3><span class="pill-ico pill-ico--rosa"></span>Cápsula Rosa</h3>
-        <p data-i18n="tier.rosa.desc">Talleres experienciales y creativos que unen teoría y actividades prácticas para ayudarte a comprender tu manera de habitar y construir una caja de herramientas personal, hecha de instrumentos, paletas cromáticas y estrategias de diseño para aplicar en tu casa.</p>
-        <a class="btn btn--capsule btn--rosa" href="rosa.html" data-i18n="cta.explora">Explora</a>
+    <div class="why-cards">
+      <article class="why-card why-card--rosa">
+        <span class="cap-sym" aria-hidden="true"></span>
+        <span class="sf">s./f.</span>
+        <p data-i18n="why.1">a la vez herramienta, refugio y vehículo: algo hecho a tu medida que te protege y te lleva hacia un estado mejor.</p>
       </article>
-      <article class="tier" style="background:none;box-shadow:none;border:0">
-        <span class="pill-tag" style="background:var(--coral-l)" data-i18n="tag.coral">Diseña con nosotras tu casa</span>
-        <h3><span class="pill-ico pill-ico--coral"></span>Cápsula Coral</h3>
-        <p data-i18n="tier.coral.desc">Desbloquea el test completo, profundiza en tu perfil y elige el nivel de asesoría profesional más adecuado para ti, desde la autoproyección guiada hasta el acompañamiento personalizado.</p>
-        <a class="btn btn--capsule btn--coralc" href="coral.html" data-i18n="cta.explora">Explora</a>
+      <article class="why-card why-card--giallo">
+        <span class="cap-sym" aria-hidden="true"></span>
+        <span class="sf">s./f.</span>
+        <p data-i18n="why.2">pequeña dosis concentrada de bienestar: algo que integrar con el tiempo, paso a paso, para acompañarte hacia un estado de equilibrio más duradero.</p>
       </article>
-      <article class="tier" style="background:none;box-shadow:none;border:0">
-        <span class="pill-tag" style="background:var(--teal-l)" data-i18n="tag.petroleo">Elige y compra con criterio</span>
-        <h3><span class="pill-ico pill-ico--petrol"></span>Cápsula Petróleo</h3>
-        <p data-i18n="tier.petroleo.desc">Recibe tu catálogo personalizado de mobiliario y acabados según tu perfil, con productos seleccionados de tiendas físicas y comercios locales.</p>
-        <a class="btn btn--capsule btn--petrolc" href="petroleo.html" data-i18n="cta.explora">Explora</a>
+      <article class="why-card why-card--coral">
+        <span class="cap-sym" aria-hidden="true"></span>
+        <span class="sf">s./f.</span>
+        <p data-i18n="why.3">formato breve, concentrado y accesible: una intervención acotada que encierra competencias especializadas en un servicio más sencillo de elegir y utilizar.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- CIERRE: POR QUÉ CÁPSULA -->
-<section class="section section--tight">
-  <div class="wrap">
-    <div class="cta-band">
-      <h2 data-i18n="home.whyTitle">¿Por qué “Cápsula”?</h2>
-      <p data-i18n="home.why">Una cápsula es a la vez herramienta, refugio y vehículo: algo hecho a tu medida que te protege y te transporta hacia un estado mejor. Eso queremos que sea tu casa.</p>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="wrap footer-grid">
+  <div class="wrap footer-grid footer-grid--2">
     <div>
       <img class="brand-logo" src="assets/img/logo.png" alt="Cápsula">
       <p class="footer-tag" data-i18n="footer.tag">habitar · habitar·te · habit·arte</p>
-      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos hogares que cuidan tu mente y tu cuerpo.</p>
-    </div>
-    <div>
-      <h4 data-i18n="footer.explore">Explora</h4>
-      <ul>
-        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-        <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
-        <li><a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
-        <li><a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a></li>
-        <li><a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a></li>
-        <li><a href="galeria.html" data-i18n="nav.gallery">Galería</a></li>
-        <li><a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a></li>
-      </ul>
+      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos tu bienestar.</p>
     </div>
     <div>
       <h4 data-i18n="footer.contactH">Contacto</h4>
@@ -147,65 +156,74 @@
   </div>
 </footer>
 
+<div class="mobile-cta"><a class="btn btn--capsule btn--coralc js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a></div>
+
 <script src="assets/i18n.js"></script>
 <script src="assets/globals-i18n.js"></script>
 <script>
 CAPSULA_I18N.add({
-  en: {
-    "hero.eyebrow":"Neuroarchitecture consulting",
-    "hero.h1":"Your home should make you feel good. Your wellbeing should be designed.",
-    "hero.p1":"Every person experiences space differently. With Cápsula we start from you.",
-    "hero.q1":"How do you perceive the stimuli around you?",
-    "hero.q2":"What emotions do colours, materials and light convey to you?",
-    "hero.q3":"Which experiences do you need to feel truly well, even while reading a book or relaxing on the sofa?",
-    "hero.p2":"Our method turns these answers into concrete tools to design a home truly made for you.",
-    "hero.cta1":"Try the Cápsula TEST","hero.cta2":"Choose your wellbeing Cápsula",
-    "home.testTitle":"Start by knowing yourself. It’s free.",
-    "home.testDesc":"Take the first part of our <em>Mi casa a mi medida</em> TEST in just 3 minutes and discover your <span style='color:var(--teal);font-weight:600'>Functional profile</span>",
-    "home.testCta":"Try it for free",
-    "home.profTitle":"Functional profile",
-    "home.profDesc":"It integrates established psychological models on sensory sensitivity and cognitive functioning, reinterpreting them through a neuroarchitecture lens to describe the way you perceive, process and live spaces.",
-    "home.pr1t":"The Dragonfly","home.pr1":"Perceptive and nuanced: appreciates light, detail and subtle balance.",
-    "home.pr2t":"The Bear","home.pr2":"Steady and low-arousal: needs clear stimuli to engage and feel present.",
-    "home.pr3t":"The Crab","home.pr3":"Sensitive and protective: needs shelter, softness and control over stimulation.",
-    "home.pr4t":"The Hummingbird","home.pr4":"Agile and stimulated: seeks colour, movement and sensory variety.",
-    "tiers.eyebrow":"Our services","tiers.title":"Choose your wellbeing Cápsula",
-    "tiers.sub":"After the test, choose the Cápsula to put our method into practice.",
-    "tag.rosa":"Learn to read your home","tag.coral":"Design your home with us","tag.petroleo":"Choose and buy with criteria",
-    "tier.rosa.desc":"Experiential, creative workshops combining theory and hands-on activities to help you understand the way you inhabit and build a personal toolbox of instruments, colour palettes and design strategies to apply in your home.",
-    "tier.coral.desc":"Unlock the full test, go deeper into your profile and choose the level of professional advisory that suits you best, from guided self-design to personalized support.",
-    "tier.petroleo.desc":"Receive your personalized catalogue of furniture and finishes based on your profile, with products selected from physical stores and local businesses.",
-    "cta.explora":"Explore",
-    "home.whyTitle":"Why “Cápsula”?",
-    "home.why":"A capsule is tool, shelter and vehicle at once: something made to your measure that protects you and carries you toward a better state. That’s what we want your home to be."
+  ca: {
+    "hero.h1":"Una llar a la teva mida.",
+    "hero.sub":"<a href=\"#servicios\">Càpsules</a> de neuroarquitectura: dosis accessibles de disseny especialitzat.",
+    "hero.more":"Descobreix-ne més",
+    "svc.eyebrow":"Els nostres serveis","svc.title":"Dissenyem el teu benestar",
+    "svc.sub":"Tria la teva dosi de Cápsula amb què posar en pràctica el nostre mètode.",
+    "svc.1tag":"Segueix la nostra guia","svc.1t":"Autodissenya",
+    "svc.1d":"Tria les eines que necessites per dissenyar pel teu compte: aprofundeix en el teu Perfil Cápsula, orienta’t amb un manual pràctic i tradueix-ho tot en decisions concretes amb un catàleg personalitzat de mobiliari, materials i acabats.",
+    "svc.2tag":"Confia’ns el projecte","svc.2t":"Encarrega",
+    "svc.2d":"Tria el nivell d’assessorament més adequat per al teu projecte i confia en un disseny professional construït realment al teu voltant. Traduïm necessitats, identitat, benestar i pressupost en un espai autèntic, coherent i pensat per durar en el temps.",
+    "svc.3tag":"Aprèn a llegir casa teva","svc.3t":"Aprèn",
+    "svc.3d":"Tallers formatius, experiencials i creatius per entendre com l’espai influeix en el teu benestar. Teoria i pràctica t’ajuden a llegir millor casa teva, la teva manera d’habitar-la i les possibilitats per transformar-la.",
+    "svc.motto":"habitar <span class=\"dout\">·</span> habitar<span class=\"din\">·</span>te <span class=\"dout\">·</span> habit<span class=\"din\">·</span>art",
+    "test.title":"Comença per conèixer-te. És gratis.",
+    "test.desc":"Fes una primera experiència gratuïta del Mètode Cápsula: descobreix el teu Perfil Cápsula i comença a entendre com la teva manera de ser, percebre i viure es pot traduir en l’espai que habites.",
+    "test.cta":"Descobreix el teu Perfil Cápsula",
+    "why.title":"Per què “Cápsula”?",
+    "why.1":"alhora eina, refugi i vehicle: alguna cosa feta a la teva mida que et protegeix i et porta cap a un estat millor.",
+    "why.2":"petita dosi concentrada de benestar: alguna cosa per integrar amb el temps, pas a pas, per acompanyar-te cap a un estat d’equilibri més durador.",
+    "why.3":"format breu, concentrat i accessible: una intervenció acotada que conté competències especialitzades en un servei més senzill de triar i utilitzar."
   },
   it: {
-    "hero.eyebrow":"Consulenza di neuroarchitettura",
-    "hero.h1":"La tua casa dovrebbe farti stare bene. Il tuo benessere va progettato.",
-    "hero.p1":"Ogni persona vive lo spazio in modo diverso. Con Cápsula partiamo da te.",
-    "hero.q1":"Come percepisci gli stimoli dell’ambiente?",
-    "hero.q2":"Quali emozioni ti trasmettono colori, materiali e luci?",
-    "hero.q3":"Di quali esperienze hai bisogno per sentirti davvero bene, anche mentre leggi un libro o ti rilassi sul divano?",
-    "hero.p2":"Il nostro metodo trasforma queste risposte in strumenti concreti per progettare una casa davvero su misura.",
-    "hero.cta1":"Prova il TEST di Cápsula","hero.cta2":"Scegli la tua Cápsula di benessere",
-    "home.testTitle":"Comincia col conoscerti. È gratis.",
-    "home.testDesc":"Svolgi la prima parte del nostro TEST <em>Mi casa a mi medida</em> in soli 3 minuti e scopri il tuo <span style='color:var(--teal);font-weight:600'>Profilo funzionale</span>",
-    "home.testCta":"Prova gratis",
-    "home.profTitle":"Profilo funzionale",
-    "home.profDesc":"Integra modelli psicologici consolidati sulla sensibilità sensoriale e sul funzionamento cognitivo, reinterpretandoli in chiave di neuroarchitettura per descrivere il tuo modo di percepire, elaborare e vivere gli spazi.",
-    "home.pr1t":"La Libellula","home.pr1":"Percettiva e sfumata: apprezza la luce, il dettaglio e gli equilibri sottili.",
-    "home.pr2t":"L’Orso","home.pr2":"Stabile e di fondo: ha bisogno di stimoli chiari per attivarsi e sentirsi presente.",
-    "home.pr3t":"Il Granchio","home.pr3":"Sensibile e protettivo: ha bisogno di rifugio, morbidezza e controllo dello stimolo.",
-    "home.pr4t":"Il Colibrì","home.pr4":"Agile e stimolato: cerca colore, movimento e varietà sensoriale.",
-    "tiers.eyebrow":"I nostri servizi","tiers.title":"Scegli la tua Cápsula di benessere",
-    "tiers.sub":"Dopo il test, scegli la Cápsula con cui mettere in pratica il nostro metodo.",
-    "tag.rosa":"Impara a leggere la tua casa","tag.coral":"Progetta con noi la tua casa","tag.petroleo":"Scegli e compra con criterio",
-    "tier.rosa.desc":"Laboratori esperienziali e creativi che uniscono teoria e attività pratiche per aiutarti a comprendere il tuo modo di abitare e costruire una cassetta degli attrezzi personale, fatta di strumenti, palette cromatiche e strategie progettuali da applicare nella tua casa.",
-    "tier.coral.desc":"Sblocca il test completo, approfondisci il tuo profilo e scegli il livello di consulenza professionale più adatto a te, dall’autoprogettazione al supporto personalizzato.",
-    "tier.petroleo.desc":"Ricevi il tuo catalogo personalizzato di arredi e finiture in base al tuo profilo, con prodotti selezionati da negozi fisici e realtà locali.",
-    "cta.explora":"Esplora",
-    "home.whyTitle":"Perché “Cápsula”?",
-    "home.why":"Una capsula è insieme strumento, rifugio e veicolo: qualcosa fatto su misura per te che ti protegge e ti porta verso uno stato migliore. È ciò che vogliamo sia la tua casa."
+    "hero.h1":"Una casa su misura per te.",
+    "hero.sub":"<a href=\"#servicios\">Capsule</a> di neuroarchitettura: dosi accessibili di progettazione specializzata.",
+    "hero.more":"Scopri di più",
+    "svc.eyebrow":"I nostri servizi","svc.title":"Progettiamo il tuo benessere",
+    "svc.sub":"Scegli la tua dose di Cápsula con cui mettere in pratica il nostro metodo.",
+    "svc.1tag":"Segui la nostra guida","svc.1t":"Autoprogetta",
+    "svc.1d":"Scegli gli strumenti che ti servono per progettare in autonomia: approfondisci il tuo Profilo Cápsula, orientati con un manuale pratico e traduci tutto in scelte concrete con un catalogo personalizzato di arredi, materiali e finiture.",
+    "svc.2tag":"Affida a noi il progetto","svc.2t":"Commissiona",
+    "svc.2d":"Scegli il livello di consulenza più adatto al tuo progetto e affidati a una progettazione professionale costruita davvero intorno a te. Traduciamo bisogni, identità, benessere e budget in uno spazio autentico, coerente e pensato per durare nel tempo.",
+    "svc.3tag":"Impara a leggere la tua casa","svc.3t":"Impara",
+    "svc.3d":"Laboratori formativi, esperienziali e creativi per capire come lo spazio influisce sul tuo benessere. Teoria e pratica ti aiutano a leggere meglio la tua casa, il tuo modo di abitarla e le possibilità per trasformarla.",
+    "svc.motto":"abitare <span class=\"dout\">·</span> abitar<span class=\"din\">·</span>ti <span class=\"dout\">·</span> abit<span class=\"din\">·</span>arte",
+    "test.title":"Comincia col conoscerti. È gratis.",
+    "test.desc":"Fai una prima esperienza gratuita del Metodo Cápsula: scopri il tuo Profilo Cápsula e inizia a capire come il tuo modo di essere, percepire e vivere può tradursi nello spazio che abiti.",
+    "test.cta":"Scopri il tuo Profilo Cápsula",
+    "why.title":"Perché “cápsula”?",
+    "why.1":"insieme strumento, rifugio e veicolo: qualcosa fatto su misura per te che ti protegge e ti porta verso uno stato migliore.",
+    "why.2":"piccola dose concentrata di benessere: qualcosa da integrare nel tempo, passo dopo passo, per accompagnarti verso uno stato di equilibrio più duraturo.",
+    "why.3":"formato breve, concentrato e accessibile: un intervento circoscritto che racchiude competenze specializzate in un servizio più semplice da scegliere e utilizzare."
+  },
+  en: {
+    "hero.h1":"A home made to your measure.",
+    "hero.sub":"<a href=\"#servicios\">Capsules</a> of neuroarchitecture: accessible doses of specialised design.",
+    "hero.more":"Learn more",
+    "svc.eyebrow":"Our services","svc.title":"We design your wellbeing",
+    "svc.sub":"Choose your dose of Cápsula to put our method into practice.",
+    "svc.1tag":"Follow our guide","svc.1t":"Self-design",
+    "svc.1d":"Choose the tools you need to design on your own: go deeper into your Cápsula Profile, find your way with a practical manual and turn it all into concrete decisions with a personalised catalogue of furniture, materials and finishes.",
+    "svc.2tag":"Entrust us with the project","svc.2t":"Commission",
+    "svc.2d":"Choose the level of advisory best suited to your project and put your trust in professional design built genuinely around you. We translate needs, identity, wellbeing and budget into a space that is authentic, coherent and made to last.",
+    "svc.3tag":"Learn to read your home","svc.3t":"Learn",
+    "svc.3d":"Educational, experiential and creative workshops to understand how space shapes your wellbeing. Theory and practice help you read your home, the way you inhabit it and the possibilities for transforming it.",
+    "svc.motto":"inhabit <span class=\"dout\">·</span> inhabit<span class=\"din\">·</span>you <span class=\"dout\">·</span> inhabit<span class=\"din\">·</span>art",
+    "test.title":"Start by knowing yourself. It’s free.",
+    "test.desc":"Try a first free experience of the Cápsula Method: discover your Cápsula Profile and begin to understand how your way of being, perceiving and living can translate into the space you inhabit.",
+    "test.cta":"Discover your Cápsula Profile",
+    "why.title":"Why “Cápsula”?",
+    "why.1":"tool, shelter and vehicle at once: something made to your measure that protects you and carries you toward a better state.",
+    "why.2":"a small concentrated dose of wellbeing: something to integrate over time, step by step, to carry you toward a more lasting balance.",
+    "why.3":"a short, concentrated and accessible format: a bounded intervention that packs specialised expertise into a service that is simpler to choose and use."
   }
 });
 </script>

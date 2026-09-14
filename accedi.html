@@ -17,16 +17,21 @@
     <nav class="nav-links">
       <a href="index.html" data-i18n="nav.home">Home</a>
       <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
-      <a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a>
-      <a class="nav-coral" href="coral.html" data-i18n="nav.coral">Cápsula Coral</a>
-      <a class="nav-petrol" href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a>
+      <div class="nav-drop">
+        <button class="nav-drop-t" type="button" aria-expanded="false"><span data-i18n="nav.services">Servicios</span><i aria-hidden="true"></i></button>
+        <div class="nav-drop-menu">
+          <a class="nav-coral" href="autoprogetta.html" data-i18n="nav.auto">Autodiseña</a>
+          <a class="nav-petrol" href="commissiona.html" data-i18n="nav.comm">Entrega</a>
+          <a class="nav-rosa" href="impara.html" data-i18n="nav.impara">Aprende</a>
+        </div>
+      </div>
       <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
-      <a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a>
-      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
+      <a href="colabora.html" data-i18n="nav.collab">Colaboramos</a>
+      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a>
     </nav>
     <div class="nav-actions">
-      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
-      <a class="btn btn--capsule btn--coralc desktop-only js-auth-cta" href="accedi.html" data-i18n="cta.login">Accede</a>
+      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="ca">CA</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <a class="btn btn--capsule btn--coralc desktop-only js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a>
       <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -67,21 +72,12 @@
 <div class="modal-bg" id="modal"><div class="modal"><button class="close" aria-label="Cerrar">✕</button><div id="modal-body"></div></div></div>
 
 <footer class="site-footer">
-  <div class="wrap footer-grid">
+  <div class="wrap footer-grid footer-grid--2">
     <div>
       <img class="brand-logo" src="assets/img/logo.png" alt="Cápsula">
       <p class="footer-tag" data-i18n="footer.tag">habitar · habitar·te · habit·arte</p>
-      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos hogares que cuidan tu mente y tu cuerpo.</p>
+      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos tu bienestar.</p>
     </div>
-    <div><h4 data-i18n="footer.explore">Explora</h4><ul>
-      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-      <li><a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a></li>
-      <li><a class="nav-rosa" href="rosa.html" data-i18n="nav.rosa">Cápsula Rosa</a></li>
-      <li><a href="coral.html" data-i18n="nav.coral">Cápsula Coral</a></li>
-      <li><a href="petroleo.html" data-i18n="nav.petroleo">Cápsula Petróleo</a></li>
-      <li><a href="galeria.html" data-i18n="nav.gallery">Galería</a></li>
-      <li><a href="colabora.html" data-i18n="nav.collab">Colabora con nosotras</a></li>
-    </ul></div>
     <div><h4 data-i18n="footer.contactH">Contacto</h4><ul>
       <li><a href="mailto:hola@capsula.studio">hola@capsula.studio</a></li>
       <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
