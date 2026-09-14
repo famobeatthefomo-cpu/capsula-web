@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cápsula · Tu Catálogo</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <span class="brand brand--static"><img class="brand-logo" src="assets/img/logo.png" alt="Cápsula"></span>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
+      <div class="nav-drop">
+        <button class="nav-drop-t" type="button" aria-expanded="false"><span data-i18n="nav.services">Servicios</span><i aria-hidden="true"></i></button>
+        <div class="nav-drop-menu">
+          <a class="nav-coral" href="autoprogetta.html" data-i18n="nav.auto">Autodiseña</a>
+          <a class="nav-petrol" href="commissiona.html" data-i18n="nav.comm">Entrega</a>
+          <a class="nav-rosa" href="impara.html" data-i18n="nav.impara">Aprende</a>
+        </div>
+      </div>
+      <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
+      <a href="colabora.html" data-i18n="nav.collab">Colaboramos</a>
+      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="ca">CA</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <a class="btn btn--capsule btn--coralc desktop-only js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a>
+      <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="locked-view" hidden>
+  <div class="wrap locked">
+    <h1 data-i18n="cat.lockT">Esta página se abre tras desbloquear el Catálogo</h1>
+    <p data-i18n="cat.lockP">El Catálogo personalizado forma parte de tu Perfil Cápsula. Desbloquéalo desde tu perfil y vuelve aquí cuando quieras.</p>
+    <a class="btn btn--capsule btn--coralc" href="accedi.html" data-i18n="cat.lockCta">Ir a mi Perfil Cápsula</a>
+  </div>
+</section>
+
+<section class="section" id="cat-view" hidden>
+  <div class="wrap cat-intro">
+    <h1 data-i18n="cat.h1">Tu Catálogo Cápsula</h1>
+    <p class="sub" data-i18n="cat.sub">Una selección que parte de ti, no de las tendencias.</p>
+    <p data-i18n="cat.p">Tu Perfil Cápsula selecciona por ti lo que es más coherente con tu manera de vivir la casa. Después puedes acotar la búsqueda según lo que estás buscando, dónde quieres comprarlo y cuánto quieres gastar.</p>
+  </div>
+
+  <div class="wrap cat-layout">
+    <aside class="filters" id="filters">
+      <div class="filters-close"><button class="btn btn--ghost" id="close-filters" data-i18n="cat.close">Cerrar</button></div>
+
+      <div class="lockbox">
+        <h4 data-i18n="cat.lockTitle">Filtros definidos por tu Perfil Cápsula</h4>
+        <div class="lockf" id="f-lock"></div>
+        <p class="why" data-i18n="cat.lockWhy">No se pueden modificar: derivan del resultado de tu Test.</p>
+      </div>
+
+      <div id="f-cat"></div>
+      <div id="f-city"></div>
+      <div id="f-shop"></div>
+
+      <div class="fgroup">
+        <h4 data-i18n="cat.fPrice">Franja de precio</h4>
+        <select id="f-price">
+          <option value="" data-i18n="cat.pAll">Cualquier precio</option>
+          <option value="lt150" data-i18n="cat.pLt">Menos de 150 €</option>
+          <option value="150-400" data-i18n="cat.pMid">150 – 400 €</option>
+          <option value="gt400" data-i18n="cat.pGt">Más de 400 €</option>
+        </select>
+      </div>
+
+      <div class="fgroup">
+        <h4 data-i18n="cat.fDeliv">Entrega</h4>
+        <label><input type="checkbox" id="f-ship"><span data-i18n="cat.ship">Envío disponible</span></label>
+        <label><input type="checkbox" id="f-pickup"><span data-i18n="cat.pickup">Recogida en tienda</span></label>
+      </div>
+    </aside>
+
+    <div>
+      <div class="cat-bar">
+        <p class="cat-count" id="cat-count"></p>
+        <div class="cat-sort">
+          <button class="btn btn--ghost filter-open" id="open-filters" style="padding:.45em 1em;font-size:.82rem" data-i18n="cat.filter">Filtrar</button>
+          <label for="cat-sort" data-i18n="cat.sortBy">Ordenar por</label>
+          <select id="cat-sort">
+            <option value="reco" data-i18n="cat.sReco">Recomendados</option>
+            <option value="asc" data-i18n="cat.sAsc">Precio ascendente</option>
+            <option value="desc" data-i18n="cat.sDesc">Precio descendente</option>
+          </select>
+        </div>
+      </div>
+      <div class="chips" id="cat-chips"></div>
+      <div class="prod-grid" id="prod-grid"></div>
+      <p class="ph-note" data-i18n="cat.sampleNote">Catálogo de muestra: los productos, tiendas y precios son ficticios y sirven para mostrar cómo funcionará el listado.</p>
+    </div>
+  </div>
+</section>
+
+<div hidden id="strings">
+  <span data-i18n="cat.countLabel">productos seleccionados para ti</span>
+  <span data-i18n="cat.see">Ver producto</span>
+  <span data-i18n="cat.shipYes">Envío</span>
+  <span data-i18n="cat.empty">Ningún producto con estos filtros.</span>
+  <span data-i18n="cat.fCat">Categoría</span>
+  <span data-i18n="cat.fCity">Ciudad</span>
+  <span data-i18n="cat.fShop">Tienda</span>
+  <span data-i18n="cat.modalNote">Producto de muestra, creado únicamente para mostrar el funcionamiento del catálogo. No es un producto real ni un partner de Cápsula.</span>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid footer-grid--2">
+    <div>
+      <img class="brand-logo" src="assets/img/logo.png" alt="Cápsula">
+      <p class="footer-tag" data-i18n="footer.tag">habitar · habitar·te · habit·arte</p>
+      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos tu bienestar.</p>
+    </div>
+    <div><h4 data-i18n="footer.contactH">Contacto</h4><ul>
+      <li><a href="mailto:hola@capsula.studio">hola@capsula.studio</a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul></div>
+  </div>
+  <div class="wrap footer-bottom"><span>© 2026 Cápsula · Barcelona</span><span><a href="#" data-i18n="footer.privacy">Privacidad</a> · <a href="#" data-i18n="footer.terms">Términos</a></span></div>
+</footer>
+
+<div class="modal-bg" id="modal"><div class="modal"><button class="close" aria-label="Cerrar">&times;</button><div id="modal-body"></div></div></div>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/globals-i18n.js"></script>
+<script src="assets/account.js"></script>
+<script src="assets/catalog-data.js"></script>
+<script>
+CAPSULA_I18N.add({
+  ca: {"cat.lockT": "Aquesta pàgina s’obre després de desbloquejar el Catàleg", "cat.lockP": "El Catàleg personalitzat forma part del teu Perfil Cápsula. Desbloqueja’l des del teu perfil i torna aquí quan vulguis.", "cat.lockCta": "Ves al meu Perfil Cápsula", "cat.h1": "El teu Catàleg Cápsula", "cat.sub": "Una selecció que parteix de tu, no de les tendències.", "cat.p": "El teu Perfil Cápsula selecciona per tu allò que és més coherent amb la teva manera de viure la casa. Després pots acotar la cerca segons el que busques, on ho vols comprar i quant hi vols gastar.", "cat.lockTitle": "Filtres definits pel teu Perfil Cápsula", "cat.lockWhy": "No es poden modificar: deriven del resultat del teu Test.", "cat.fCat": "Categoria", "cat.fCity": "Ciutat", "cat.fShop": "Botiga", "cat.fPrice": "Franja de preu", "cat.fDeliv": "Lliurament", "cat.pAll": "Qualsevol preu", "cat.pLt": "Menys de 150 €", "cat.pMid": "150 – 400 €", "cat.pGt": "Més de 400 €", "cat.ship": "Enviament disponible", "cat.pickup": "Recollida a la botiga", "cat.countLabel": "productes seleccionats per a tu", "cat.sortBy": "Ordena per", "cat.sReco": "Recomanats", "cat.sAsc": "Preu ascendent", "cat.sDesc": "Preu descendent", "cat.see": "Veure producte", "cat.shipYes": "Enviament", "cat.empty": "Cap producte amb aquests filtres.", "cat.filter": "Filtra", "cat.close": "Tanca", "cat.modalNote": "Producte de mostra, creat únicament per mostrar el funcionament del catàleg. No és un producte real ni un partner de Cápsula.", "cat.sampleNote": "Catàleg de mostra: els productes, botigues i preus són ficticis i serveixen per mostrar com funcionarà el llistat."},
+  it: {"cat.lockT": "Questa pagina si apre dopo aver sbloccato il Catalogo", "cat.lockP": "Il Catalogo personalizzato fa parte del tuo Profilo Cápsula. Sbloccalo dal tuo profilo e torna qui quando vuoi.", "cat.lockCta": "Vai al mio Profilo Cápsula", "cat.h1": "Il tuo Catalogo Cápsula", "cat.sub": "Una selezione che parte da te, non dalle tendenze.", "cat.p": "Il tuo Profilo Cápsula seleziona per te ciò che è più coerente con il tuo modo di vivere la casa. Puoi poi restringere la ricerca in base a ciò che stai cercando, dove vuoi acquistarlo e quanto vuoi spendere.", "cat.lockTitle": "Filtri definiti dal tuo Profilo Cápsula", "cat.lockWhy": "Non sono modificabili: derivano dal risultato del tuo Test.", "cat.fCat": "Categoria", "cat.fCity": "Città", "cat.fShop": "Negozio", "cat.fPrice": "Fascia di prezzo", "cat.fDeliv": "Consegna", "cat.pAll": "Qualsiasi prezzo", "cat.pLt": "Meno di 150 €", "cat.pMid": "150 – 400 €", "cat.pGt": "Più di 400 €", "cat.ship": "Spedizione disponibile", "cat.pickup": "Ritiro in negozio", "cat.countLabel": "prodotti selezionati per te", "cat.sortBy": "Ordina per", "cat.sReco": "Consigliati", "cat.sAsc": "Prezzo crescente", "cat.sDesc": "Prezzo decrescente", "cat.see": "Vedi prodotto", "cat.shipYes": "Spedizione", "cat.empty": "Nessun prodotto con questi filtri.", "cat.filter": "Filtra", "cat.close": "Chiudi", "cat.modalNote": "Prodotto sample, creato solamente per mostrare il funzionamento del catalogo. Non è un prodotto reale né un partner di Cápsula.", "cat.sampleNote": "Catalogo sample: prodotti, negozi e prezzi sono fittizi e servono a mostrare come funzionerà il listato."},
+  en: {"cat.lockT": "This page opens once the Catalogue is unlocked", "cat.lockP": "The personalised Catalogue is part of your Cápsula Profile. Unlock it from your profile and come back whenever you like.", "cat.lockCta": "Go to my Cápsula Profile", "cat.h1": "Your Cápsula Catalogue", "cat.sub": "A selection that starts from you, not from trends.", "cat.p": "Your Cápsula Profile selects what best matches the way you live your home. You can then narrow the search by what you’re looking for, where you want to buy it and how much you want to spend.", "cat.lockTitle": "Filters set by your Cápsula Profile", "cat.lockWhy": "They can’t be changed: they come from your Test result.", "cat.fCat": "Category", "cat.fCity": "City", "cat.fShop": "Shop", "cat.fPrice": "Price range", "cat.fDeliv": "Delivery", "cat.pAll": "Any price", "cat.pLt": "Under €150", "cat.pMid": "€150 – 400", "cat.pGt": "Over €400", "cat.ship": "Shipping available", "cat.pickup": "Collect in store", "cat.countLabel": "products selected for you", "cat.sortBy": "Sort by", "cat.sReco": "Recommended", "cat.sAsc": "Price low to high", "cat.sDesc": "Price high to low", "cat.see": "View product", "cat.shipYes": "Shipping", "cat.empty": "No products match these filters.", "cat.filter": "Filter", "cat.close": "Close", "cat.modalNote": "Sample product, created only to show how the catalogue works. It is not a real product or a Cápsula partner.", "cat.sampleNote": "Sample catalogue: products, shops and prices are fictional and exist to show how the listing will work."}
+});
+</script>
+<script src="assets/catalog.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -733,3 +733,360 @@ body.page-petrol .hl-box { color: var(--teal); }
 /* logo: non deve mai deformarsi */
 .brand-logo { height: 46px; width: auto; max-width: none; flex: none; object-fit: contain; }
 .site-footer .brand-logo { height: 54px; width: auto; max-width: none; }
+
+/* ===========================================================
+   Fase 2 — pagine servizio: cassetta degli attrezzi,
+   sezioni esplicative, blocchi consulenza, card "a partire da"
+   =========================================================== */
+
+/* --- Autoprogetta: le tre schede della cassetta degli attrezzi --- */
+.tools { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2.4rem; }
+.tool {
+  background:linear-gradient(160deg,var(--coral-l),#ffdbd0);
+  border-radius:var(--radius); padding:1.9rem 1.5rem;
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.tool h3 { font-size:1.1rem; line-height:1.3; flex:1; color:var(--coral-d); }
+.tool .price {
+  font-family:var(--serif); font-weight:700; font-size:2.6rem; line-height:1;
+  color:var(--teal); margin-top:1rem;
+}
+.tool .btn { margin-top:1.3rem; }
+@media (max-width:900px){ .tools { grid-template-columns:1fr; } }
+
+/* --- sezioni esplicative (una per strumento) --- */
+.explain-item {
+  max-width:70ch; margin-inline:auto; text-align:center;
+  padding-block:2.8rem; border-top:1px solid var(--line);
+}
+.explain-item:first-of-type { border-top:0; padding-top:1.4rem; }
+.explain-item h3 { font-size:clamp(1.4rem,3.2vw,2rem); }
+.explain-item p { color:var(--muted); margin-top:.9rem; }
+.explain-item .accent { color:var(--teal); font-weight:500; }
+.explain-item .btn { margin-top:1.5rem; }
+
+/* --- Commissiona: blocchi consulenza senza riquadro --- */
+.svc-block { padding-block:3rem; border-top:1px solid var(--line); }
+.svc-block:first-of-type { border-top:0; padding-top:.6rem; }
+.svc-block h3 { font-size:clamp(1.6rem,3.4vw,2.2rem); }
+.svc-block .tagline {
+  font-family:var(--serif); font-style:italic; font-size:1.2rem;
+  color:var(--teal); margin-top:.35rem;
+}
+.svc-block .blurb { color:var(--muted); margin-top:.7rem; max-width:64ch; }
+.svc-block .inc-h {
+  font-family:var(--sans); font-size:.74rem; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--muted); margin-top:1.7rem;
+}
+.includes { list-style:none; display:grid; gap:.45rem; margin-top:.8rem; max-width:64ch; }
+.includes li { position:relative; padding-left:1.6rem; color:var(--ink); font-size:.97rem; }
+.includes li::before {
+  content:""; position:absolute; left:0; top:.6em;
+  width:15px; height:7px; border-radius:999px; background:var(--teal);
+}
+
+/* --- card prezzo "a partire da" --- */
+.from-cards { display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; max-width:640px; margin-top:2rem; }
+.from-card {
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:1.6rem 1.3rem; text-align:center; box-shadow:var(--shadow-sm);
+}
+.from-card h4 { font-family:var(--serif); font-size:1.25rem; font-weight:600; }
+.from-card .froml { font-size:.8rem; color:var(--muted); margin-top:.5rem; }
+.from-card .amount {
+  font-family:var(--serif); font-weight:700; font-size:2.4rem; line-height:1.1;
+  color:var(--teal); margin-top:.1rem;
+}
+@media (max-width:620px){ .from-cards { grid-template-columns:1fr; } }
+
+/* la pagina Commissiona è petrolio: i prezzi virano al corallo per staccare */
+body.page-petrol .from-card .amount,
+body.page-petrol .tool .price { color:var(--coral); }
+body.page-petrol .includes li::before { background:var(--coral); }
+body.page-petrol .svc-block .tagline { color:var(--teal-d); }
+body.page-petrol .explain-item .accent { color:var(--coral); }
+
+/* riga "Lavoriamo con:" sempre a capo, frase sopra mai spezzata su desktop */
+.collab-line { max-width:none; }
+@media (min-width:901px){ .collab-line { white-space:nowrap; } }
+.collab-with { display:block; margin-top:1.1rem; font-weight:600; }
+
+/* ===========================================================
+   Fase 3 — Profilo Cápsula: spiegazione Test, risultato sample,
+   grafici percentuali, card sblocca/consulta
+   =========================================================== */
+
+/* quarto colore identitario: giallo del logo scurito quanto basta
+   per essere leggibile su crema (stessa logica di --pink-d / --coral-d) */
+:root { --yellow-d: #D9B826; }
+
+/* --- i tre elementi informativi prima del Test --- */
+.dims { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem; margin-top:2.2rem; }
+.dim { text-align:center; }
+.dim .dot {
+  display:inline-block; width:28px; height:13px; border-radius:999px; background:var(--coral);
+  margin-bottom:.7rem;
+}
+.dim:nth-child(2) .dot { background:var(--teal); }
+.dim:nth-child(3) .dot { background:var(--pink-d); }
+.dim h3 { font-size:1.05rem; }
+.dim p { color:var(--muted); font-size:.93rem; margin-top:.3rem; }
+@media (max-width:760px){ .dims { grid-template-columns:1fr; gap:1.6rem; } }
+
+.test-close {
+  font-family:var(--serif); font-style:italic; font-size:clamp(1.1rem,2.4vw,1.45rem);
+  color:var(--teal-d); text-align:center; max-width:46ch; margin:2.2rem auto 0;
+}
+.test-note { font-size:.82rem; color:var(--muted); margin-top:.7rem; }
+
+/* nota metodologica: accordion volutamente secondario */
+.method-acc { max-width:70ch; margin:2.6rem auto 0; border-top:1px solid var(--line); }
+.method-acc .faq-q { font-family:var(--sans); font-size:.92rem; font-weight:600; color:var(--muted); }
+.method-acc .faq-q::after { color:var(--muted); font-size:1.3rem; }
+.method-acc .faq-a { max-height:0; }
+.method-acc .faq-item.open .faq-a { max-height:900px; }
+.method-acc .faq-a p { font-size:.92rem; padding-bottom:.9rem; }
+
+/* --- risultato: profilo prevalente --- */
+.result-head { text-align:center; }
+.result-head .animal { width:min(190px,52vw); margin:0 auto 1rem; border-radius:50%; }
+.result-head .pname { font-family:var(--serif); font-size:clamp(1.5rem,3.4vw,2.1rem); font-weight:600; }
+.result-head .pname b { color:var(--coral); font-weight:600; }
+.result-body { max-width:64ch; margin:1.4rem auto 0; color:var(--muted); text-align:center; }
+
+.synth { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; margin-top:2.2rem; }
+.synth div { text-align:center; }
+.synth dt { font-family:var(--sans); font-size:.72rem; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--coral); }
+.synth dd { margin:.35rem 0 0; font-family:var(--serif); font-style:italic; color:var(--ink); font-size:1rem; }
+@media (max-width:760px){ .synth { grid-template-columns:1fr; gap:1.1rem; } }
+
+/* --- tre grafici circolari delle percentuali --- */
+.rings { display:flex; gap:clamp(1.2rem,4vw,2.6rem); justify-content:center; margin-top:2.4rem; flex-wrap:nowrap; }
+.ring { text-align:center; flex:0 0 auto; }
+.ring svg { display:block; margin:0 auto; width:clamp(74px,19vw,96px); height:auto; }
+.ring .ring-track { fill:none; stroke:var(--line); stroke-width:7; }
+.ring .ring-arc { fill:none; stroke-width:7; stroke-linecap:round; transform:rotate(-90deg); transform-origin:50% 50%; }
+.ring img { width:46%; position:absolute; }
+.ring .ring-wrap { position:relative; display:grid; place-items:center; }
+.ring .ring-wrap img { position:absolute; width:44%; border-radius:50%; }
+.ring .rlabel { font-size:.8rem; margin-top:.5rem; color:var(--ink); }
+.ring .rpct { font-family:var(--serif); font-weight:700; font-size:1.05rem; }
+.rings-note { text-align:center; font-size:.84rem; color:var(--muted); margin-top:1rem; }
+
+/* --- "Vuoi andare oltre?" — due card prodotto --- */
+.unlock { display:grid; grid-template-columns:repeat(2,1fr); gap:1.3rem; margin-top:2.2rem; max-width:780px; margin-inline:auto; }
+.ucard {
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:1.7rem 1.5rem; display:flex; flex-direction:column; text-align:center; box-shadow:var(--shadow-sm);
+}
+.ucard h3 { font-size:1.15rem; }
+.ucard p { color:var(--muted); font-size:.93rem; margin-top:.6rem; flex:1; }
+.ucard .uprice { font-family:var(--serif); font-weight:700; font-size:1.8rem; color:var(--teal); margin-top:.9rem; }
+.ucard .btn { margin-top:1.1rem; align-self:center; }
+.ucard.owned { border-color:var(--teal); background:var(--teal-l); }
+.ucard.owned .uprice { display:none; }
+.owned-tag { font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--teal); margin-top:.9rem; }
+@media (max-width:760px){ .unlock { grid-template-columns:1fr; } }
+
+/* ===========================================================
+   Fase 3 — Scheda approfondita e Catalogo
+   =========================================================== */
+
+/* --- pagina bloccata finché il prodotto non è stato acquistato --- */
+.locked { text-align:center; max-width:46ch; margin-inline:auto; padding-block:3rem; }
+.locked h1 { font-size:clamp(1.5rem,3.4vw,2.1rem); }
+.locked p { color:var(--muted); margin-top:.9rem; }
+.locked .btn { margin-top:1.6rem; }
+
+/* --- intestazione della Scheda --- */
+.sheet-head { text-align:center; padding-bottom:.5rem; }
+.sheet-head h1 { font-size:clamp(1.7rem,4vw,2.6rem); }
+.sheet-head .who { font-family:var(--serif); font-size:clamp(1.1rem,2.4vw,1.5rem); margin-top:.6rem; }
+.sheet-head .who b { color:var(--coral); font-weight:600; }
+.sheet-head .owner { font-size:.86rem; color:var(--muted); margin-top:.35rem; }
+
+.sheet-sec { padding-block:clamp(2.4rem,5vw,3.4rem); border-top:1px solid var(--line); }
+.sheet-sec > h2 { font-size:clamp(1.35rem,3vw,1.9rem); text-align:center; }
+.sheet-sec > .intro { color:var(--muted); max-width:62ch; margin:.9rem auto 0; text-align:center; }
+
+/* --- palette per macro-funzione --- */
+.fn { margin-top:2.2rem; }
+.fn > h3 { font-size:1.15rem; margin-bottom:.9rem; }
+.pal-pair { display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; }
+.pal h4 { font-family:var(--sans); font-size:.72rem; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--teal); }
+.pal p { font-size:.85rem; color:var(--muted); margin-top:.25rem; }
+.swatches { display:flex; margin-top:.7rem; border-radius:10px; overflow:hidden; box-shadow:var(--shadow-sm); }
+.swatches span { flex:1; aspect-ratio:1/1.5; }
+@media (max-width:760px){ .pal-pair { grid-template-columns:1fr; gap:1.5rem; } }
+
+/* --- tips progettuali --- */
+.tips { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem; margin-top:2rem; }
+.tip {
+  background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  padding:1.2rem 1.3rem; font-family:var(--serif); font-size:1.02rem; line-height:1.4;
+}
+.tip::before { content:""; display:block; width:26px; height:12px; border-radius:999px;
+  background:var(--coral); margin-bottom:.7rem; }
+
+/* --- parole chiave --- */
+.keys { display:grid; gap:.2rem; margin-top:2rem; max-width:62ch; margin-inline:auto; }
+.key { display:flex; flex-wrap:wrap; gap:.5rem 1rem; align-items:baseline;
+  padding-block:.9rem; border-bottom:1px solid var(--line-soft, var(--line)); }
+.key:last-child { border-bottom:0; }
+.key dt { font-size:.95rem; flex:1 1 14ch; }
+.key dd { margin:0; font-family:var(--serif); font-style:italic; color:var(--teal); font-size:1.02rem; }
+
+/* --- stili --- */
+.styles { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:2rem; }
+.style figure { margin:0; }
+.style img { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+.style figcaption { margin-top:.7rem; }
+.style h4 { font-family:var(--serif); font-size:1.1rem; }
+.style p { font-size:.9rem; color:var(--muted); margin-top:.25rem; }
+.style .main-tag { font-size:.65rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--coral); }
+@media (max-width:760px){ .styles { grid-template-columns:1fr; } }
+
+.ph-note { font-size:.8rem; font-style:italic; color:var(--muted); text-align:center; margin-top:1.2rem; }
+
+/* --- Catalogo: product listing page --- */
+.cat-intro { max-width:64ch; }
+.cat-intro h1 { font-size:clamp(1.7rem,4vw,2.6rem); }
+.cat-intro .sub { font-family:var(--serif); font-style:italic; font-size:1.2rem; color:var(--teal); margin-top:.4rem; }
+.cat-intro p { color:var(--muted); margin-top:.8rem; }
+
+.cat-layout { display:grid; grid-template-columns:250px 1fr; gap:2.2rem; margin-top:2.2rem; align-items:start; }
+@media (max-width:900px){ .cat-layout { grid-template-columns:1fr; gap:1.2rem; } }
+
+.filters { position:sticky; top:86px; display:grid; gap:1.5rem; }
+.fgroup h4 { font-family:var(--sans); font-size:.7rem; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:.6rem; }
+.fgroup label { display:flex; align-items:center; gap:.5em; font-size:.9rem; padding:.18rem 0; cursor:pointer; }
+.fgroup input { accent-color:var(--coral); }
+.fgroup select { width:100%; border:1px solid var(--line); border-radius:10px; padding:.5em .7em;
+  font-family:var(--sans); font-size:.9rem; background:var(--white); color:var(--ink); }
+
+/* filtri bloccati dal Profilo */
+.lockbox { background:var(--coral-l); border-radius:var(--radius); padding:1rem 1.1rem; }
+.lockbox h4 { color:var(--coral-d); }
+.lockf { display:flex; flex-wrap:wrap; gap:.4rem; }
+.lockf span {
+  display:inline-flex; align-items:center; gap:.35em; font-size:.76rem; font-weight:600;
+  background:var(--white); color:var(--coral-d); border-radius:999px; padding:.3em .7em;
+}
+.lockf span::after { content:"🔒"; font-size:.8em; filter:grayscale(1); opacity:.7; }
+.lockbox .why { font-size:.76rem; color:var(--coral-d); margin-top:.6rem; }
+
+.cat-bar { display:flex; flex-wrap:wrap; gap:.8rem 1.2rem; align-items:center; justify-content:space-between;
+  padding-bottom:.9rem; border-bottom:1px solid var(--line); }
+.cat-count { font-size:.95rem; }
+.cat-count b { font-variant-numeric:tabular-nums; }
+.cat-sort { display:flex; align-items:center; gap:.5rem; font-size:.84rem; color:var(--muted); }
+.cat-sort select { border:1px solid var(--line); border-radius:999px; padding:.4em .8em;
+  font-family:var(--sans); font-size:.84rem; background:var(--white); color:var(--ink); }
+
+.chips { display:flex; flex-wrap:wrap; gap:.45rem; margin-top:.9rem; }
+.chip { display:inline-flex; align-items:center; gap:.4em; font-size:.78rem; font-weight:600;
+  background:var(--teal-l); color:var(--teal-d); border-radius:999px; padding:.3em .4em .3em .8em; }
+.chip button { border:0; background:none; cursor:pointer; color:inherit; font-size:1rem; line-height:1;
+  padding:0 .25em; }
+
+.prod-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:1.2rem; margin-top:1.4rem; }
+.prod { background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden; display:flex; flex-direction:column; }
+.prod img { width:100%; aspect-ratio:1/1; object-fit:cover; }
+.prod .pbody { padding:.9rem 1rem 1.1rem; display:flex; flex-direction:column; flex:1; }
+.prod .pcat { font-size:.66rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.prod h3 { font-size:1.02rem; margin-top:.2rem; }
+.prod .pshop { font-size:.8rem; color:var(--muted); margin-top:.25rem; }
+.prod .ptags { display:flex; flex-wrap:wrap; gap:.3rem; margin-top:.6rem; }
+.prod .ptags span { font-size:.68rem; background:var(--cream-2); border-radius:999px; padding:.22em .6em; color:#6a6555; }
+.prod .pfoot { display:flex; align-items:baseline; justify-content:space-between; gap:.6rem; margin-top:.8rem; }
+.prod .pprice { font-family:var(--serif); font-weight:700; font-size:1.15rem; }
+.prod .pship { font-size:.7rem; color:var(--teal); }
+.prod .btn { margin-top:.9rem; align-self:stretch; justify-content:center; font-size:.82rem; padding:.6em 1em; }
+.cat-empty { text-align:center; color:var(--muted); padding:3rem 1rem; }
+
+/* pannello filtri su mobile */
+.filter-open { display:none; }
+@media (max-width:900px){
+  .filter-open { display:inline-flex; }
+  .filters {
+    position:fixed; inset:0; z-index:80; background:var(--cream); overflow:auto;
+    padding:1.2rem 4vw 6rem; display:none; gap:1.4rem; top:0;
+  }
+  .filters.open { display:grid; }
+  .filters-close { position:sticky; top:0; display:flex; justify-content:flex-end; background:var(--cream); padding-block:.4rem; }
+}
+@media (min-width:901px){ .filters-close { display:none; } }
+
+/* ===========================================================
+   Fase 4 — Galleria: caroselli progetti/laboratori + lightbox
+   =========================================================== */
+
+.gcar-wrap { position:relative; margin-top:1.4rem; }
+.gcar {
+  display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x proximity;
+  scroll-behavior:smooth; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+  padding-bottom:4px;
+}
+.gcar::-webkit-scrollbar { display:none; }
+.gcar > * { flex:0 0 clamp(230px, 31%, 360px); scroll-snap-align:start; }
+@media (max-width:760px){
+  .gcar-wrap { width:100vw; margin-inline:calc(50% - 50vw); }
+  .gcar { padding-inline:4vw; }
+  .gcar > * { flex-basis:78%; }
+}
+
+/* scheda progetto dentro il carosello */
+.gproj { position:relative; border-radius:14px; overflow:hidden; display:block; }
+.gproj img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; transition:transform .35s ease; }
+.gproj:hover img { transform:scale(1.03); }
+.gproj figcaption {
+  position:absolute; inset:auto 0 0 0; padding:1.5rem 1rem .9rem;
+  background:linear-gradient(to top, rgba(0,0,0,.62), transparent);
+  color:#fff; font-family:var(--serif); font-size:1.1rem; font-weight:600;
+}
+/* immagine di laboratorio: apre solo la lightbox */
+.glab { border-radius:14px; overflow:hidden; cursor:zoom-in; border:0; padding:0; background:none; display:block; }
+.glab img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; transition:transform .35s ease; }
+.glab:hover img { transform:scale(1.03); }
+
+.gcar-nav { position:absolute; top:50%; transform:translateY(-50%); z-index:3;
+  width:38px; height:38px; border-radius:999px; border:1px solid var(--line);
+  background:rgba(255,255,255,.92); cursor:pointer; display:grid; place-items:center;
+  font-size:1.1rem; color:var(--ink); box-shadow:var(--shadow-sm); }
+.gcar-nav[data-dir="prev"] { left:-14px; }
+.gcar-nav[data-dir="next"] { right:-14px; }
+.gcar-nav:disabled { opacity:0; pointer-events:none; }
+@media (max-width:760px){ .gcar-nav { display:none; } }
+
+/* --- lightbox --- */
+.lb { position:fixed; inset:0; z-index:200; background:rgba(20,24,23,.94);
+  display:none; place-items:center; padding:clamp(1rem,4vw,3rem); }
+.lb.open { display:grid; }
+.lb img { max-width:100%; max-height:82vh; object-fit:contain; border-radius:8px; display:block; margin-inline:auto; }
+.lb-count { text-align:center; color:#cfd6d4; font-size:.82rem; margin-top:.9rem;
+  font-variant-numeric:tabular-nums; }
+.lb button { position:absolute; border:0; cursor:pointer; background:rgba(255,255,255,.1);
+  color:#fff; border-radius:999px; width:44px; height:44px; display:grid; place-items:center; font-size:1.4rem; }
+.lb button:hover { background:rgba(255,255,255,.2); }
+.lb .lb-close { top:clamp(.8rem,3vw,1.6rem); right:clamp(.8rem,3vw,1.6rem); }
+.lb .lb-prev { left:clamp(.5rem,2vw,1.4rem); top:50%; transform:translateY(-50%); }
+.lb .lb-next { right:clamp(.5rem,2vw,1.4rem); top:50%; transform:translateY(-50%); }
+
+/* --- pagina progetto --- */
+.proj-head { text-align:center; padding-block:clamp(2rem,4vw,3rem) 0; }
+.proj-head h1 { font-size:clamp(1.9rem,4.6vw,3rem); }
+.proj-info { display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem;
+  max-width:840px; margin:clamp(2.2rem,5vw,3.4rem) auto 0; text-align:center; }
+.proj-info dt { font-family:var(--sans); font-size:.68rem; font-weight:700; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--muted); }
+.proj-info dd { margin:.4rem 0 0; font-family:var(--serif); font-size:1.15rem; }
+.proj-info .sub { display:block; font-family:var(--sans); font-size:.78rem; color:var(--muted); margin-top:.2rem; }
+@media (max-width:760px){ .proj-info { grid-template-columns:repeat(2,1fr); gap:1.6rem; } }
+.back-link { display:inline-flex; align-items:center; gap:.4em; font-size:.88rem; color:var(--muted); }
+.back-link:hover { color:var(--coral); }

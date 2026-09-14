@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cápsula · Ficha de tu Perfil</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <span class="brand brand--static"><img class="brand-logo" src="assets/img/logo.png" alt="Cápsula"></span>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="chi-siamo.html" data-i18n="nav.about">Quiénes somos</a>
+      <div class="nav-drop">
+        <button class="nav-drop-t" type="button" aria-expanded="false"><span data-i18n="nav.services">Servicios</span><i aria-hidden="true"></i></button>
+        <div class="nav-drop-menu">
+          <a class="nav-coral" href="autoprogetta.html" data-i18n="nav.auto">Autodiseña</a>
+          <a class="nav-petrol" href="commissiona.html" data-i18n="nav.comm">Entrega</a>
+          <a class="nav-rosa" href="impara.html" data-i18n="nav.impara">Aprende</a>
+        </div>
+      </div>
+      <a href="galeria.html" data-i18n="nav.gallery">Galería</a>
+      <a href="colabora.html" data-i18n="nav.collab">Colaboramos</a>
+      <a class="nav-login js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Idioma"><button data-lang="es">ES</button><button data-lang="ca">CA</button><button data-lang="it">IT</button><button data-lang="en">EN</button></div>
+      <a class="btn btn--capsule btn--coralc desktop-only js-auth-cta" href="accedi.html" data-i18n="cta.profile">Perfil Cápsula</a>
+      <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="locked-view" hidden>
+  <div class="wrap locked">
+    <h1 data-i18n="sch.lockT">Esta página se abre tras desbloquear la Ficha</h1>
+    <p data-i18n="sch.lockP">La Ficha detallada forma parte de tu Perfil Cápsula. Desbloquéala desde tu perfil y vuelve aquí cuando quieras.</p>
+    <a class="btn btn--capsule btn--coralc" href="accedi.html" data-i18n="sch.lockCta">Ir a mi Perfil Cápsula</a>
+  </div>
+</section>
+
+<section class="section" id="sheet-view" hidden>
+  <div class="wrap sheet-head">
+    <h1 data-i18n="sch.h1">Tu Perfil Cápsula, en profundidad</h1>
+    <p class="who"><b id="sheet-sensory"></b> · <span id="sheet-cognitive"></span></p>
+    <p class="owner"><span data-i18n="sch.owner">Perfil de</span> <span id="sheet-owner"></span></p>
+  </div>
+
+  <div class="wrap sheet-sec">
+    <h2 data-i18n="sch.palTitle">Los colores que trabajan contigo</h2>
+    <p class="intro" data-i18n="sch.palIntro">El color cambia según lo que haces y la experiencia que quieres vivir. Por eso no asignamos simplemente una paleta a cada habitación, sino a las principales funciones de tu casa.</p>
+      <div class="fn">
+        <h3 data-i18n="sch.f1">Descanso y recuperación</h3>
+        <div class="pal-pair">
+          <div class="pal"><h4 data-i18n="sch.palF">Paleta funcional</h4><p data-i18n="sch.palFd">Colores identificados en relación con las características sensoriales y cognitivas de tu Perfil.</p><div class="swatches"><span style="background:#E8DCCB"></span><span style="background:#D6C3AE"></span><span style="background:#B9A488"></span><span style="background:#8E7C66"></span><span style="background:#5F5344"></span></div></div>
+          <div class="pal"><h4 data-i18n="sch.palE">Paleta emotiva</h4><p data-i18n="sch.palEd">Colores ligados a las emociones y a las experiencias de bienestar que asocias a esa actividad.</p><div class="swatches"><span style="background:#EFE3DA"></span><span style="background:#DCC6BD"></span><span style="background:#C2A79E"></span><span style="background:#9E8279"></span><span style="background:#6F5A54"></span></div></div>
+        </div>
+      </div>
+      <div class="fn">
+        <h3 data-i18n="sch.f2">Concentración y actividad</h3>
+        <div class="pal-pair">
+          <div class="pal"><h4 data-i18n="sch.palF">Paleta funcional</h4><p data-i18n="sch.palFd">Colores identificados en relación con las características sensoriales y cognitivas de tu Perfil.</p><div class="swatches"><span style="background:#EFEBE2"></span><span style="background:#D8D6C9"></span><span style="background:#B3B4A3"></span><span style="background:#86897A"></span><span style="background:#575A50"></span></div></div>
+          <div class="pal"><h4 data-i18n="sch.palE">Paleta emotiva</h4><p data-i18n="sch.palEd">Colores ligados a las emociones y a las experiencias de bienestar que asocias a esa actividad.</p><div class="swatches"><span style="background:#E9EDEA"></span><span style="background:#CBD6D2"></span><span style="background:#A3B3AE"></span><span style="background:#7A8C88"></span><span style="background:#51605D"></span></div></div>
+        </div>
+      </div>
+      <div class="fn">
+        <h3 data-i18n="sch.f3">Compartir y relación</h3>
+        <div class="pal-pair">
+          <div class="pal"><h4 data-i18n="sch.palF">Paleta funcional</h4><p data-i18n="sch.palFd">Colores identificados en relación con las características sensoriales y cognitivas de tu Perfil.</p><div class="swatches"><span style="background:#F3E4D7"></span><span style="background:#E4C4A8"></span><span style="background:#CD9E7C"></span><span style="background:#A97757"></span><span style="background:#7A533A"></span></div></div>
+          <div class="pal"><h4 data-i18n="sch.palE">Paleta emotiva</h4><p data-i18n="sch.palEd">Colores ligados a las emociones y a las experiencias de bienestar que asocias a esa actividad.</p><div class="swatches"><span style="background:#F6E0CF"></span><span style="background:#EEC2A1"></span><span style="background:#DFA077"></span><span style="background:#C07C53"></span><span style="background:#8E5736"></span></div></div>
+        </div>
+      </div>
+      <div class="fn">
+        <h3 data-i18n="sch.f4">Cotidianidad y cuidado</h3>
+        <div class="pal-pair">
+          <div class="pal"><h4 data-i18n="sch.palF">Paleta funcional</h4><p data-i18n="sch.palFd">Colores identificados en relación con las características sensoriales y cognitivas de tu Perfil.</p><div class="swatches"><span style="background:#F1EFE6"></span><span style="background:#DEDACB"></span><span style="background:#C0BCA9"></span><span style="background:#97937F"></span><span style="background:#6A6757"></span></div></div>
+          <div class="pal"><h4 data-i18n="sch.palE">Paleta emotiva</h4><p data-i18n="sch.palEd">Colores ligados a las emociones y a las experiencias de bienestar que asocias a esa actividad.</p><div class="swatches"><span style="background:#F4EEE4"></span><span style="background:#E2D6C3"></span><span style="background:#C8B7A0"></span><span style="background:#A2907A"></span><span style="background:#736455"></span></div></div>
+        </div>
+      </div>
+  </div>
+
+  <div class="wrap sheet-sec">
+    <h2 data-i18n="sch.tipsTitle">Cómo puede responderte tu casa</h2>
+    <div class="tips">
+      <p class="tip" data-i18n="sch.t1">Crea jerarquías visuales claras.</p>
+      <p class="tip" data-i18n="sch.t2">Prevé distintos niveles de estimulación.</p>
+      <p class="tip" data-i18n="sch.t3">Haz que la luz y la privacidad sean fáciles de regular.</p>
+      <p class="tip" data-i18n="sch.t4">Usa materiales capaces de crear equilibrio sensorial.</p>
+      <p class="tip" data-i18n="sch.t5">Construye transiciones legibles entre las distintas funciones.</p>
+    </div>
+  </div>
+
+  <div class="wrap sheet-sec">
+    <h2 data-i18n="sch.keyTitle">Cómo quieres sentirte mientras vives la casa</h2>
+    <dl class="keys">
+      <div class="key"><dt data-i18n="sch.f1">Descanso y recuperación</dt><dd data-i18n="sch.k1">protección · quietud · suavidad</dd></div>
+      <div class="key"><dt data-i18n="sch.f2">Concentración y actividad</dt><dd data-i18n="sch.k2">claridad · control · ritmo</dd></div>
+      <div class="key"><dt data-i18n="sch.f3">Compartir y relación</dt><dd data-i18n="sch.k3">calidez · apertura · conexión</dd></div>
+      <div class="key"><dt data-i18n="sch.f4">Cotidianidad y cuidado</dt><dd data-i18n="sch.k4">fluidez · equilibrio · ligereza</dd></div>
+    </dl>
+  </div>
+
+  <div class="wrap sheet-sec">
+    <h2 data-i18n="sch.stTitle">Estilos que hablan tu idioma</h2>
+    <p class="intro" data-i18n="sch.stIntro">No te asignamos un estilo para copiar: identificamos los más compatibles con tu Perfil y con las experiencias que quieres vivir en tu casa.</p>
+    <div class="styles">
+      <figure class="style"><img src="assets/img/stili/organic-modern.jpg" alt="">
+        <figcaption><span class="main-tag" data-i18n="sch.stMain">Estilo principal</span>
+          <h4 data-i18n="sch.s1">Organic Modern</h4><p data-i18n="sch.s1d">Formas suaves, materiales naturales y una paleta cálida y desaturada.</p></figcaption></figure>
+      <figure class="style"><img src="assets/img/stili/japandi.jpg" alt="">
+        <figcaption><span class="main-tag" style="color:var(--teal)" data-i18n="sch.stCompat">Compatible</span>
+          <h4 data-i18n="sch.s2">Japandi</h4><p data-i18n="sch.s2d">Orden visual, madera clara y vacíos que dejan respirar el espacio.</p></figcaption></figure>
+      <figure class="style"><img src="assets/img/stili/mediterraneo.jpg" alt="">
+        <figcaption><span class="main-tag" style="color:var(--teal)" data-i18n="sch.stCompat">Compatible</span>
+          <h4 data-i18n="sch.s3">Mediterráneo contemporáneo</h4><p data-i18n="sch.s3d">Luz, cal, cerámica y texturas que envejecen bien.</p></figcaption></figure>
+    </div>
+    <p class="ph-note" data-i18n="sch.phNote">Imágenes de muestra: se sustituirán por fotografías reales.</p>
+  </div>
+
+  <div class="wrap">
+    <p class="ph-note" data-i18n="sch.sampleNote">Todo el contenido de esta ficha es de muestra y sirve para construir la página.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid footer-grid--2">
+    <div>
+      <img class="brand-logo" src="assets/img/logo.png" alt="Cápsula">
+      <p class="footer-tag" data-i18n="footer.tag">habitar · habitar·te · habit·arte</p>
+      <p style="color:#b9b09a;margin-top:.5rem;max-width:34ch" data-i18n="footer.blurb">Diseñamos tu bienestar.</p>
+    </div>
+    <div><h4 data-i18n="footer.contactH">Contacto</h4><ul>
+      <li><a href="mailto:hola@capsula.studio">hola@capsula.studio</a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul></div>
+  </div>
+  <div class="wrap footer-bottom"><span>© 2026 Cápsula · Barcelona</span><span><a href="#" data-i18n="footer.privacy">Privacidad</a> · <a href="#" data-i18n="footer.terms">Términos</a></span></div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/globals-i18n.js"></script>
+<script src="assets/account.js"></script>
+<script>
+CAPSULA_I18N.add({
+  ca: {"sch.lockT": "Aquesta pàgina s’obre després de desbloquejar la Fitxa", "sch.lockP": "La Fitxa detallada forma part del teu Perfil Cápsula. Desbloqueja-la des del teu perfil i torna aquí quan vulguis.", "sch.lockCta": "Ves al meu Perfil Cápsula", "sch.h1": "El teu Perfil Cápsula, en profunditat", "sch.owner": "Perfil de", "sch.palTitle": "Els colors que treballen amb tu", "sch.palIntro": "El color canvia segons el que fas i l’experiència que vols viure. Per això no assignem simplement una paleta a cada habitació, sinó a les principals funcions de casa teva.", "sch.palF": "Paleta funcional", "sch.palFd": "Colors identificats en relació amb les característiques sensorials i cognitives del teu Perfil.", "sch.palE": "Paleta emotiva", "sch.palEd": "Colors lligats a les emocions i a les experiències de benestar que associes a aquella activitat.", "sch.f1": "Descans i recuperació", "sch.f2": "Concentració i activitat", "sch.f3": "Compartir i relació", "sch.f4": "Quotidianitat i cura", "sch.tipsTitle": "Com et pot respondre casa teva", "sch.t1": "Crea jerarquies visuals clares.", "sch.t2": "Preveu diferents nivells d’estimulació.", "sch.t3": "Fes que la llum i la privacitat siguin fàcils de regular.", "sch.t4": "Fes servir materials capaços de crear equilibri sensorial.", "sch.t5": "Construeix transicions llegibles entre les diferents funcions.", "sch.keyTitle": "Com et vols sentir mentre vius la casa", "sch.k1": "protecció · quietud · suavitat", "sch.k2": "claredat · control · ritme", "sch.k3": "escalfor · obertura · connexió", "sch.k4": "fluïdesa · equilibri · lleugeresa", "sch.stTitle": "Estils que parlen la teva llengua", "sch.stIntro": "No t’assignem un estil per copiar: identifiquem els més compatibles amb el teu Perfil i amb les experiències que vols viure a casa teva.", "sch.stMain": "Estil principal", "sch.stCompat": "Compatible", "sch.s1": "Organic Modern", "sch.s1d": "Formes suaus, materials naturals i una paleta càlida i desaturada.", "sch.s2": "Japandi", "sch.s2d": "Ordre visual, fusta clara i buits que deixen respirar l’espai.", "sch.s3": "Mediterrani contemporani", "sch.s3d": "Llum, calç, ceràmica i textures que envelleixen bé.", "sch.phNote": "Imatges de mostra: se substituiran per fotografies reals.", "sch.sampleNote": "Tot el contingut d’aquesta fitxa és de mostra i serveix per construir la pàgina."},
+  it: {"sch.lockT": "Questa pagina si apre dopo aver sbloccato la Scheda", "sch.lockP": "La Scheda approfondita fa parte del tuo Profilo Cápsula. Sbloccala dal tuo profilo e torna qui quando vuoi.", "sch.lockCta": "Vai al mio Profilo Cápsula", "sch.h1": "Il tuo Profilo Cápsula, in profondità", "sch.owner": "Profilo di", "sch.palTitle": "I colori che lavorano con te", "sch.palIntro": "Il colore cambia in base a ciò che fai e all’esperienza che vuoi vivere. Per questo non assegniamo semplicemente una palette a ogni stanza, ma alle principali funzioni della tua casa.", "sch.palF": "Palette funzionale", "sch.palFd": "Colori individuati in relazione alle caratteristiche sensoriali e cognitive del tuo Profilo.", "sch.palE": "Palette emotiva", "sch.palEd": "Colori legati alle emozioni e alle esperienze di benessere che associ a quella specifica attività.", "sch.f1": "Riposo e recupero", "sch.f2": "Concentrazione e attività", "sch.f3": "Condivisione e relazione", "sch.f4": "Quotidianità e cura di sé", "sch.tipsTitle": "Come può risponderti la tua casa", "sch.t1": "Crea gerarchie visive chiare.", "sch.t2": "Prevedi diversi livelli di stimolazione.", "sch.t3": "Rendi luce e privacy facilmente regolabili.", "sch.t4": "Usa materiali capaci di creare equilibrio sensoriale.", "sch.t5": "Costruisci transizioni leggibili tra le diverse funzioni.", "sch.keyTitle": "Come vuoi sentirti mentre vivi la casa", "sch.k1": "protezione · quiete · morbidezza", "sch.k2": "chiarezza · controllo · ritmo", "sch.k3": "calore · apertura · connessione", "sch.k4": "fluidità · equilibrio · leggerezza", "sch.stTitle": "Stili che parlano la tua lingua", "sch.stIntro": "Non ti assegniamo uno stile da copiare: individuiamo quelli più compatibili con il tuo Profilo e con le esperienze che vuoi vivere nella tua casa.", "sch.stMain": "Stile principale", "sch.stCompat": "Compatibile", "sch.s1": "Organic Modern", "sch.s1d": "Forme morbide, materiali naturali e una palette calda e desaturata.", "sch.s2": "Japandi", "sch.s2d": "Ordine visivo, legno chiaro e vuoti che lasciano respirare lo spazio.", "sch.s3": "Mediterraneo contemporaneo", "sch.s3d": "Luce, calce, ceramica e texture che invecchiano bene.", "sch.phNote": "Immagini sample: verranno sostituite da fotografie reali.", "sch.sampleNote": "Tutto il contenuto di questa scheda è sample e serve a costruire la pagina."},
+  en: {"sch.lockT": "This page opens once the Sheet is unlocked", "sch.lockP": "The in-depth Sheet is part of your Cápsula Profile. Unlock it from your profile and come back whenever you like.", "sch.lockCta": "Go to my Cápsula Profile", "sch.h1": "Your Cápsula Profile, in depth", "sch.owner": "Profile of", "sch.palTitle": "The colours that work with you", "sch.palIntro": "Colour changes with what you do and the experience you want to have. That’s why we don’t simply assign a palette to each room, but to the main functions of your home.", "sch.palF": "Functional palette", "sch.palFd": "Colours identified in relation to the sensory and cognitive characteristics of your Profile.", "sch.palE": "Emotional palette", "sch.palEd": "Colours tied to the emotions and wellbeing experiences you associate with that activity.", "sch.f1": "Rest and recovery", "sch.f2": "Focus and activity", "sch.f3": "Sharing and connection", "sch.f4": "Everyday life and self-care", "sch.tipsTitle": "How your home can answer you", "sch.t1": "Create clear visual hierarchies.", "sch.t2": "Provide different levels of stimulation.", "sch.t3": "Make light and privacy easy to adjust.", "sch.t4": "Use materials that create sensory balance.", "sch.t5": "Build legible transitions between functions.", "sch.keyTitle": "How you want to feel while living your home", "sch.k1": "protection · quiet · softness", "sch.k2": "clarity · control · rhythm", "sch.k3": "warmth · openness · connection", "sch.k4": "flow · balance · lightness", "sch.stTitle": "Styles that speak your language", "sch.stIntro": "We don’t assign you a style to copy: we identify those most compatible with your Profile and with the experiences you want to live at home.", "sch.stMain": "Main style", "sch.stCompat": "Compatible", "sch.s1": "Organic Modern", "sch.s1d": "Soft forms, natural materials and a warm, desaturated palette.", "sch.s2": "Japandi", "sch.s2d": "Visual order, pale wood and voids that let the space breathe.", "sch.s3": "Contemporary Mediterranean", "sch.s3d": "Light, lime, ceramic and textures that age well.", "sch.phNote": "Sample images: they will be replaced by real photography.", "sch.sampleNote": "Everything in this sheet is sample content and exists to build the page."}
+});
+</script>
+<script>
+/* la Scheda si apre solo dopo l'acquisto */
+(function () {
+  var A = window.CAPSULA_ACCOUNT;
+  var NAMES = {
+    es:{lib:"Libélula",cartografo:"Cartógrafo"}, ca:{lib:"Libèl·lula",cartografo:"Cartògraf"},
+    it:{lib:"Libellula",cartografo:"Cartografo"}, en:{lib:"Dragonfly",cartografo:"Cartographer"}
+  };
+  function render() {
+    var ok = A && A.owns("scheda") && A.hasTest();
+    document.getElementById("locked-view").hidden = ok;
+    document.getElementById("sheet-view").hidden = !ok;
+    if (!ok) return;
+    var n = NAMES[(window.CAPSULA_I18N && CAPSULA_I18N.current()) || "es"] || NAMES.es;
+    var r = A.result() || {};
+    document.getElementById("sheet-sensory").textContent = n[r.sensory] || "";
+    document.getElementById("sheet-cognitive").textContent = n[r.cognitive] || "";
+    document.getElementById("sheet-owner").textContent = (A.user() || {}).name || "";
+  }
+  document.addEventListener("capsula:lang", render);
+  render();
+})();
+</script>
+<script src="assets/main.js"></script>
+</body>
+</html>

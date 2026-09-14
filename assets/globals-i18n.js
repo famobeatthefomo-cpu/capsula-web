@@ -11,6 +11,7 @@ CAPSULA_I18N.add({
     "footer.blurb":"Dissenyem el teu benestar.",
     "footer.contactH":"Contacte",
     "footer.privacy":"Privacitat","footer.terms":"Condicions",
+    "form.name":"Nom i cognoms","form.email":"Correu electrònic",
     "form.thanks":"Gràcies! Ens posarem en contacte aviat.",
     "form.send":"Envia"
   },
@@ -23,6 +24,7 @@ CAPSULA_I18N.add({
     "footer.blurb":"Progettiamo il tuo benessere.",
     "footer.contactH":"Contatti",
     "footer.privacy":"Privacy","footer.terms":"Termini",
+    "form.name":"Nome e cognome","form.email":"Email",
     "form.thanks":"Grazie! Ti ricontatteremo a breve.",
     "form.send":"Invia"
   },
@@ -35,6 +37,7 @@ CAPSULA_I18N.add({
     "footer.blurb":"We design your wellbeing.",
     "footer.contactH":"Contact",
     "footer.privacy":"Privacy","footer.terms":"Terms",
+    "form.name":"Full name","form.email":"Email",
     "form.thanks":"Thanks! We’ll be in touch shortly.",
     "form.send":"Send"
   }

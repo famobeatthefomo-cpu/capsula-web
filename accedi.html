@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accede · Carta Habitacional · Cápsula</title>
-<meta name="description" content="Regístrate o accede a tu perfil personal: tu Carta Habitacional con el Test “Mi casa a mi medida” y sus tres microtests.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Cápsula · Perfil Cápsula</title>
+<meta name="description" content="Descubre tu Perfil Cápsula: el punto de partida del método Cápsula para diseñar una casa a tu medida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
@@ -37,39 +38,101 @@
   </div>
 </header>
 
-<!-- REGISTRO / ACCESO -->
-<section class="section" id="auth-view">
+<!-- ESTADO: sin cuenta -->
+<section class="section" id="auth-view" hidden>
   <div class="wrap center">
     <p class="eyebrow" data-i18n="acc.eyebrow">Tu perfil personal</p>
-    <h1 data-i18n="acc.h1">Accede a tu Carta Habitacional</h1>
-    <p class="lead" style="max-width:56ch;margin:1rem auto 0" data-i18n="acc.lead">Regístrate o accede para consultar tu Carta Habitacional: el resultado del Test “Mi casa a mi medida” y sus tres microtests.</p>
+    <h1 data-i18n="acc.h1">Perfil Cápsula</h1>
+    <p class="lead" style="max-width:52ch;margin:.9rem auto 0" data-i18n="acc.authLead">Regístrate o accede para descubrir tu Perfil Cápsula y conservarlo siempre contigo.</p>
   </div>
-  <div class="wrap" style="display:grid;place-items:center;margin-top:2rem">
+  <div class="wrap" style="display:grid;place-items:center;margin-top:1.8rem">
     <form class="form card" id="auth-form" style="width:min(480px,100%)">
-      <div><label data-i18n="form.name">Nombre y apellidos</label><input type="text" id="auth-name" required></div>
-      <div><label data-i18n="form.email">Email</label><input type="email" id="auth-email" required></div>
-      <div><label data-i18n="acc.pass">Contraseña</label><input type="password" id="auth-pass" required minlength="4"></div>
-      <button class="btn btn--capsule btn--coralc" type="submit" data-i18n="acc.enter">Regístrate / Accede</button>
-      <p class="note" data-i18n="acc.demo">Demo: los datos se guardan solo en tu navegador.</p>
+      <div><label for="auth-name" data-i18n="form.name">Nombre y apellidos</label><input type="text" id="auth-name" required></div>
+      <div><label for="auth-email" data-i18n="form.email">Email</label><input type="email" id="auth-email" required></div>
+      <div><label for="auth-pass" data-i18n="acc.pass">Contraseña</label><input type="password" id="auth-pass" required minlength="4"></div>
+      <button class="btn btn--capsule btn--coralc" type="submit" data-i18n="acc.signin">Entrar</button>
     </form>
   </div>
 </section>
 
-<!-- PERFIL / CARTA HABITACIONAL -->
-<section class="section" id="profile-view" hidden>
+<!-- ESTADO A: cuenta sin Test -->
+<section class="section" id="pretest-view" hidden>
   <div class="wrap center">
-    <p class="eyebrow" data-i18n="acc.pEyebrow">Tu perfil personal</p>
-    <h1 id="profile-title">Carta Habitacional de …</h1>
-    <h2 style="margin-top:1.6rem;font-size:1.5rem" data-i18n="acc.testTitle">Test “Mi casa a mi medida”</h2>
+    <p class="eyebrow" data-i18n="acc.testEyebrow">Test</p>
+    <h1 data-i18n="acc.testTitle">Descubre tu Perfil Cápsula</h1>
+    <p class="lead" style="max-width:66ch;margin:1rem auto 0" data-i18n="acc.i1">El Test Cápsula es el punto de partida de nuestro método: explora tu manera de percibir, comprender y vivir el espacio a través de la dimensión sensorial, cognitiva y emotivo-experiencial.</p>
+    <p class="muted" style="max-width:66ch;margin:.9rem auto 0" data-i18n="acc.i2">No partimos solo de lo que te gusta, sino de cómo reaccionas a los estímulos, de cómo interpretas lo que te rodea y de las situaciones de bienestar que asocias a las actividades de tu día a día. Cruzamos esta información con principios de neuroarquitectura y evidence-based design para transformarla en indicaciones útiles para el diseño de tu casa.</p>
   </div>
-  <div class="wrap microtests" id="microtests"></div>
-  <div class="wrap center" style="margin-top:2rem">
-    <button class="btn btn--ghost" id="logout" data-i18n="acc.logout">Cerrar sesión</button>
+  <div class="wrap">
+    <div class="dims">
+      <div class="dim"><span class="dot"></span><h3 data-i18n="acc.d1t">Percepción sensorial</h3><p data-i18n="acc.d1">Cómo vives los estímulos del entorno.</p></div>
+      <div class="dim"><span class="dot"></span><h3 data-i18n="acc.d2t">Funcionamiento cognitivo</h3><p data-i18n="acc.d2">Cómo comprendes, organizas e interpretas lo que te rodea.</p></div>
+      <div class="dim"><span class="dot"></span><h3 data-i18n="acc.d3t">Emociones y experiencias</h3><p data-i18n="acc.d3">Situaciones ideales de bienestar para cada actividad cotidiana.</p></div>
+    </div>
+    <p class="test-close" data-i18n="acc.close">Del encuentro entre tu manera de percibir, comprender y desear vivir el espacio nace tu Perfil Cápsula.</p>
+    <p class="muted center" style="max-width:62ch;margin:1.6rem auto 0" data-i18n="acc.ant">El resultado puede traducirse en indicaciones personalizadas sobre colores, materiales, acabados, estilo y criterios de diseño más coherentes contigo y con tu manera de vivir la casa.</p>
+    <div class="center" style="margin-top:2rem">
+      <button class="btn btn--capsule btn--coralc" id="start-test" data-i18n="acc.start">Empieza el Test</button>
+      <p class="test-note" data-i18n="acc.free">Gratuito · Puedes hacerlo una sola vez por cuenta</p>
+    </div>
+    <div class="faq method-acc">
+      <div class="faq-item">
+        <button class="faq-q" type="button" data-i18n="acc.accQ">¿Cómo hemos construido el Test?</button>
+        <div class="faq-a">
+          <p data-i18n="acc.accA1">El Test Cápsula es una herramienta propia desarrollada para aplicar al proyecto doméstico principios de neuroarquitectura y evidence-based design. Está inspirado en modelos, tests e investigaciones presentes en la literatura científica sobre el funcionamiento sensorial, cognitivo y emotivo, reinterpretados por nosotras en clave arquitectónica.</p>
+          <p data-i18n="acc.accA2">No es un test psicológico ni clínico, no tiene finalidad diagnóstica y no sustituye una valoración profesional. Los Perfiles Cápsula, sus denominaciones y la traducción de los resultados en indicaciones de diseño son una elaboración propia.</p>
+          <p data-i18n="acc.accA3">Para profundizar en tu Perfil y trasladarlo a la situación concreta de tu casa, te recomendamos un encuentro de conocimiento con nosotras.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- MODAL -->
-<div class="modal-bg" id="modal"><div class="modal"><button class="close" aria-label="Cerrar">✕</button><div id="modal-body"></div></div></div>
+<!-- ESTADOS B–E: Test hecho -->
+<section class="section" id="result-view" hidden>
+  <div class="wrap">
+    <p class="center" style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral)" data-i18n="acc.sample">Contenido de muestra</p>
+    <div class="result-head" style="margin-top:.8rem">
+      <h1 style="font-size:clamp(1.5rem,3.4vw,2.1rem)"><span data-i18n="acc.resTitle">Perfil Cápsula de</span> <span id="res-name"></span></h1>
+      <img class="animal" src="assets/img/profilo-libellula.png" alt="">
+      <p class="pname"><b>Libélula</b> · Cartógrafo</p>
+    </div>
+    <p class="result-body" data-i18n="acc.rb1">Tienes una sensibilidad atenta a los estímulos y tiendes a estar mejor cuando lo que te rodea es equilibrado y fácilmente regulable. El componente Cartógrafo añade una fuerte necesidad de coherencia y legibilidad: comprendes y vives mejor los ambientes en los que todos los elementos, las funciones y los recorridos tienen relaciones claras e intuitivas.</p>
+    <p class="result-body" data-i18n="acc.rb2">Las experiencias de bienestar surgidas del Test completan el Perfil indicando qué atmósferas y condiciones querrías que acompañaran las distintas actividades de tu día a día. El resultado une así sensibilidad, modo de comprender el espacio y experiencia deseada, traduciéndolos después en indicaciones de diseño, cromáticas y matéricas.</p>
+    <dl class="synth">
+      <div><dt data-i18n="acc.s1t">Percepción</dt><dd data-i18n="acc.s1">sensible a la calidad y a la intensidad de los estímulos</dd></div>
+      <div><dt data-i18n="acc.s2t">Cognición</dt><dd data-i18n="acc.s2">busca coherencia, legibilidad y orden</dd></div>
+      <div><dt data-i18n="acc.s3t">Experiencia</dt><dd data-i18n="acc.s3">busca condiciones capaces de acompañar positivamente lo que hace</dd></div>
+    </dl>
+    <div class="rings" id="rings"></div>
+    <p class="rings-note" data-i18n="acc.ringsNote">Porcentaje de características de los otros Perfiles presentes en tu resultado.</p>
+    <p class="note center" style="max-width:60ch;margin:1.4rem auto 0" data-i18n="acc.sampleNote">Todo el contenido de este resultado es ficticio y sirve únicamente para construir la página. Las características reales de los Perfiles se definirán más adelante.</p>
+  </div>
+
+  <div class="wrap center" style="margin-top:3.4rem">
+    <h2 data-i18n="acc.moreTitle">¿Quieres ir más allá?</h2>
+    <p class="lead" style="max-width:56ch;margin:.8rem auto 0" data-i18n="acc.moreSub">El Test te ha dado una primera lectura. Ahora puedes transformarla en herramientas concretas para tu casa.</p>
+  </div>
+  <div class="wrap">
+    <div class="unlock">
+      <article class="ucard" id="card-scheda">
+        <h3 data-i18n="acc.u1t">Ficha detallada de tu Perfil Cápsula</h3>
+        <p data-i18n="acc.u1">Profundiza en tu resultado y descubre paleta, criterios de diseño, materiales, palabras clave y estilos más adecuados a ti.</p>
+        <p class="uprice">20&thinsp;€</p>
+        <div class="ucta"></div>
+      </article>
+      <article class="ucard" id="card-catalogo">
+        <h3 data-i18n="acc.u2t">Catálogo personalizado de mobiliario y acabados</h3>
+        <p data-i18n="acc.u2">Descubre mobiliario, materiales y acabados seleccionados según las características de tu Perfil Cápsula.</p>
+        <p class="uprice">30&thinsp;€</p>
+        <div class="ucta"></div>
+      </article>
+    </div>
+    <div class="center" style="margin-top:2.6rem">
+      <button class="btn btn--ghost" id="logout" data-i18n="acc.logout">Cerrar sesión</button>
+    </div>
+  </div>
+</section>
 
 <footer class="site-footer">
   <div class="wrap footer-grid footer-grid--2">
@@ -87,197 +150,33 @@
   <div class="wrap footer-bottom"><span>© 2026 Cápsula · Barcelona</span><span><a href="#" data-i18n="footer.privacy">Privacidad</a> · <a href="#" data-i18n="footer.terms">Términos</a></span></div>
 </footer>
 
+
+<!-- stringhe usate solo da profile.js: nascoste, ma tradotte dal motore i18n -->
+<div hidden id="strings">
+  <span data-i18n="acc.unlock">Desbloquea</span>
+  <span data-i18n="acc.consult">Consulta</span>
+  <span data-i18n="acc.owned">Ya es tuyo</span>
+  <span data-i18n="acc.payTitle">Pago simulado</span>
+  <span data-i18n="acc.payDesc">La tienda todavía no está conectada. Pulsa para simular la compra y ver cómo queda la página una vez desbloqueada.</span>
+  <span data-i18n="acc.paySim">Simular la compra</span>
+  <span data-i18n="acc.testSim">Test de muestra</span>
+  <span data-i18n="acc.testSimDesc">En la versión final aquí se abre el Test completo. En esta demo, pulsa para generar el resultado de muestra.</span>
+  <span data-i18n="acc.testSimBtn">Generar resultado de muestra</span>
+</div>
+
+<div class="modal-bg" id="modal"><div class="modal"><button class="close" aria-label="Cerrar">&times;</button><div id="modal-body"></div></div></div>
+
 <script src="assets/i18n.js"></script>
 <script src="assets/globals-i18n.js"></script>
+<script src="assets/account.js"></script>
 <script>
 CAPSULA_I18N.add({
-  en: {
-    "acc.eyebrow":"Your personal profile","acc.h1":"Access your Living Chart",
-    "acc.lead":"Sign up or log in to consult your Living Chart: the result of the “Mi casa a mi medida” test and its three microtests.",
-    "form.name":"Full name","form.email":"Email","acc.pass":"Password",
-    "acc.enter":"Sign up / Log in","acc.demo":"Demo: data is stored only in your browser.",
-    "acc.pEyebrow":"Your personal profile","acc.testTitle":"“Mi casa a mi medida” Test",
-    "acc.logout":"Log out"
-  },
-  it: {
-    "acc.eyebrow":"Il tuo profilo personale","acc.h1":"Accedi alla tua Carta Abitativa",
-    "acc.lead":"Registrati o accedi per consultare la tua Carta Abitativa: il risultato del Test “Mi casa a mi medida” e i suoi tre microtest.",
-    "form.name":"Nome e cognome","form.email":"Email","acc.pass":"Password",
-    "acc.enter":"Registrati / Accedi","acc.demo":"Demo: i dati vengono salvati solo nel tuo browser.",
-    "acc.pEyebrow":"Il tuo profilo personale","acc.testTitle":"Test “Mi casa a mi medida”",
-    "acc.logout":"Esci"
-  }
+  ca: {"acc.h1": "Perfil Cápsula", "acc.authLead": "Registra’t o entra per descobrir el teu Perfil Cápsula i conservar-lo sempre amb tu.", "acc.pass": "Contrasenya", "acc.signin": "Entra", "acc.logout": "Tanca la sessió", "acc.testEyebrow": "Test", "acc.testTitle": "Descobreix el teu Perfil Cápsula", "acc.i1": "El Test Cápsula és el punt de partida del nostre mètode: explora la teva manera de percebre, comprendre i viure l’espai a través de la dimensió sensorial, cognitiva i emotivoexperiencial.", "acc.i2": "No partim només d’allò que t’agrada, sinó de com reacciones als estímuls, de com interpretes el que t’envolta i de les situacions de benestar que associes a les activitats del teu dia a dia. Creuem aquesta informació amb principis de neuroarquitectura i evidence-based design per transformar-la en indicacions útils per al disseny de casa teva.", "acc.d1t": "Percepció sensorial", "acc.d1": "Com vius els estímuls de l’entorn.", "acc.d2t": "Funcionament cognitiu", "acc.d2": "Com comprens, organitzes i interpretes el que t’envolta.", "acc.d3t": "Emocions i experiències", "acc.d3": "Situacions ideals de benestar per a cada activitat quotidiana.", "acc.close": "De la trobada entre la teva manera de percebre, comprendre i desitjar viure l’espai neix el teu Perfil Cápsula.", "acc.ant": "El resultat es pot traduir en indicacions personalitzades sobre colors, materials, acabats, estil i criteris de disseny més coherents amb tu i amb la teva manera de viure la casa.", "acc.start": "Comença el Test", "acc.free": "Gratuït · El pots fer una sola vegada per compte", "acc.accQ": "Com hem construït el Test?", "acc.accA1": "El Test Cápsula és una eina pròpia desenvolupada per aplicar al projecte domèstic principis de neuroarquitectura i evidence-based design. S’inspira en models, tests i recerques presents a la literatura científica sobre el funcionament sensorial, cognitiu i emotiu, reinterpretats per nosaltres en clau arquitectònica.", "acc.accA2": "No és un test psicològic ni clínic, no té finalitat diagnòstica i no substitueix una valoració professional. Els Perfils Cápsula, les seves denominacions i la traducció dels resultats en indicacions de disseny són una elaboració pròpia.", "acc.accA3": "Per aprofundir en el teu Perfil i traslladar-lo a la situació concreta de casa teva, et recomanem una trobada de coneixença amb nosaltres.", "acc.resTitle": "Perfil Cápsula de", "acc.sample": "Contingut de mostra", "acc.sampleNote": "Tot el contingut d’aquest resultat és fictici i serveix únicament per construir la pàgina. Les característiques reals dels Perfils es definiran més endavant.", "acc.rb1": "Tens una sensibilitat atenta als estímuls i tendeixes a estar millor quan el que t’envolta és equilibrat i fàcilment regulable. El component Cartògraf hi afegeix una forta necessitat de coherència i llegibilitat: comprens i vius millor els ambients en què tots els elements, les funcions i els recorreguts tenen relacions clares i intuïtives.", "acc.rb2": "Les experiències de benestar sorgides del Test completen el Perfil indicant quines atmosferes i condicions voldries que acompanyessin les diferents activitats del teu dia a dia. El resultat uneix així sensibilitat, manera de comprendre l’espai i experiència desitjada, traduint-les després en indicacions de disseny, cromàtiques i matèriques.", "acc.s1t": "Percepció", "acc.s1": "sensible a la qualitat i a la intensitat dels estímuls", "acc.s2t": "Cognició", "acc.s2": "busca coherència, llegibilitat i ordre", "acc.s3t": "Experiència", "acc.s3": "busca condicions capaces d’acompanyar positivament el que fa", "acc.ringsNote": "Percentatge de característiques dels altres Perfils presents en el teu resultat.", "acc.moreTitle": "Vols anar més enllà?", "acc.moreSub": "El Test t’ha donat una primera lectura. Ara la pots transformar en eines concretes per a casa teva.", "acc.u1t": "Fitxa detallada del teu Perfil Cápsula", "acc.u1": "Aprofundeix en el teu resultat i descobreix paleta, criteris de disseny, materials, paraules clau i estils més adequats per a tu.", "acc.u2t": "Catàleg personalitzat de mobiliari i acabats", "acc.u2": "Descobreix mobiliari, materials i acabats seleccionats segons les característiques del teu Perfil Cápsula.", "acc.unlock": "Desbloqueja", "acc.consult": "Consulta", "acc.owned": "Ja és teu", "acc.payTitle": "Pagament simulat", "acc.payDesc": "La botiga encara no està connectada. Prem per simular la compra i veure com queda la pàgina un cop desbloquejada.", "acc.paySim": "Simula la compra", "acc.testSim": "Test de mostra", "acc.testSimDesc": "A la versió final aquí s’obre el Test complet. En aquesta demo, prem per generar el resultat de mostra.", "acc.testSimBtn": "Genera el resultat de mostra"},
+  it: {"acc.h1": "Profilo Cápsula", "acc.authLead": "Registrati o accedi per scoprire il tuo Profilo Cápsula e averlo sempre con te.", "acc.pass": "Password", "acc.signin": "Entra", "acc.logout": "Esci", "acc.testEyebrow": "Test", "acc.testTitle": "Scopri il tuo Profilo Cápsula", "acc.i1": "Il Test Cápsula è il punto di partenza del nostro metodo: esplora il tuo modo di percepire, comprendere e vivere lo spazio attraverso la dimensione sensoriale, cognitiva ed emotivo-esperienziale.", "acc.i2": "Non partiamo solo da ciò che ti piace, ma da come reagisci agli stimoli, da come interpreti ciò che ti circonda e dalle situazioni di benessere che associ alle attività della tua quotidianità. Incrociamo queste informazioni con principi di neuroarchitettura ed evidence-based design per trasformarle in indicazioni utili alla progettazione della tua casa.", "acc.d1t": "Percezione sensoriale", "acc.d1": "Come vivi gli stimoli dell’ambiente.", "acc.d2t": "Funzionamento cognitivo", "acc.d2": "Come comprendi, organizzi e interpreti ciò che ti circonda.", "acc.d3t": "Emozioni ed esperienze", "acc.d3": "Situazioni ideali di benessere per ogni attività della quotidianità.", "acc.close": "Dall’incontro tra il tuo modo di percepire, comprendere e desiderare di vivere lo spazio nasce il tuo Profilo Cápsula.", "acc.ant": "Il risultato può tradursi in indicazioni personalizzate su colori, materiali, finiture, stile e criteri progettuali più coerenti con te e con il tuo modo di vivere la casa.", "acc.start": "Inizia il Test", "acc.free": "Gratuito · Puoi svolgerlo una sola volta per account", "acc.accQ": "Come abbiamo costruito il Test?", "acc.accA1": "Il Test Cápsula è uno strumento proprietario sviluppato per applicare al progetto domestico principi di neuroarchitettura ed evidence-based design. È ispirato a modelli, test e ricerche presenti nella letteratura scientifica sul funzionamento sensoriale, cognitivo ed emotivo, reinterpretati da noi in chiave architettonica.", "acc.accA2": "Non è un test psicologico o clinico, non ha finalità diagnostiche e non sostituisce una valutazione professionale. I Profili Cápsula, le loro denominazioni e la traduzione dei risultati in indicazioni progettuali sono una nostra elaborazione proprietaria.", "acc.accA3": "Per approfondire il tuo Profilo e tradurlo nella situazione specifica della tua casa, consigliamo un incontro conoscitivo con noi.", "acc.resTitle": "Profilo Cápsula di", "acc.sample": "Contenuto sample", "acc.sampleNote": "Tutto il contenuto di questo risultato è fittizio e serve solamente per costruire graficamente la pagina. Le caratteristiche reali dei Profili verranno definite successivamente.", "acc.rb1": "Hai una sensibilità attenta agli stimoli e tendi a stare meglio quando ciò che ti circonda è equilibrato e facilmente regolabile. La componente Cartografo aggiunge un forte bisogno di coerenza e leggibilità: comprendi e vivi meglio ambienti in cui gli elementi, le funzioni e i percorsi hanno relazioni chiare e intuitive.", "acc.rb2": "Le esperienze di benessere emerse dal Test completano il Profilo indicando quali atmosfere e condizioni vorresti accompagnassero le diverse attività della tua quotidianità. Il risultato unisce quindi sensibilità, modo di comprendere lo spazio ed esperienza desiderata, traducendoli successivamente in indicazioni progettuali, cromatiche e materiche.", "acc.s1t": "Percezione", "acc.s1": "sensibile alla qualità e all’intensità degli stimoli", "acc.s2t": "Cognizione", "acc.s2": "ricerca coerenza, leggibilità e ordine", "acc.s3t": "Esperienza", "acc.s3": "cerca condizioni capaci di accompagnare positivamente ciò che fa", "acc.ringsNote": "Percentuale di caratteristiche degli altri Profili presenti nel tuo risultato.", "acc.moreTitle": "Vuoi andare oltre?", "acc.moreSub": "Il Test ti ha dato una prima lettura. Ora puoi trasformarla in strumenti concreti per la tua casa.", "acc.u1t": "Scheda approfondita del tuo Profilo Cápsula", "acc.u1": "Approfondisci il tuo risultato e scopri palette, criteri progettuali, materiali, parole chiave e stili più adatti a te.", "acc.u2t": "Catalogo personalizzato di arredi e finiture", "acc.u2": "Scopri arredi, materiali e finiture selezionati in base alle caratteristiche del tuo Profilo Cápsula.", "acc.unlock": "Sblocca", "acc.consult": "Consulta", "acc.owned": "Già tuo", "acc.payTitle": "Pagamento simulato", "acc.payDesc": "Il negozio non è ancora collegato. Premi per simulare l’acquisto e vedere come si presenta la pagina una volta sbloccata.", "acc.paySim": "Simula l’acquisto", "acc.testSim": "Test sample", "acc.testSimDesc": "Nella versione finale qui si apre il Test completo. In questa demo, premi per generare il risultato sample.", "acc.testSimBtn": "Genera il risultato sample"},
+  en: {"acc.h1": "Cápsula Profile", "acc.authLead": "Sign up or log in to discover your Cápsula Profile and keep it with you.", "acc.pass": "Password", "acc.signin": "Enter", "acc.logout": "Sign out", "acc.testEyebrow": "Test", "acc.testTitle": "Discover your Cápsula Profile", "acc.i1": "The Cápsula Test is the starting point of our method: it explores the way you perceive, understand and live space through the sensory, cognitive and emotional-experiential dimensions.", "acc.i2": "We don’t start only from what you like, but from how you react to stimuli, how you interpret what surrounds you and the conditions of wellbeing you associate with your everyday activities. We cross this with principles of neuroarchitecture and evidence-based design to turn it into guidance for designing your home.", "acc.d1t": "Sensory perception", "acc.d1": "How you experience the stimuli around you.", "acc.d2t": "Cognitive functioning", "acc.d2": "How you understand, organise and interpret what surrounds you.", "acc.d3t": "Emotions and experiences", "acc.d3": "Ideal conditions of wellbeing for each everyday activity.", "acc.close": "Your Cápsula Profile grows from the meeting of how you perceive, how you understand, and how you wish to live space.", "acc.ant": "The result can translate into personalised guidance on colours, materials, finishes, style and design criteria most coherent with you and the way you live your home.", "acc.start": "Start the Test", "acc.free": "Free · One attempt per account", "acc.accQ": "How did we build the Test?", "acc.accA1": "The Cápsula Test is a proprietary tool developed to apply principles of neuroarchitecture and evidence-based design to the domestic project. It draws on models, tests and research in the scientific literature on sensory, cognitive and emotional functioning, reinterpreted by us through an architectural lens.", "acc.accA2": "It is not a psychological or clinical test, it has no diagnostic purpose and it does not replace a professional assessment. The Cápsula Profiles, their names and the translation of results into design guidance are our own elaboration.", "acc.accA3": "To go deeper into your Profile and apply it to your own home, we recommend an introductory meeting with us.", "acc.resTitle": "Cápsula Profile of", "acc.sample": "Sample content", "acc.sampleNote": "Everything in this result is fictional and exists only to build the page. The real characteristics of the Profiles will be defined later.", "acc.rb1": "You have a sensibility attentive to stimuli and tend to feel better when what surrounds you is balanced and easily adjustable. The Cartographer component adds a strong need for coherence and legibility: you understand and inhabit best those spaces where elements, functions and routes have clear, intuitive relationships.", "acc.rb2": "The wellbeing experiences that emerged from the Test complete the Profile by indicating which atmospheres and conditions you would want accompanying your everyday activities. The result therefore joins sensibility, way of understanding space and desired experience, later translating them into design, chromatic and material guidance.", "acc.s1t": "Perception", "acc.s1": "sensitive to the quality and intensity of stimuli", "acc.s2t": "Cognition", "acc.s2": "seeks coherence, legibility and order", "acc.s3t": "Experience", "acc.s3": "seeks conditions that positively accompany what it does", "acc.ringsNote": "Percentage of characteristics from the other Profiles present in your result.", "acc.moreTitle": "Want to go further?", "acc.moreSub": "The Test gave you a first reading. Now you can turn it into concrete tools for your home.", "acc.u1t": "In-depth sheet of your Cápsula Profile", "acc.u1": "Go deeper into your result and discover the palette, design criteria, materials, keywords and styles best suited to you.", "acc.u2t": "Personalised catalogue of furniture and finishes", "acc.u2": "Discover furniture, materials and finishes selected according to your Cápsula Profile.", "acc.unlock": "Unlock", "acc.consult": "Open", "acc.owned": "Already yours", "acc.payTitle": "Simulated payment", "acc.payDesc": "The shop isn’t connected yet. Press to simulate the purchase and see how the page looks once unlocked.", "acc.paySim": "Simulate the purchase", "acc.testSim": "Sample Test", "acc.testSimDesc": "In the final version the full Test opens here. In this demo, press to generate the sample result.", "acc.testSimBtn": "Generate the sample result"}
 });
 </script>
+<script src="assets/profile.js"></script>
 <script src="assets/main.js"></script>
-<script>
-/* Perfil personal — mockup (sin backend) */
-(function () {
-  var LS_USER = "capsula_user", LS_STATE = "capsula_tests";
-  var STR = {
-    es: {
-      chartOf: "Carta Habitacional de ", free: "Gratis", locked: "Bloqueado", done: "Completado",
-      t1: "Perfil funcional", t1d: "Descubre cómo percibes los estímulos del entorno: tu perfil entre Libélula, Oso, Cangrejo y Colibrí, con tips de diseño específicos.",
-      t2: "Paleta cromática personalizada", t2d: "Los colores más adecuados para ti, del encuentro entre perfil funcional y estación armocromática, para las tres zonas funcionales de la casa.",
-      t3: "Estilo de interiorismo", t3d: "El estilo más coherente con tu manera de vivir los espacios, con materialboard y concept en palabras clave para las tres zonas funcionales.",
-      doTest: "Realiza el test", seeResult: "Consulta tu resultado", unlock: "Desbloquea con el test completo",
-      payTitle: "Desbloquea el test completo", payDesc: "Elige tu opción (pago simulado en esta demo):",
-      pay1: "Para una persona — 20 €", pay2: "Convivientes de 2 personas — 30 €", pay3: "Núcleo de 3–5 personas — 50 € (+10 €/extra)",
-      buy: "Compra", paid: "¡Pago simulado completado! Microtests desbloqueados.",
-      simTitle: "Demo del microtest", simDesc: "En la versión final aquí se abre la experiencia inmersiva del microtest. En esta demo, pulsa para generar un resultado de ejemplo.",
-      simBtn: "Completar test (demo)",
-      resT1: "Tu perfil funcional: ", resT2: "Tu paleta: ", resT3: "Tu estilo: ",
-      profiles: { lib: ["La Libélula","Perceptiva y matizada: aprecia la luz, el detalle y los equilibrios sutiles. Tips: ilumina por capas, cuida los detalles materiales y evita saturar el ambiente."],
-                  oso: ["El Oso","Estable y de fondo: necesita estímulos claros para activarse. Tips: contrastes definidos, zonas de actividad bien marcadas y colores francos."],
-                  can: ["El Cangrejo","Sensible y protector: necesita refugio y control del estímulo. Tips: rincones envolventes, materiales suaves y control de ruido y luz."],
-                  col: ["El Colibrí","Ágil y estimulado: busca color, movimiento y variedad. Tips: paletas vivas, elementos cambiantes y espacios flexibles."] },
-      res2: "Otoño profundo — tonos cálidos y envolventes para la zona de comer/cocinar, neutros suaves para dormir/relajarse y acentos activadores para trabajar/concentrarse.",
-      res3: "Japandi cálido — madera clara, textiles naturales y orden visual. Concept: calma (dormir), convivialidad (comer), claridad (trabajar)."
-    },
-    it: {
-      chartOf: "Carta Abitativa di ", free: "Gratis", locked: "Bloccato", done: "Completato",
-      t1: "Profilo funzionale", t1d: "Scopri come percepisci gli stimoli dell’ambiente: il tuo profilo tra Libellula, Orso, Granchio e Colibrì, con tips progettuali specifici.",
-      t2: "Palette cromatica personalizzata", t2d: "I colori più adatti a te, dall’incontro tra profilo funzionale e stagione armocromatica, per le tre zone funzionali della casa.",
-      t3: "Stile di arredamento", t3d: "Lo stile più coerente con il tuo modo di vivere gli spazi, con materialboard e concept in parole chiave per le tre zone funzionali.",
-      doTest: "Svolgi il test", seeResult: "Consulta il tuo risultato", unlock: "Sblocca con il test completo",
-      payTitle: "Sblocca il test completo", payDesc: "Scegli la tua opzione (pagamento simulato in questa demo):",
-      pay1: "Per una persona — 20 €", pay2: "Coabitanti di 2 persone — 30 €", pay3: "Nucleo di 3–5 persone — 50 € (+10 €/extra)",
-      buy: "Acquista", paid: "Pagamento simulato completato! Microtest sbloccati.",
-      simTitle: "Demo del microtest", simDesc: "Nella versione finale qui si apre l’esperienza immersiva del microtest. In questa demo, premi per generare un risultato di esempio.",
-      simBtn: "Completa il test (demo)",
-      resT1: "Il tuo profilo funzionale: ", resT2: "La tua palette: ", resT3: "Il tuo stile: ",
-      profiles: { lib: ["La Libellula","Percettiva e sfumata: apprezza la luce, il dettaglio e gli equilibri sottili. Tips: luce a strati, cura dei dettagli materici, ambienti non saturi."],
-                  oso: ["L’Orso","Stabile e di fondo: ha bisogno di stimoli chiari per attivarsi. Tips: contrasti definiti, zone di attività ben marcate e colori decisi."],
-                  can: ["Il Granchio","Sensibile e protettivo: ha bisogno di rifugio e controllo dello stimolo. Tips: angoli avvolgenti, materiali morbidi e controllo di rumore e luce."],
-                  col: ["Il Colibrì","Agile e stimolato: cerca colore, movimento e varietà. Tips: palette vivaci, elementi mutevoli e spazi flessibili."] },
-      res2: "Autunno profondo — toni caldi e avvolgenti per la zona in cui mangi/cucini, neutri morbidi per dormire/rilassarti e accenti attivanti per lavorare/concentrarti.",
-      res3: "Japandi caldo — legno chiaro, tessili naturali e ordine visivo. Concept: calma (dormire), convivialità (mangiare), chiarezza (lavorare)."
-    },
-    en: {
-      chartOf: "Living Chart of ", free: "Free", locked: "Locked", done: "Completed",
-      t1: "Functional profile", t1d: "Discover how you perceive environmental stimuli: your profile among Dragonfly, Bear, Crab and Hummingbird, with targeted design tips.",
-      t2: "Personalized colour palette", t2d: "The most suitable colours for you, from the meeting of functional profile and colour season, for the home’s three functional areas.",
-      t3: "Interior style", t3d: "The style most coherent with the way you live your spaces, with a material board and concept keywords for the three functional areas.",
-      doTest: "Take the test", seeResult: "See your result", unlock: "Unlock with the full test",
-      payTitle: "Unlock the full test", payDesc: "Choose your option (simulated payment in this demo):",
-      pay1: "For one person — €20", pay2: "2 cohabitants — €30", pay3: "Household of 3–5 — €50 (+€10/extra)",
-      buy: "Buy", paid: "Simulated payment completed! Microtests unlocked.",
-      simTitle: "Microtest demo", simDesc: "In the final version the immersive microtest experience opens here. In this demo, press to generate a sample result.",
-      simBtn: "Complete test (demo)",
-      resT1: "Your functional profile: ", resT2: "Your palette: ", resT3: "Your style: ",
-      profiles: { lib: ["The Dragonfly","Perceptive and nuanced: appreciates light, detail and subtle balance. Tips: layered lighting, material detail, unsaturated environments."],
-                  oso: ["The Bear","Steady and low-arousal: needs clear stimuli to engage. Tips: defined contrasts, clearly marked activity zones and frank colours."],
-                  can: ["The Crab","Sensitive and protective: needs shelter and stimulus control. Tips: enveloping corners, soft materials, noise and light control."],
-                  col: ["The Hummingbird","Agile and stimulated: seeks colour, movement and variety. Tips: lively palettes, changing elements and flexible spaces."] },
-      res2: "Deep Autumn — warm enveloping tones for the eating/cooking area, soft neutrals for sleeping/relaxing and activating accents for working/concentrating.",
-      res3: "Warm Japandi — light wood, natural textiles and visual order. Concept: calm (sleep), conviviality (eat), clarity (work)."
-    }
-  };
-
-  function lang() { try { return localStorage.getItem("capsula_lang") || "es"; } catch (e) { return "es"; } }
-  function t() { return STR[lang()] || STR.es; }
-  function getUser() { try { return JSON.parse(localStorage.getItem(LS_USER)); } catch (e) { return null; } }
-  function getState() { try { return JSON.parse(localStorage.getItem(LS_STATE)) || {}; } catch (e) { return {}; } }
-  function setState(s) { try { localStorage.setItem(LS_STATE, JSON.stringify(s)); } catch (e) {} }
-
-  var authView = document.getElementById("auth-view");
-  var profView = document.getElementById("profile-view");
-  var wrap = document.getElementById("microtests");
-  var modal = document.getElementById("modal");
-  var modalBody = document.getElementById("modal-body");
-
-  function openModal(html) { modalBody.innerHTML = html; modal.classList.add("open"); }
-  function closeModal() { modal.classList.remove("open"); }
-  modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
-  modal.querySelector(".close").addEventListener("click", closeModal);
-
-  function card(id, title, desc, stateLbl, stateCls, btnHtml) {
-    return '<div class="microtest"><span class="state ' + stateCls + '">' + stateLbl + '</span><h3>' + title + '</h3><p>' + desc + '</p>' + btnHtml + '</div>';
-  }
-
-  function render() {
-    var user = getUser();
-    if (!user) { authView.hidden = false; profView.hidden = true; return; }
-    authView.hidden = true; profView.hidden = false;
-    var s = getState(), d = t();
-    document.getElementById("profile-title").textContent = d.chartOf + user.name;
-    var html = "";
-    // Microtest 1 (gratis)
-    html += card("t1", d.t1, d.t1d,
-      s.t1 ? d.done : d.free, s.t1 ? "done" : "free",
-      s.t1
-        ? '<button class="btn btn--capsule btn--coralc" data-act="res1">' + d.seeResult + '</button>'
-        : '<button class="btn btn--capsule btn--coralc" data-act="do1">' + d.doTest + '</button>');
-    // Microtests 2 y 3 (de pago)
-    ["2", "3"].forEach(function (n) {
-      var done = s["t" + n];
-      var lbl = done ? d.done : (s.paid ? d.free : d.locked);
-      var cls = done ? "done" : (s.paid ? "free" : "locked");
-      var btn;
-      if (done) btn = '<button class="btn btn--capsule btn--coralc" data-act="res' + n + '">' + d.seeResult + '</button>';
-      else if (s.paid) btn = '<button class="btn btn--capsule btn--coralc" data-act="do' + n + '">' + d.doTest + '</button>';
-      else btn = '<button class="btn btn--capsule btn--coralc" data-act="pay">' + d.unlock + ' 🔒</button>';
-      html += card("t" + n, d["t" + n], d["t" + n + "d"], lbl, cls, btn);
-    });
-    wrap.innerHTML = html;
-
-    wrap.querySelectorAll("[data-act]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        var act = b.getAttribute("data-act"), d = t(), s = getState();
-        if (act === "pay") {
-          openModal("<h3>" + d.payTitle + "</h3><p class='muted'>" + d.payDesc + "</p>" +
-            ["pay1","pay2","pay3"].map(function (k) {
-              return "<p style='display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.9rem'><span>" + d[k] + "</span><button class='btn btn--capsule btn--coralc' data-buy>" + d.buy + "</button></p>";
-            }).join(""));
-          modalBody.querySelectorAll("[data-buy]").forEach(function (bb) {
-            bb.addEventListener("click", function () {
-              var st = getState(); st.paid = true; setState(st);
-              modalBody.innerHTML = "<h3>✓</h3><p>" + d.paid + "</p>";
-              setTimeout(function () { closeModal(); render(); }, 1200);
-            });
-          });
-        } else if (act.slice(0, 2) === "do") {
-          var n = act.slice(2);
-          openModal("<h3>" + d.simTitle + "</h3><p class='muted'>" + d.simDesc + "</p><p style='margin-top:1rem'><button class='btn btn--capsule btn--coralc' data-sim>" + d.simBtn + "</button></p>");
-          modalBody.querySelector("[data-sim]").addEventListener("click", function () {
-            var st = getState();
-            if (n === "1") { var keys = ["lib","oso","can","col"]; st.t1 = keys[Math.floor(Math.random() * 4)]; }
-            else st["t" + n] = true;
-            setState(st); closeModal(); render();
-          });
-        } else if (act === "res1") {
-          var p = d.profiles[s.t1] || d.profiles.lib;
-          var imgs = { lib: "profilo-libellula.png", oso: "profilo-orso.png", can: "profilo-granchio.png", col: "profilo-colibri.png" };
-          openModal("<h3>" + d.resT1 + p[0] + "</h3><img src='assets/img/" + imgs[s.t1 || "lib"] + "' style='width:120px;border-radius:50%;margin:.6rem 0'><p class='muted'>" + p[1] + "</p>");
-        } else if (act === "res2") {
-          openModal("<h3>" + d.resT2 + "</h3><p class='muted'>" + d.res2 + "</p>");
-        } else if (act === "res3") {
-          openModal("<h3>" + d.resT3 + "</h3><p class='muted'>" + d.res3 + "</p>");
-        }
-      });
-    });
-  }
-
-  var form = document.getElementById("auth-form");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var name = document.getElementById("auth-name").value.trim();
-    var email = document.getElementById("auth-email").value.trim();
-    try { localStorage.setItem(LS_USER, JSON.stringify({ name: name, email: email })); } catch (err) {}
-    document.querySelectorAll(".js-auth-cta").forEach(function (a) { a.dataset.es = "Tu Carta Habitacional"; a.innerHTML = "Tu Carta Habitacional"; a.setAttribute("data-i18n", "cta.profile"); a.classList.add("logged"); });
-    if (window.CAPSULA_I18N) CAPSULA_I18N.apply(lang());
-    render();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  document.getElementById("logout").addEventListener("click", function () {
-    try { localStorage.removeItem(LS_USER); localStorage.removeItem(LS_STATE); } catch (e) {}
-    location.reload();
-  });
-
-  document.querySelectorAll(".lang-switch button").forEach(function (b) { b.addEventListener("click", function () { setTimeout(render, 0); }); });
-  render();
-})();
-</script>
 </body>
 </html>
