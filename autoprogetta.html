@@ -251,6 +251,8 @@ CAPSULA_I18N.add({
       if (!A.owns(key)) return;
       var href = LINKS[key];
       if (!href) { b.textContent = txt("auto.owned"); b.classList.add("owned"); return; }
+      /* senza Test fatto, Consulta porta al Profilo Cápsula */
+      if (!A.hasTest()) href = "accedi.html";
       var a = document.createElement("a");
       a.className = b.className; a.href = href;
       a.setAttribute("data-i18n", "auto.consult");

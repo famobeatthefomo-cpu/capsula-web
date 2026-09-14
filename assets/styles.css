@@ -1090,3 +1090,55 @@ body.page-petrol .explain-item .accent { color:var(--coral); }
 @media (max-width:760px){ .proj-info { grid-template-columns:repeat(2,1fr); gap:1.6rem; } }
 .back-link { display:inline-flex; align-items:center; gap:.4em; font-size:.88rem; color:var(--muted); }
 .back-link:hover { color:var(--coral); }
+
+/* ===========================================================
+   Aggiustamenti richiesti — settembre 2026
+   =========================================================== */
+
+/* HOME — motto spostato nell'hero, sotto il testo introduttivo.
+   La larghezza viene poi adattata da main.js a quella del paragrafo sopra. */
+.hero--petrol .cap-motto--hero {
+  text-align: left; margin: 1.15rem 0 0;
+  width: max-content; max-width: 100%;
+  white-space: nowrap; line-height: 1.25;
+  font-size: clamp(1rem, 3.2vw, 2rem);
+}
+.cap-motto--hero .dout { color: var(--yellow); }  /* puntini fra una parola e l'altra */
+@media (max-width: 900px) { .hero--petrol .cap-motto--hero { max-width: 100%; } }
+
+/* HOME — "Diseñamos tu bienestar" più grande, deve spiccare */
+#servicios h2 { font-size: clamp(2rem, 4.6vw, 3rem); }
+
+/* HOME — titolo corallo sopra "Empieza por conocerte. Es gratis." */
+.test-kicker {
+  font-family: var(--serif); font-weight: 600; color: var(--coral);
+  font-size: clamp(2.2rem, 5.2vw, 3.4rem); line-height: 1.1; margin-bottom: .6rem;
+}
+
+/* AUTOPROGETTA / COMMISSIONA — domanda in corsivo larga come il testo colorato sotto */
+body.page-coral .page-hero .prov,
+body.page-petrol .page-hero .prov { max-width: 70ch; }
+
+/* AUTOPROGETTA — titoli degli strumenti in corallo, stessa misura del titolo di sezione */
+.explain-item h3 { font-size: 1.5rem; color: var(--coral); }
+body.page-petrol .explain-item h3 { color: var(--teal); }
+
+/* AUTOPROGETTA — fasce alternate: sinistra / destra / sinistra */
+.explain-item { scroll-margin-top: 96px; }
+@media (min-width: 761px) {
+  .explain-item {
+    width: min(58%, 60ch); max-width: none; margin-inline: 0;
+    border-top: 0; padding-block: 2.2rem;
+  }
+  .explain-item:nth-of-type(odd)  { text-align: left;  margin-right: auto; }
+  .explain-item:nth-of-type(even) { text-align: right; margin-left: auto; }
+}
+
+/* GALLERIA — immagini squadrate e più grandi (due per riga) */
+.gproj, .glab { border-radius: 0; }
+.gcar > * { flex: 0 0 clamp(300px, 48%, 540px); }
+@media (max-width: 760px) { .gcar > * { flex-basis: 86%; } }
+
+/* FOOTER — contatti a destra e allineati a destra */
+.footer-grid--2 > div:last-child { text-align: right; }
+@media (max-width: 900px) { .footer-grid--2 > div:last-child { text-align: left; } }

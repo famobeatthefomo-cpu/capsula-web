@@ -144,3 +144,36 @@
 
   });
 })();
+
+/* Home — il motto sotto il testo introduttivo dell'hero:
+   la misura viene adattata perché la riga sia larga quanto il paragrafo sopra. */
+(function () {
+  function init() {
+    var motto = document.querySelector(".cap-motto--hero");
+    if (!motto) return;
+    var ref = document.querySelector(".hero--petrol .hero-sub");
+    if (!ref) return;
+
+    /* Misura fuori dal flusso: così il motto non allarga la colonna
+       mentre leggiamo la larghezza del paragrafo di riferimento. */
+    function fit() {
+      var prev = motto.getAttribute("style") || "";
+      motto.style.cssText = prev +
+        ";position:absolute;visibility:hidden;left:-9999px;top:0;" +
+        "width:max-content;max-width:none;white-space:nowrap;font-size:40px";
+      var w = motto.getBoundingClientRect().width;
+      var target = ref.getBoundingClientRect().width;
+      if (prev) { motto.setAttribute("style", prev); } else { motto.removeAttribute("style"); }
+      if (!w || !target) return;
+      var size = Math.max(12, Math.min(40, 40 * target / w));
+      motto.style.fontSize = size.toFixed(2) + "px";
+    }
+
+    fit();
+    window.addEventListener("resize", fit);
+    document.addEventListener("capsula:lang", function () { setTimeout(fit, 0); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
